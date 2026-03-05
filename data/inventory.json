@@ -1,0 +1,3918 @@
+{
+  "search": {
+    "totalResults": 95,
+    "pageSize": 95,
+    "currentPage": 1,
+    "totalPages": 1
+  },
+  "seller": {
+    "mobileSellerId": "2396",
+    "companyName": "Yaman Exclusive Automobile",
+    "type": "DEALER",
+    "address": {
+      "street": "Nebenbank 9",
+      "zipcode": "45472",
+      "city": "Mülheim an der Ruhr",
+      "country": "DE"
+    },
+    "phone": "+49 2083 764 532 3",
+    "email": "info@yaman-automobile.de"
+  },
+  "ads": [
+    {
+      "mobileAdId": "959764325",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-09-29T09:04:00.000Z",
+      "modificationDate": "2025-10-08T10:15:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Cabrio",
+      "make": "PORSCHE",
+      "model": "911",
+      "modelDescription": "Turbo S Cabriolet · InnoDrive · Carbon · Lift",
+      "condition": "USED",
+      "firstRegistration": "202309",
+      "mileage": 8800,
+      "power": 353,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "209850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=959764325",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/68e3df65bfd8cacc190a54f4/2396_68f9e65990d5ecd1b30f1bc3__IMG_1011.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Porsche 911",
+        "subtitle": "Turbo S Cabriolet · InnoDrive · Carbon · Lift",
+        "priceFormatted": "209.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 0
+      }
+    },
+    {
+      "mobileAdId": "954492247",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-10-24T03:47:00.000Z",
+      "modificationDate": "2025-11-02T04:44:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Cabrio",
+      "make": "MERCEDES_BENZ",
+      "model": "AMG GT R",
+      "modelDescription": "Roadster 1 of 750 Magno · Keramik · Carbon",
+      "condition": "USED",
+      "firstRegistration": "202203",
+      "mileage": 29000,
+      "power": 430,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "179750.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=954492247",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/68936d56db2bbe43740bf16c/2396_68baaf053f1c2f296103302d__IMG_8259.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz AMG GT R",
+        "subtitle": "Roadster 1 of 750 Magno · Keramik · Carbon",
+        "priceFormatted": "179.750 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 1
+      }
+    },
+    {
+      "mobileAdId": "944195258",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-10-01T02:28:00.000Z",
+      "modificationDate": "2025-10-06T02:03:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Limousine",
+      "make": "MERCEDES_BENZ",
+      "model": "S 580",
+      "modelDescription": "Maybach  · E-Aktive · FirstClass · Kühlbox · 3xTV",
+      "condition": "USED",
+      "firstRegistration": "202010",
+      "mileage": 34800,
+      "power": 370,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "149850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=944195258",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/67f64eb849b69046a10446e6/2396_67fe40ab06dd18958205f063__IMG_5744.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz S 580",
+        "subtitle": "Maybach  · E-Aktive · FirstClass · Kühlbox · 3xTV",
+        "priceFormatted": "149.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 2
+      }
+    },
+    {
+      "mobileAdId": "950071178",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-02-11T02:23:00.000Z",
+      "modificationDate": "2026-02-21T06:32:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Limousine",
+      "make": "ALPINA",
+      "model": "XB7",
+      "modelDescription": "Bowers & Wilkins · Massage · ACC",
+      "condition": "USED",
+      "firstRegistration": "202007",
+      "mileage": 24100,
+      "power": 457,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "130850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=950071178",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/684ff7876dc1b0889f0b7ffb/2396_685008dde3837211c10a7258__IMG_4990.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Alpina XB7",
+        "subtitle": "Bowers & Wilkins · Massage · ACC",
+        "priceFormatted": "130.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 3
+      }
+    },
+    {
+      "mobileAdId": "954646201",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-11-07T03:53:00.000Z",
+      "modificationDate": "2025-11-15T08:21:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Cabrio",
+      "make": "MERCEDES_BENZ",
+      "model": "AMG GT",
+      "modelDescription": "Roadster Perf.-Sitze · SitzKlima · Burmester",
+      "condition": "USED",
+      "firstRegistration": "202011",
+      "mileage": 61100,
+      "power": 350,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "116950.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=954646201",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/6895c6b5e7c5bc707b008285/2396_68a03738626b391fbb088e08__IMG_7859.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz AMG GT",
+        "subtitle": "Roadster Perf.-Sitze · SitzKlima · Burmester",
+        "priceFormatted": "116.950 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 4
+      }
+    },
+    {
+      "mobileAdId": "951289289",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-02-09T06:20:00.000Z",
+      "modificationDate": "2026-02-10T08:48:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "MERCEDES_BENZ",
+      "model": "G 500",
+      "modelDescription": "AMG · G Manufaktur · StHzg · GSD · Massage",
+      "condition": "USED",
+      "firstRegistration": "202010",
+      "mileage": 31800,
+      "power": 310,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "113850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=951289289",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/68628dc4ef232d08210990ed/2396_686e4acc6a89fe5d580027ef__IMG_6331.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz G 500",
+        "subtitle": "AMG · G Manufaktur · StHzg · GSD · Massage",
+        "priceFormatted": "113.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 5
+      }
+    },
+    {
+      "mobileAdId": "952153993",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-01-20T02:08:00.000Z",
+      "modificationDate": "2026-01-21T02:07:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Limousine",
+      "make": "MERCEDES_BENZ",
+      "model": "SL 63 AMG",
+      "modelDescription": "4Matic · Aero · Keramik · PremiumPlus · HuD",
+      "condition": "USED",
+      "firstRegistration": "201803",
+      "mileage": 71100,
+      "power": 430,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "109990.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=952153993",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/686fbf83df0b550c350c7849/2396_687132473305dd6a5c034047__IMG_6563.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz SL 63 AMG",
+        "subtitle": "4Matic · Aero · Keramik · PremiumPlus · HuD",
+        "priceFormatted": "109.990 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 6
+      }
+    },
+    {
+      "mobileAdId": "967878837",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-12-31T03:24:00.000Z",
+      "modificationDate": "2026-01-11T00:40:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "LAND_ROVER",
+      "model": "Range Rover",
+      "modelDescription": "P530 Autobiography · Pano · Head-Up",
+      "condition": "USED",
+      "firstRegistration": "201805",
+      "mileage": 55600,
+      "power": 390,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "108850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=967878837",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/695fb0aef0b3a6d99807f4b5/2396_69691acf6a1dadd6a00e6f25__IMG_4508.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Land Rover Range Rover",
+        "subtitle": "P530 Autobiography · Pano · Head-Up",
+        "priceFormatted": "108.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 7
+      }
+    },
+    {
+      "mobileAdId": "959397204",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-12-07T04:03:00.000Z",
+      "modificationDate": "2025-12-07T06:06:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "LAND_ROVER",
+      "model": "Range Rover Sport",
+      "modelDescription": "First Edition · Standheizung · AHK",
+      "condition": "USED",
+      "firstRegistration": "202005",
+      "mileage": 70300,
+      "power": 294,
+      "fuel": "DIESEL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "106850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=959397204",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/68de454c1ddb09fc98049e41/2396_68f218ed46d0fcc02b0e87ea__IMG_0313.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Land Rover Range Rover Sport",
+        "subtitle": "First Edition · Standheizung · AHK",
+        "priceFormatted": "106.850 €",
+        "fuelDisplay": "Diesel",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 8
+      }
+    },
+    {
+      "mobileAdId": "971594266",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-09-05T01:52:00.000Z",
+      "modificationDate": "2025-09-12T06:15:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "LAND_ROVER",
+      "model": "Range Rover Sport",
+      "modelDescription": "Autobiography Pano StHzg",
+      "condition": "USED",
+      "firstRegistration": "201811",
+      "mileage": 66200,
+      "power": 294,
+      "fuel": "DIESEL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "105850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=971594266",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/69986211994453a4d108af4d/2396_69a04dd19ce5391e1704ec24__IMG_6715.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Land Rover Range Rover Sport",
+        "subtitle": "Autobiography Pano StHzg",
+        "priceFormatted": "105.850 €",
+        "fuelDisplay": "Diesel",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 9
+      }
+    },
+    {
+      "mobileAdId": "950083731",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-12-07T01:26:00.000Z",
+      "modificationDate": "2025-12-08T00:10:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Limousine",
+      "make": "BMW",
+      "model": "M4",
+      "modelDescription": "xDrive Competition · Carbon · Akrapovic · Einzelstk",
+      "condition": "USED",
+      "firstRegistration": "201907",
+      "mileage": 54300,
+      "power": 375,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "103850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=950083731",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/6850288905f32cdf350d2ab0/2396_685d6290258e711d790fc345__IMG_5716.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "BMW M4",
+        "subtitle": "xDrive Competition · Carbon · Akrapovic · Einzelstk",
+        "priceFormatted": "103.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 10
+      }
+    },
+    {
+      "mobileAdId": "962255746",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-10-20T04:23:00.000Z",
+      "modificationDate": "2025-10-25T03:40:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "LAND_ROVER",
+      "model": "Range Rover Sport",
+      "modelDescription": "P510e First Edition · Pano · HuD",
+      "condition": "USED",
+      "firstRegistration": "202008",
+      "mileage": 28600,
+      "power": 294,
+      "fuel": "HYBRID",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "97850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=962255746",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/6909e37729ff419c21048c95/2396_690f3d60569075bbb30ffa94__IMG_1975.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Land Rover Range Rover Sport",
+        "subtitle": "P510e First Edition · Pano · HuD",
+        "priceFormatted": "97.850 €",
+        "fuelDisplay": "Hybrid",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 11
+      }
+    },
+    {
+      "mobileAdId": "950859807",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-11-24T09:24:00.000Z",
+      "modificationDate": "2025-12-08T09:22:00.000Z",
+      "vehicleClass": "Car",
+      "category": "EstateCar",
+      "make": "AUDI",
+      "model": "RS6",
+      "modelDescription": "4.0 TFSI Q · Pano · HuD · B&O-Adv. · Carbon · Dynamik+",
+      "condition": "USED",
+      "firstRegistration": "201803",
+      "mileage": 58300,
+      "power": 441,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "95850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=950859807",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/685c0013be38b2a0640c9fc6/2396_68665dd1b6af79a828099679__IMG_5952.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Audi RS6",
+        "subtitle": "4.0 TFSI Q · Pano · HuD · B&O-Adv. · Carbon · Dynamik+",
+        "priceFormatted": "95.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 12
+      }
+    },
+    {
+      "mobileAdId": "963551589",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-01-25T01:32:00.000Z",
+      "modificationDate": "2026-01-26T05:09:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "PORSCHE",
+      "model": "Cayenne",
+      "modelDescription": "S  · Kreide · Pano · HuD · InnoDrive · Sport-Desig",
+      "condition": "USED",
+      "firstRegistration": "202006",
+      "mileage": 49100,
+      "power": 260,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "95850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=963551589",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/691da958f4d2a3dfc00d174e/2396_69272dc92a802bd07008528c__IMG_2770.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Porsche Cayenne",
+        "subtitle": "S  · Kreide · Pano · HuD · InnoDrive · Sport-Desig",
+        "priceFormatted": "95.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 13
+      }
+    },
+    {
+      "mobileAdId": "947395972",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-01-23T03:18:00.000Z",
+      "modificationDate": "2026-02-04T06:20:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "MERCEDES_BENZ",
+      "model": "GLS 63 AMG",
+      "modelDescription": "4M+ · Pano · HuD · StHzg · LederExklusiv · TV",
+      "condition": "USED",
+      "firstRegistration": "201903",
+      "mileage": 98700,
+      "power": 450,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "95750.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=947395972",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/6827257674dc70374a008c8b/2396_68d1440e73d842d4fc043de6__IMG_2993.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz GLS 63 AMG",
+        "subtitle": "4M+ · Pano · HuD · StHzg · LederExklusiv · TV",
+        "priceFormatted": "95.750 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 14
+      }
+    },
+    {
+      "mobileAdId": "970026083",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-12-24T08:31:00.000Z",
+      "modificationDate": "2025-12-30T07:51:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "LAND_ROVER",
+      "model": "Range Rover Sport",
+      "modelDescription": "S Hybrid P460e Head-Up",
+      "condition": "USED",
+      "firstRegistration": "202005",
+      "mileage": 41100,
+      "power": 294,
+      "fuel": "HYBRID",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "94850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=970026083",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/698074543d6e11b9fc0d4a42/2396_6989cdff79596f80b70a6cd1__IMG_5478.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Land Rover Range Rover Sport",
+        "subtitle": "S Hybrid P460e Head-Up",
+        "priceFormatted": "94.850 €",
+        "fuelDisplay": "Hybrid",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 15
+      }
+    },
+    {
+      "mobileAdId": "970026677",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-02-07T01:16:00.000Z",
+      "modificationDate": "2026-02-19T06:14:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Limousine",
+      "make": "MERCEDES_BENZ",
+      "model": "S 63 AMG",
+      "modelDescription": "4M Magic Sky · Nachtsicht · Swarovski · NP220",
+      "condition": "USED",
+      "firstRegistration": "201810",
+      "mileage": 79700,
+      "power": 450,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "93550.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=970026677",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/698076a58e1d40e7380e785e/2396_698225854885a88b3f0011f8__IMG_5251.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz S 63 AMG",
+        "subtitle": "4M Magic Sky · Nachtsicht · Swarovski · NP220",
+        "priceFormatted": "93.550 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 16
+      }
+    },
+    {
+      "mobileAdId": "960974994",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-10-09T03:51:00.000Z",
+      "modificationDate": "2025-10-14T00:30:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Limousine",
+      "make": "MERCEDES_BENZ",
+      "model": "S 63 AMG",
+      "modelDescription": "First-Class · 3xTV · StHzg · DriversP · Chauf",
+      "condition": "USED",
+      "firstRegistration": "201805",
+      "mileage": 102700,
+      "power": 450,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "91750.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=960974994",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/68f658810e9e628984076ea6/2396_6904b6de4aaa329929063d4c__IMG_1340.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz S 63 AMG",
+        "subtitle": "First-Class · 3xTV · StHzg · DriversP · Chauf",
+        "priceFormatted": "91.750 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 17
+      }
+    },
+    {
+      "mobileAdId": "962274590",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-01-28T06:14:00.000Z",
+      "modificationDate": "2026-01-28T06:05:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "BMW",
+      "model": "X5",
+      "modelDescription": "50 e xDr M Sport · Pano-Sky · Massage · Iconic · 22\"",
+      "condition": "USED",
+      "firstRegistration": "201811",
+      "mileage": 100200,
+      "power": 250,
+      "fuel": "HYBRID",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "90850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=962274590",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/690a2d0ccc07abfdda0a53ef/2396_690c7f0829caa227af0b07fb__IMG_1756.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "BMW X5",
+        "subtitle": "50 e xDr M Sport · Pano-Sky · Massage · Iconic · 22\"",
+        "priceFormatted": "90.850 €",
+        "fuelDisplay": "Hybrid",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 18
+      }
+    },
+    {
+      "mobileAdId": "970806186",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-10-23T03:06:00.000Z",
+      "modificationDate": "2025-11-01T10:24:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "MERCEDES_BENZ",
+      "model": "EQS SUV",
+      "modelDescription": "580 4M AMG Business Class · 5xTV ·  HAL 10°",
+      "condition": "USED",
+      "firstRegistration": "202012",
+      "mileage": 66700,
+      "power": 265,
+      "fuel": "ELECTRICITY",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "89950.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=970806186",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/698c5b971f70d6e077023940/2396_699c77d63e4678ec67090012__IMG_6498.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz EQS SUV",
+        "subtitle": "580 4M AMG Business Class · 5xTV ·  HAL 10°",
+        "priceFormatted": "89.950 €",
+        "fuelDisplay": "Elektro",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 19
+      }
+    },
+    {
+      "mobileAdId": "948875079",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-11-24T02:56:00.000Z",
+      "modificationDate": "2025-12-02T09:52:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Limousine",
+      "make": "MERCEDES_BENZ",
+      "model": "S 65 AMG",
+      "modelDescription": "L  · First-Class · 3xTV · DriversP · Carbon",
+      "condition": "USED",
+      "firstRegistration": "201809",
+      "mileage": 114000,
+      "power": 463,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "89850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=948875079",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/683db73396246bbabe0b7d48/2396_684816effad697f9360addc0__IMG_4595.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz S 65 AMG",
+        "subtitle": "L  · First-Class · 3xTV · DriversP · Carbon",
+        "priceFormatted": "89.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 20
+      }
+    },
+    {
+      "mobileAdId": "943003084",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-12-13T07:05:00.000Z",
+      "modificationDate": "2025-12-19T06:07:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Cabrio",
+      "make": "PORSCHE",
+      "model": "Boxster",
+      "modelDescription": "718 Spyder  ·  1.Hd  ·  Sportabgas",
+      "condition": "USED",
+      "firstRegistration": "201904",
+      "mileage": 61600,
+      "power": 257,
+      "fuel": "PETROL",
+      "gearbox": "MANUAL_GEAR",
+      "consumerPriceGross": "87750.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=943003084",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/67e41db77c0dc30be601fe62/2396_67fa58715dd9bd3e880884d2__IMG_5366.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Porsche Boxster",
+        "subtitle": "718 Spyder  ·  1.Hd  ·  Sportabgas",
+        "priceFormatted": "87.750 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Schaltgetriebe",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 21
+      }
+    },
+    {
+      "mobileAdId": "970298726",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-11-10T00:03:00.000Z",
+      "modificationDate": "2025-11-20T09:48:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "BMW",
+      "model": "X7 M60",
+      "modelDescription": "i Pano-Sky · FROZEN · Massage · B&W · StHzg · 23\"",
+      "condition": "USED",
+      "firstRegistration": "201811",
+      "mileage": 40700,
+      "power": 390,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "86850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=970298726",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/69849d5006c227e99c00e704/2396_698c5d00a9bab9e7740d409a__IMG_5536.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "BMW X7 M60",
+        "subtitle": "i Pano-Sky · FROZEN · Massage · B&W · StHzg · 23\"",
+        "priceFormatted": "86.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 22
+      }
+    },
+    {
+      "mobileAdId": "958969067",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-12-14T04:35:00.000Z",
+      "modificationDate": "2025-12-26T00:08:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Cabrio",
+      "make": "PORSCHE",
+      "model": "911",
+      "modelDescription": "Turbo Cabrio Sport-Chrono · Carbon ·  · U-Frei",
+      "condition": "USED",
+      "firstRegistration": "201807",
+      "mileage": 43200,
+      "power": 353,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "86850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=958969067",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/68d7bcd47720afcb03037026/2396_68dd462e24a3b5087a06a7ec__IMG_0378.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Porsche 911",
+        "subtitle": "Turbo Cabrio Sport-Chrono · Carbon ·  · U-Frei",
+        "priceFormatted": "86.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 23
+      }
+    },
+    {
+      "mobileAdId": "963371691",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-10-14T10:35:00.000Z",
+      "modificationDate": "2025-10-27T06:22:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "PORSCHE",
+      "model": "Macan",
+      "modelDescription": "GTS · Sport-Chrono · Luft · Keyl · Pano · AHK · 21",
+      "condition": "USED",
+      "firstRegistration": "201811",
+      "mileage": 59300,
+      "power": 265,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "84850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=963371691",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/691aea93cff5bce3b9027a9b/2396_691da1ad9974dae32d0cce97__IMG_2272.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Porsche Macan",
+        "subtitle": "GTS · Sport-Chrono · Luft · Keyl · Pano · AHK · 21",
+        "priceFormatted": "84.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 24
+      }
+    },
+    {
+      "mobileAdId": "971596020",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-10-03T02:35:00.000Z",
+      "modificationDate": "2025-10-14T06:49:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "BMW",
+      "model": "X7 M60",
+      "modelDescription": "i Pano-Sky · 7-Sitz · Massage · B&W · StHzg · 23\"ACC",
+      "condition": "USED",
+      "firstRegistration": "201905",
+      "mileage": 90600,
+      "power": 390,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "83850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=971596020",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/699868db41f8bdf33d077201/2396_69a19ce539b3f938ac092411__IMG_6810.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "BMW X7 M60",
+        "subtitle": "i Pano-Sky · 7-Sitz · Massage · B&W · StHzg · 23\"ACC",
+        "priceFormatted": "83.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 25
+      }
+    },
+    {
+      "mobileAdId": "951479738",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-10-28T01:27:00.000Z",
+      "modificationDate": "2025-11-09T02:45:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "MERCEDES_BENZ",
+      "model": "GLS 580",
+      "modelDescription": "4Matic · AMG · Pano · HuD · StHzg · KeylessGO · 23\"",
+      "condition": "USED",
+      "firstRegistration": "201701",
+      "mileage": 109100,
+      "power": 370,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "82850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=951479738",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/686575a0e2e3855da309cf25/2396_686f9b0aafd20c772e0dba1e__IMG_6459.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz GLS 580",
+        "subtitle": "4Matic · AMG · Pano · HuD · StHzg · KeylessGO · 23\"",
+        "priceFormatted": "82.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 26
+      }
+    },
+    {
+      "mobileAdId": "952154483",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-01-06T02:37:00.000Z",
+      "modificationDate": "2026-01-17T07:40:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "PORSCHE",
+      "model": "Cayenne",
+      "modelDescription": "GTS  · Pano · InnoDrive · 18-Wege · AHK",
+      "condition": "USED",
+      "firstRegistration": "201702",
+      "mileage": 58500,
+      "power": 260,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "78850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=952154483",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/686fc158cab5a908740c8ae4/2396_687600e8f5d0f8a37200ad43__IMG_6632.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Porsche Cayenne",
+        "subtitle": "GTS  · Pano · InnoDrive · 18-Wege · AHK",
+        "priceFormatted": "78.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 27
+      }
+    },
+    {
+      "mobileAdId": "970204864",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-12-19T10:24:00.000Z",
+      "modificationDate": "2026-01-01T09:43:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "MERCEDES_BENZ",
+      "model": "GLE 450",
+      "modelDescription": "d 4M AMG Pano · Luftf · Trittbretter · Distr.",
+      "condition": "USED",
+      "firstRegistration": "201805",
+      "mileage": 89400,
+      "power": 270,
+      "fuel": "DIESEL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "76990.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=970204864",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/69832ea4b4fb65abee0afdd2/2396_6985dacc36f50d50b506aace__IMG_5439.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz GLE 450",
+        "subtitle": "d 4M AMG Pano · Luftf · Trittbretter · Distr.",
+        "priceFormatted": "76.990 €",
+        "fuelDisplay": "Diesel",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 28
+      }
+    },
+    {
+      "mobileAdId": "935822546",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-11-17T05:19:00.000Z",
+      "modificationDate": "2025-11-23T01:10:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "MERCEDES_BENZ",
+      "model": "GLE 63 AMG",
+      "modelDescription": "GLE 63S AMG 4M+ · Pano · Airm · Burm · HUD · Night · Drivers",
+      "condition": "USED",
+      "firstRegistration": "201804",
+      "mileage": 54500,
+      "power": 420,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "76850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=935822546",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/67768cb5eb3fcd56c3017728/2396_694014e7e735eecce206a066__IMG_3259.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz GLE 63 AMG",
+        "subtitle": "GLE 63S AMG 4M+ · Pano · Airm · Burm · HUD · Night · Drivers",
+        "priceFormatted": "76.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 29
+      }
+    },
+    {
+      "mobileAdId": "969789247",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-01-24T02:06:00.000Z",
+      "modificationDate": "2026-01-27T08:27:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "MERCEDES_BENZ",
+      "model": "GLE 400",
+      "modelDescription": "e 4M · AMG · PremiumPlus · Pano · HuD · Luftf",
+      "condition": "USED",
+      "firstRegistration": "201805",
+      "mileage": 87400,
+      "power": 243,
+      "fuel": "HYBRID",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "76850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=969789247",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/697cd721de53861cc80309eb/2396_698cacf607ccaef8c1045698__IMG_7787.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz GLE 400",
+        "subtitle": "e 4M · AMG · PremiumPlus · Pano · HuD · Luftf",
+        "priceFormatted": "76.850 €",
+        "fuelDisplay": "Hybrid",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 30
+      }
+    },
+    {
+      "mobileAdId": "970130868",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-02-21T08:37:00.000Z",
+      "modificationDate": "2026-02-26T00:06:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Limousine",
+      "make": "BMW",
+      "model": "M5",
+      "modelDescription": "M Drivers P. · Sitzbelüftung · Glasdach",
+      "condition": "USED",
+      "firstRegistration": "201912",
+      "mileage": 50700,
+      "power": 441,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "74850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=970130868",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/69820d95d027e7760c03dac8/2396_69848495e45789ae64062da2__IMG_5342.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "BMW M5",
+        "subtitle": "M Drivers P. · Sitzbelüftung · Glasdach",
+        "priceFormatted": "74.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 31
+      }
+    },
+    {
+      "mobileAdId": "958539109",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-01-07T09:29:00.000Z",
+      "modificationDate": "2026-01-20T07:06:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Limousine",
+      "make": "MERCEDES_BENZ",
+      "model": "EQS",
+      "modelDescription": "AMG 53 4Matic · Premium Plus · Carbon · Nappa",
+      "condition": "USED",
+      "firstRegistration": "202009",
+      "mileage": 60200,
+      "power": 265,
+      "fuel": "ELECTRICITY",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "73850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=958539109",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/68d12d451dbc0f93030ca4df/2396_68e3b41764026c87c6079d25__IMG_9985.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz EQS",
+        "subtitle": "AMG 53 4Matic · Premium Plus · Carbon · Nappa",
+        "priceFormatted": "73.850 €",
+        "fuelDisplay": "Elektro",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 32
+      }
+    },
+    {
+      "mobileAdId": "957077722",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-01-05T01:00:00.000Z",
+      "modificationDate": "2026-01-19T01:24:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "MERCEDES_BENZ",
+      "model": "EQE SUV",
+      "modelDescription": "AMG 43 4Matic · Premium+ · Pano · HuD",
+      "condition": "USED",
+      "firstRegistration": "202011",
+      "mileage": 82400,
+      "power": 215,
+      "fuel": "ELECTRICITY",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "72950.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=957077722",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/68bae0b9cb6a7bd8580085f6/2396_68bc00aefb34a859280f55b5__IMG_8309.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz EQE SUV",
+        "subtitle": "AMG 43 4Matic · Premium+ · Pano · HuD",
+        "priceFormatted": "72.950 €",
+        "fuelDisplay": "Elektro",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 33
+      }
+    },
+    {
+      "mobileAdId": "966067908",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-09-15T08:06:00.000Z",
+      "modificationDate": "2025-09-24T01:08:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "MERCEDES_BENZ",
+      "model": "GLC 450",
+      "modelDescription": "d 4Matic Edition AMG Line · Pano · HuD",
+      "condition": "USED",
+      "firstRegistration": "201810",
+      "mileage": 63400,
+      "power": 270,
+      "fuel": "DIESEL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "72750.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=966067908",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/69440ea21aaa1e28bd04232c/2396_6946a0892bb36fc1bb015bcc__IMG_3737.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz GLC 450",
+        "subtitle": "d 4Matic Edition AMG Line · Pano · HuD",
+        "priceFormatted": "72.750 €",
+        "fuelDisplay": "Diesel",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 34
+      }
+    },
+    {
+      "mobileAdId": "958030108",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-01-28T04:58:00.000Z",
+      "modificationDate": "2026-01-29T02:50:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Limousine",
+      "make": "MERCEDES_BENZ",
+      "model": "S 63 AMG",
+      "modelDescription": "4M · MagicSky · HuD · Swarovski · StHzg · TV",
+      "condition": "USED",
+      "firstRegistration": "201711",
+      "mileage": 99700,
+      "power": 450,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "70850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=958030108",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/68c968f955e7bbab520e5c53/2396_68d27892acdc4a6c1f025b40__IMG_9328.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz S 63 AMG",
+        "subtitle": "4M · MagicSky · HuD · Swarovski · StHzg · TV",
+        "priceFormatted": "70.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 35
+      }
+    },
+    {
+      "mobileAdId": "937988702",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-09-30T08:56:00.000Z",
+      "modificationDate": "2025-09-30T02:24:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Cabrio",
+      "make": "MERCEDES_BENZ",
+      "model": "C 63 AMG",
+      "modelDescription": "C 63 S AMG Cabrio  · Burm · SAGA · Distr+ · Night · RFK",
+      "condition": "USED",
+      "firstRegistration": "201910",
+      "mileage": 88700,
+      "power": 375,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "70850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=937988702",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/67979a3a82ab43b51e0b8b4d/2396_67a3665139c3a78937027473__20250205_132110.jpg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz C 63 AMG",
+        "subtitle": "C 63 S AMG Cabrio  · Burm · SAGA · Distr+ · Night · RFK",
+        "priceFormatted": "70.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 36
+      }
+    },
+    {
+      "mobileAdId": "960970367",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-09-21T00:38:00.000Z",
+      "modificationDate": "2025-10-03T10:17:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "MERCEDES_BENZ",
+      "model": "GLE 350",
+      "modelDescription": "de 4Matic · Pano · HuD · Luftf · KeylessGO · AHK",
+      "condition": "USED",
+      "firstRegistration": "201912",
+      "mileage": 74500,
+      "power": 200,
+      "fuel": "HYBRID",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "69850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=960970367",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/68f6465a5e24ec58c50238bb/2396_690b2d4f440b4b232c0f31dc__IMG_1606.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz GLE 350",
+        "subtitle": "de 4Matic · Pano · HuD · Luftf · KeylessGO · AHK",
+        "priceFormatted": "69.850 €",
+        "fuelDisplay": "Hybrid",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 37
+      }
+    },
+    {
+      "mobileAdId": "955768023",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-01-03T04:36:00.000Z",
+      "modificationDate": "2026-01-04T02:43:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Coupe",
+      "make": "PORSCHE",
+      "model": "911",
+      "modelDescription": "Carrera 4 S Coupe · Sport-Chrono · Glasdach · PCM",
+      "condition": "USED",
+      "firstRegistration": "201706",
+      "mileage": 92800,
+      "power": 353,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "69850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=955768023",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/68a6e4b113e86e64c408a154/2396_68ba8ee050798f9a580819a8__IMG_8225.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Porsche 911",
+        "subtitle": "Carrera 4 S Coupe · Sport-Chrono · Glasdach · PCM",
+        "priceFormatted": "69.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 38
+      }
+    },
+    {
+      "mobileAdId": "960368147",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-10-24T03:53:00.000Z",
+      "modificationDate": "2025-10-30T07:03:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Limousine",
+      "make": "BMW",
+      "model": "M4",
+      "modelDescription": "xDrive Compe. · Carbon Ext. · Schale · Sonderlacki.",
+      "condition": "USED",
+      "firstRegistration": "201912",
+      "mileage": 37100,
+      "power": 375,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "69850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=960368147",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/68ed15ecf47b38d40303efa5/2396_68ef8c5ee51c2384680e17f1__IMG_0459.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "BMW M4",
+        "subtitle": "xDrive Compe. · Carbon Ext. · Schale · Sonderlacki.",
+        "priceFormatted": "69.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 39
+      }
+    },
+    {
+      "mobileAdId": "963633368",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-01-19T06:16:00.000Z",
+      "modificationDate": "2026-01-31T01:32:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "LAND_ROVER",
+      "model": "Range Rover Sport",
+      "modelDescription": "5.0 SVR · Carbon · Pano · StHzg · 22\"",
+      "condition": "USED",
+      "firstRegistration": "201801",
+      "mileage": 114200,
+      "power": 294,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "67850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=963633368",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/691ee8b0a12c3d07060ec3db/2396_6925c87519e14e312a0cc207__IMG_2649.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Land Rover Range Rover Sport",
+        "subtitle": "5.0 SVR · Carbon · Pano · StHzg · 22\"",
+        "priceFormatted": "67.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 40
+      }
+    },
+    {
+      "mobileAdId": "958030318",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-10-06T05:31:00.000Z",
+      "modificationDate": "2025-10-13T10:53:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Coupe",
+      "make": "PORSCHE",
+      "model": "911",
+      "modelDescription": "Carrera 4 GTS Coupe · Aerokit · Approved10/2026",
+      "condition": "USED",
+      "firstRegistration": "201802",
+      "mileage": 123600,
+      "power": 353,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "66950.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=958030318",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/68c969c5398530cb310133d0/2396_68cbef1779902e0b49059b61__IMG_9156.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Porsche 911",
+        "subtitle": "Carrera 4 GTS Coupe · Aerokit · Approved10/2026",
+        "priceFormatted": "66.950 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 41
+      }
+    },
+    {
+      "mobileAdId": "959919275",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-10-15T02:23:00.000Z",
+      "modificationDate": "2025-10-24T09:43:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Van",
+      "make": "MERCEDES_BENZ",
+      "model": "V 250",
+      "modelDescription": "d STYLE AMG-Line lang · Pano · Tisch · 7-Sitz",
+      "condition": "USED",
+      "firstRegistration": "201807",
+      "mileage": 98300,
+      "power": 140,
+      "fuel": "DIESEL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "66850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=959919275",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/68e63c81b3d4f2e4df038f27/2396_68ecee2716c760d082007ea5__IMG_0744.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz V 250",
+        "subtitle": "d STYLE AMG-Line lang · Pano · Tisch · 7-Sitz",
+        "priceFormatted": "66.850 €",
+        "fuelDisplay": "Diesel",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 42
+      }
+    },
+    {
+      "mobileAdId": "963119822",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-10-19T03:18:00.000Z",
+      "modificationDate": "2025-10-23T06:20:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Coupe",
+      "make": "MERCEDES_BENZ",
+      "model": "GLC 220",
+      "modelDescription": "d 4M Coupe AMG · Pano · 360 · Burm · Distr. · HuD",
+      "condition": "USED",
+      "firstRegistration": "201808",
+      "mileage": 90500,
+      "power": 143,
+      "fuel": "DIESEL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "66850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=963119822",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/691712a35e0885f9e60dcafb/2396_691ee848d9f22f99b20e0a13__IMG_2457.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz GLC 220",
+        "subtitle": "d 4M Coupe AMG · Pano · 360 · Burm · Distr. · HuD",
+        "priceFormatted": "66.850 €",
+        "fuelDisplay": "Diesel",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 43
+      }
+    },
+    {
+      "mobileAdId": "961303434",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-02-16T08:51:00.000Z",
+      "modificationDate": "2026-02-24T00:25:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Limousine",
+      "make": "MERCEDES_BENZ",
+      "model": "EQS",
+      "modelDescription": "580 4M · AMG · Adv. · MAGNO · Pano · Hyper · Burm · 360",
+      "condition": "USED",
+      "firstRegistration": "202011",
+      "mileage": 87400,
+      "power": 265,
+      "fuel": "ELECTRICITY",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "66850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=961303434",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/68fb5b5e0444168a06049442/2396_6904ca3c4837fb8fa503f183__IMG_1374.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz EQS",
+        "subtitle": "580 4M · AMG · Adv. · MAGNO · Pano · Hyper · Burm · 360",
+        "priceFormatted": "66.850 €",
+        "fuelDisplay": "Elektro",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 44
+      }
+    },
+    {
+      "mobileAdId": "966399956",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-12-12T09:45:00.000Z",
+      "modificationDate": "2025-12-21T10:22:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "MERCEDES_BENZ",
+      "model": "GLE 450",
+      "modelDescription": "d 4M AMG · PremiumPlus · Pano · HuD · StHzg",
+      "condition": "USED",
+      "firstRegistration": "201904",
+      "mileage": 91600,
+      "power": 270,
+      "fuel": "DIESEL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "65850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=966399956",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/69491fa71836ab0d950936fc/2396_69526c742bb323c473032bd2__IMG_4076.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz GLE 450",
+        "subtitle": "d 4M AMG · PremiumPlus · Pano · HuD · StHzg",
+        "priceFormatted": "65.850 €",
+        "fuelDisplay": "Diesel",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 45
+      }
+    },
+    {
+      "mobileAdId": "943069851",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-01-22T04:51:00.000Z",
+      "modificationDate": "2026-01-27T03:46:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Limousine",
+      "make": "AUDI",
+      "model": "S7",
+      "modelDescription": "3.0 TDI qu · Pano · HuD · StHzg · B&O-Adv. · Laser",
+      "condition": "USED",
+      "firstRegistration": "201801",
+      "mileage": 122100,
+      "power": 260,
+      "fuel": "DIESEL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "64950.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=943069851",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/67e5226dee81d62b3c093a46/2396_67f8f17c7958bb54800551f0__20250411_105944.jpg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Audi S7",
+        "subtitle": "3.0 TDI qu · Pano · HuD · StHzg · B&O-Adv. · Laser",
+        "priceFormatted": "64.950 €",
+        "fuelDisplay": "Diesel",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 46
+      }
+    },
+    {
+      "mobileAdId": "948854487",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-09-09T08:53:00.000Z",
+      "modificationDate": "2025-09-22T10:21:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "BMW",
+      "model": "X7",
+      "modelDescription": "xDr 40d M-Sport · StHz · Laser · PanoSky · Massage",
+      "condition": "USED",
+      "firstRegistration": "201705",
+      "mileage": 104100,
+      "power": 250,
+      "fuel": "DIESEL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "62850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=948854487",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/683d66a83e8cb921c2037aa7/2396_6842d9be91b0607b5108f9f4__IMG_4458.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "BMW X7",
+        "subtitle": "xDr 40d M-Sport · StHz · Laser · PanoSky · Massage",
+        "priceFormatted": "62.850 €",
+        "fuelDisplay": "Diesel",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 47
+      }
+    },
+    {
+      "mobileAdId": "953880992",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-01-24T10:03:00.000Z",
+      "modificationDate": "2026-02-01T04:56:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Limousine",
+      "make": "BMW",
+      "model": "550",
+      "modelDescription": "e xDrive · Pano · H&K · Sitzbelüftung · Iconic Glow",
+      "condition": "USED",
+      "firstRegistration": "201904",
+      "mileage": 95600,
+      "power": 300,
+      "fuel": "HYBRID",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "62850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=953880992",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/688a197066cb6e3523073962/2396_68936c7bcf14ad6ffd0256a0__IMG_7351.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "BMW 550",
+        "subtitle": "e xDrive · Pano · H&K · Sitzbelüftung · Iconic Glow",
+        "priceFormatted": "62.850 €",
+        "fuelDisplay": "Hybrid",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 48
+      }
+    },
+    {
+      "mobileAdId": "100000122",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-10-13T02:19:00.000Z",
+      "modificationDate": "2025-10-18T10:25:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "MERCEDES_BENZ",
+      "model": "GLC 400",
+      "modelDescription": "e 4M AMG Premium Plus · Pano · HuD · SitzKlima",
+      "condition": "USED",
+      "firstRegistration": "201802",
+      "mileage": 93300,
+      "power": 243,
+      "fuel": "HYBRID",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "62750.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=100000122",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/document_images/2396_63d7892abe17fe465c0f58cc__Frisch%2520eingetroffen.jpg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz GLC 400",
+        "subtitle": "e 4M AMG Premium Plus · Pano · HuD · SitzKlima",
+        "priceFormatted": "62.750 €",
+        "fuelDisplay": "Hybrid",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 49
+      }
+    },
+    {
+      "mobileAdId": "970025755",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-12-06T08:14:00.000Z",
+      "modificationDate": "2025-12-11T06:05:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "JAGUAR",
+      "model": "F-Pace",
+      "modelDescription": "P400 AWD · Pano · HuD · Massage · Matrix · Standhzg",
+      "condition": "USED",
+      "firstRegistration": "201706",
+      "mileage": 124700,
+      "power": 221,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "61990.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=970025755",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/698072e919a47c250304bce3/2396_698a0954a63d9b48ea048014__IMG_5625.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Jaguar F-Pace",
+        "subtitle": "P400 AWD · Pano · HuD · Massage · Matrix · Standhzg",
+        "priceFormatted": "61.990 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 50
+      }
+    },
+    {
+      "mobileAdId": "964342658",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-01-11T05:28:00.000Z",
+      "modificationDate": "2026-01-21T08:49:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Limousine",
+      "make": "MERCEDES_BENZ",
+      "model": "S 560",
+      "modelDescription": "4M Lang · AMG · Pano · HuD · StHzg · FOND-TV",
+      "condition": "USED",
+      "firstRegistration": "201812",
+      "mileage": 116900,
+      "power": 345,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "61850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=964342658",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/6929bb4f8c1cdd0f6e0cfd4c/2396_693174642b874b24400aa0b9__DSC00103.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz S 560",
+        "subtitle": "4M Lang · AMG · Pano · HuD · StHzg · FOND-TV",
+        "priceFormatted": "61.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 51
+      }
+    },
+    {
+      "mobileAdId": "956118707",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-09-07T03:19:00.000Z",
+      "modificationDate": "2025-09-20T07:08:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "BMW",
+      "model": "X7",
+      "modelDescription": "xD 40 d M Sport · Pano-Sky · StHzg · 3xTV · Night",
+      "condition": "USED",
+      "firstRegistration": "201707",
+      "mileage": 68100,
+      "power": 250,
+      "fuel": "DIESEL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "61850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=956118707",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/68ac3e7f31e6192cc50e4c6b/2396_68fcbf33d24febc0d508c00c__IMG_8341.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "BMW X7",
+        "subtitle": "xD 40 d M Sport · Pano-Sky · StHzg · 3xTV · Night",
+        "priceFormatted": "61.850 €",
+        "fuelDisplay": "Diesel",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 52
+      }
+    },
+    {
+      "mobileAdId": "971242124",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-12-19T06:16:00.000Z",
+      "modificationDate": "2025-12-28T09:06:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "MASERATI",
+      "model": "Grecale",
+      "modelDescription": "Modena Pano · HuD · SitzKlima · Sonus · AHK · 360°",
+      "condition": "USED",
+      "firstRegistration": "201705",
+      "mileage": 147600,
+      "power": 221,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "60950.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=971242124",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/69930257aa6f275b060d8ab3/2396_69a2c7be9cb2e47c99023a17__IMG_6893.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Maserati Grecale",
+        "subtitle": "Modena Pano · HuD · SitzKlima · Sonus · AHK · 360°",
+        "priceFormatted": "60.950 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 53
+      }
+    },
+    {
+      "mobileAdId": "938340818",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-01-11T04:33:00.000Z",
+      "modificationDate": "2026-01-20T01:41:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Limousine",
+      "make": "AUDI",
+      "model": "A8",
+      "modelDescription": "60 TDI Lang Q. · Sportpaket · Pano · B&O-Adv · HuD · TV",
+      "condition": "USED",
+      "firstRegistration": "201612",
+      "mileage": 82200,
+      "power": 210,
+      "fuel": "DIESEL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "60850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=938340818",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/679cf99cb4e400f020044a14/2396_67a73278fbeabed5c506602a__20250208_094944.jpg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Audi A8",
+        "subtitle": "60 TDI Lang Q. · Sportpaket · Pano · B&O-Adv · HuD · TV",
+        "priceFormatted": "60.850 €",
+        "fuelDisplay": "Diesel",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 54
+      }
+    },
+    {
+      "mobileAdId": "956974764",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-12-16T04:16:00.000Z",
+      "modificationDate": "2025-12-25T02:59:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "BMW",
+      "model": "X7",
+      "modelDescription": "xDrive 40 d M Sport · Pano-SKY · StHzg · H&K · ACC",
+      "condition": "USED",
+      "firstRegistration": "201706",
+      "mileage": 97000,
+      "power": 250,
+      "fuel": "DIESEL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "60850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=956974764",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/68b94e75285e4b2ba303d86b/2396_68c28f952d3221085a01cd53__IMG_8572.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "BMW X7",
+        "subtitle": "xDrive 40 d M Sport · Pano-SKY · StHzg · H&K · ACC",
+        "priceFormatted": "60.850 €",
+        "fuelDisplay": "Diesel",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 55
+      }
+    },
+    {
+      "mobileAdId": "970635790",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-09-13T01:00:00.000Z",
+      "modificationDate": "2025-09-18T06:52:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "MERCEDES_BENZ",
+      "model": "GLE 450",
+      "modelDescription": "4Matic AMG Panorama · Head-Up · Night-P. · AHK",
+      "condition": "USED",
+      "firstRegistration": "201604",
+      "mileage": 160900,
+      "power": 270,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "59950.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=970635790",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/6989c1d649c8095808063116/2396_698de2f9157fc0e8cf05b398__IMG_5849.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz GLE 450",
+        "subtitle": "4Matic AMG Panorama · Head-Up · Night-P. · AHK",
+        "priceFormatted": "59.950 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 56
+      }
+    },
+    {
+      "mobileAdId": "967879167",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-10-28T02:39:00.000Z",
+      "modificationDate": "2025-11-04T07:08:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Limousine",
+      "make": "MERCEDES_BENZ",
+      "model": "S 350",
+      "modelDescription": "d 4Matic Chauffeur-Paket · StHzg · Distronic",
+      "condition": "USED",
+      "firstRegistration": "201812",
+      "mileage": 55100,
+      "power": 200,
+      "fuel": "DIESEL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "59950.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=967879167",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/695fb1c6a017b6f89a001443/2396_6982175b2e5ea14510092b0c__IMG_5202.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz S 350",
+        "subtitle": "d 4Matic Chauffeur-Paket · StHzg · Distronic",
+        "priceFormatted": "59.950 €",
+        "fuelDisplay": "Diesel",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 57
+      }
+    },
+    {
+      "mobileAdId": "964692835",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-09-26T06:18:00.000Z",
+      "modificationDate": "2025-09-30T05:49:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "MERCEDES_BENZ",
+      "model": "GLC 300",
+      "modelDescription": "d 4M AMG · PremiumPlus · Pano · HuD · StHzg",
+      "condition": "USED",
+      "firstRegistration": "201708",
+      "mileage": 59600,
+      "power": 190,
+      "fuel": "DIESEL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "59850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=964692835",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/692f1329db470cc7030a419c/2396_693980adb77df7268100d87a__IMG_3146.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz GLC 300",
+        "subtitle": "d 4M AMG · PremiumPlus · Pano · HuD · StHzg",
+        "priceFormatted": "59.850 €",
+        "fuelDisplay": "Diesel",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 58
+      }
+    },
+    {
+      "mobileAdId": "960528155",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-12-08T08:01:00.000Z",
+      "modificationDate": "2025-12-11T00:26:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "MERCEDES_BENZ",
+      "model": "GLE 350",
+      "modelDescription": "e 4Matic AMG · Pano · HuD · Burm. · Keyless · 360°",
+      "condition": "USED",
+      "firstRegistration": "201802",
+      "mileage": 79300,
+      "power": 200,
+      "fuel": "HYBRID",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "59750.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=960528155",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/68ef86e05c6e2e5045099d00/2396_68f75c8d3f49d29c3c0562f3__IMG_0888.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz GLE 350",
+        "subtitle": "e 4Matic AMG · Pano · HuD · Burm. · Keyless · 360°",
+        "priceFormatted": "59.750 €",
+        "fuelDisplay": "Hybrid",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 59
+      }
+    },
+    {
+      "mobileAdId": "956906312",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-10-22T05:38:00.000Z",
+      "modificationDate": "2025-11-03T01:01:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "JAGUAR",
+      "model": "F-Pace",
+      "modelDescription": "SVR AWD  · Pano · HuD · ACC",
+      "condition": "USED",
+      "firstRegistration": "201811",
+      "mileage": 61100,
+      "power": 221,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "58850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=956906312",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/68b8430c3759fc2a290ffc3f/2396_68c1447af81e2c6755019f73__IMG_8425.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Jaguar F-Pace",
+        "subtitle": "SVR AWD  · Pano · HuD · ACC",
+        "priceFormatted": "58.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 60
+      }
+    },
+    {
+      "mobileAdId": "965963318",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-10-09T05:51:00.000Z",
+      "modificationDate": "2025-10-09T03:12:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "LAND_ROVER",
+      "model": "Range Rover Velar",
+      "modelDescription": "P400 R-Dynamic SE · Pano · HuD · AHK",
+      "condition": "USED",
+      "firstRegistration": "201706",
+      "mileage": 132800,
+      "power": 221,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "57950.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=965963318",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/694275f9057a95fb930890d4/2396_694bb5e1a678b704b006415d__IMG_3997.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Land Rover Range Rover Velar",
+        "subtitle": "P400 R-Dynamic SE · Pano · HuD · AHK",
+        "priceFormatted": "57.950 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 61
+      }
+    },
+    {
+      "mobileAdId": "971239522",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-10-28T00:26:00.000Z",
+      "modificationDate": "2025-10-29T05:05:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "BMW",
+      "model": "X5 M50",
+      "modelDescription": "i  · Pano-Sky · StHzg · Bowers & Wilkins ·  22\"",
+      "condition": "USED",
+      "firstRegistration": "201707",
+      "mileage": 116300,
+      "power": 360,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "57950.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=971239522",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/6992f8246aa7ad86e8081b36/2396_69984bb7cca9ed9dd605c66b__IMG_6281.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "BMW X5 M50",
+        "subtitle": "i  · Pano-Sky · StHzg · Bowers & Wilkins ·  22\"",
+        "priceFormatted": "57.950 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 62
+      }
+    },
+    {
+      "mobileAdId": "971239523",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-10-28T00:26:00.000Z",
+      "modificationDate": "2025-10-29T05:05:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "BMW",
+      "model": "X5 M50",
+      "modelDescription": "i  · Pano-Sky · StHzg · Bowers & Wilkins ·  22\"",
+      "condition": "USED",
+      "firstRegistration": "201707",
+      "mileage": 116300,
+      "power": 360,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "57950.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=971239523",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/6992f8246aa7ad86e8081b36/2396_69984bb7cca9ed9dd605c66b__IMG_6281.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "BMW X5 M50",
+        "subtitle": "i  · Pano-Sky · StHzg · Bowers & Wilkins ·  22\"",
+        "priceFormatted": "57.950 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 63
+      }
+    },
+    {
+      "mobileAdId": "100000164",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-02-19T10:52:00.000Z",
+      "modificationDate": "2026-02-27T04:58:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "MERCEDES_BENZ",
+      "model": "GLC 300",
+      "modelDescription": "d 4M AMG · PremiumPlus · Pano · HuD · StHzg · Burm",
+      "condition": "USED",
+      "firstRegistration": "201810",
+      "mileage": 64300,
+      "power": 190,
+      "fuel": "DIESEL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "57850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=100000164",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/document_images/2396_63d7892abe17fe465c0f58cc__Frisch%2520eingetroffen.jpg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz GLC 300",
+        "subtitle": "d 4M AMG · PremiumPlus · Pano · HuD · StHzg · Burm",
+        "priceFormatted": "57.850 €",
+        "fuelDisplay": "Diesel",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 64
+      }
+    },
+    {
+      "mobileAdId": "964756298",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-10-08T05:58:00.000Z",
+      "modificationDate": "2025-10-11T03:51:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Limousine",
+      "make": "PORSCHE",
+      "model": "Panamera",
+      "modelDescription": "4S V8 Diesel · Pano · Matrix · Luft · Chrono · 21",
+      "condition": "USED",
+      "firstRegistration": "201810",
+      "mileage": 78100,
+      "power": 330,
+      "fuel": "DIESEL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "56950.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=964756298",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/69300b092b735e7f12018b52/2396_69452f06b1d678fc2a06809c__IMG_3700.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Porsche Panamera",
+        "subtitle": "4S V8 Diesel · Pano · Matrix · Luft · Chrono · 21",
+        "priceFormatted": "56.950 €",
+        "fuelDisplay": "Diesel",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 65
+      }
+    },
+    {
+      "mobileAdId": "968495667",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-01-12T06:45:00.000Z",
+      "modificationDate": "2026-01-23T06:33:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "BMW",
+      "model": "X5 M50",
+      "modelDescription": "d Panorama HuD H&K AHK 22\"",
+      "condition": "USED",
+      "firstRegistration": "201710",
+      "mileage": 131800,
+      "power": 360,
+      "fuel": "DIESEL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "56850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=968495667",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/696919f1cb6310bbdb0b186f/2396_697775d1e8cb467657088673__IMG_4803.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "BMW X5 M50",
+        "subtitle": "d Panorama HuD H&K AHK 22\"",
+        "priceFormatted": "56.850 €",
+        "fuelDisplay": "Diesel",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 66
+      }
+    },
+    {
+      "mobileAdId": "970026396",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-09-13T06:44:00.000Z",
+      "modificationDate": "2025-09-17T00:09:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "LAND_ROVER",
+      "model": "Range Rover Velar",
+      "modelDescription": "P400e · Pano · HuD · Massage · Matrix",
+      "condition": "USED",
+      "firstRegistration": "201803",
+      "mileage": 89500,
+      "power": 221,
+      "fuel": "HYBRID",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "56850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=970026396",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/69807559501cdec06e0a5af8/2396_6989e3d19199782c6908fa36__IMG_5589.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Land Rover Range Rover Velar",
+        "subtitle": "P400e · Pano · HuD · Massage · Matrix",
+        "priceFormatted": "56.850 €",
+        "fuelDisplay": "Hybrid",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 67
+      }
+    },
+    {
+      "mobileAdId": "970025932",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-12-19T00:11:00.000Z",
+      "modificationDate": "2025-12-24T01:20:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "MERCEDES_BENZ",
+      "model": "GLE 350",
+      "modelDescription": "d 4M · AMG · E-Aktive · Pano · HuD · Massage · 22\"",
+      "condition": "USED",
+      "firstRegistration": "201710",
+      "mileage": 145200,
+      "power": 200,
+      "fuel": "DIESEL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "56850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=970025932",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/69807388abd7184fff014d85/2396_698dae1a18ea43e6d20380b7__IMG_5812.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz GLE 350",
+        "subtitle": "d 4M · AMG · E-Aktive · Pano · HuD · Massage · 22\"",
+        "priceFormatted": "56.850 €",
+        "fuelDisplay": "Diesel",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 68
+      }
+    },
+    {
+      "mobileAdId": "970025933",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-12-19T00:11:00.000Z",
+      "modificationDate": "2025-12-24T01:20:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "MERCEDES_BENZ",
+      "model": "GLE 350",
+      "modelDescription": "d 4M · AMG · E-Aktive · Pano · HuD · Massage · 22\"",
+      "condition": "USED",
+      "firstRegistration": "201710",
+      "mileage": 145200,
+      "power": 200,
+      "fuel": "DIESEL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "56850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=970025933",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/69807388abd7184fff014d85/2396_698dae1a18ea43e6d20380b7__IMG_5812.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz GLE 350",
+        "subtitle": "d 4M · AMG · E-Aktive · Pano · HuD · Massage · 22\"",
+        "priceFormatted": "56.850 €",
+        "fuelDisplay": "Diesel",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 69
+      }
+    },
+    {
+      "mobileAdId": "970634858",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-02-17T10:59:00.000Z",
+      "modificationDate": "2026-03-02T06:43:00.000Z",
+      "vehicleClass": "Car",
+      "category": "EstateCar",
+      "make": "AUDI",
+      "model": "RS6",
+      "modelDescription": "4.0 TFSI Q performance Pano · Akrapovic · 280 km",
+      "condition": "USED",
+      "firstRegistration": "201809",
+      "mileage": 56600,
+      "power": 441,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "56850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=970634858",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/6989be249c2332bab401472a/2396_69947f6f94cdfa9498020fe4__IMG_6119.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Audi RS6",
+        "subtitle": "4.0 TFSI Q performance Pano · Akrapovic · 280 km",
+        "priceFormatted": "56.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 70
+      }
+    },
+    {
+      "mobileAdId": "965203576",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-12-25T05:48:00.000Z",
+      "modificationDate": "2025-12-26T08:20:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "MERCEDES_BENZ",
+      "model": "GLE 350",
+      "modelDescription": "d 4M AMG · Pano · HuD · Airmatic · StHzg · Distr",
+      "condition": "USED",
+      "firstRegistration": "201801",
+      "mileage": 51900,
+      "power": 200,
+      "fuel": "DIESEL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "54750.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=965203576",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/6936de3182558d45e2086f10/2396_693c1b58261637e1da0a0e9d__IMG_3337.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz GLE 350",
+        "subtitle": "d 4M AMG · Pano · HuD · Airmatic · StHzg · Distr",
+        "priceFormatted": "54.750 €",
+        "fuelDisplay": "Diesel",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 71
+      }
+    },
+    {
+      "mobileAdId": "967879047",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-11-09T04:17:00.000Z",
+      "modificationDate": "2025-11-20T09:18:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "MERCEDES_BENZ",
+      "model": "GLE 350",
+      "modelDescription": "e 4M Pano · Head-up · Burmester · Distronic",
+      "condition": "USED",
+      "firstRegistration": "201803",
+      "mileage": 73600,
+      "power": 200,
+      "fuel": "HYBRID",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "53850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=967879047",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/695fb13f62df61f59c0b734e/2396_6973a2e14fd3207ad806bcd9__IMG_4709.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz GLE 350",
+        "subtitle": "e 4M Pano · Head-up · Burmester · Distronic",
+        "priceFormatted": "53.850 €",
+        "fuelDisplay": "Hybrid",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 72
+      }
+    },
+    {
+      "mobileAdId": "971240992",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-02-24T01:35:00.000Z",
+      "modificationDate": "2026-03-01T09:26:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "BMW",
+      "model": "X5",
+      "modelDescription": "xDr 45e M Sport Pano · HuD · Laser · Bowers&Wilkins",
+      "condition": "USED",
+      "firstRegistration": "201807",
+      "mileage": 91900,
+      "power": 250,
+      "fuel": "HYBRID",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "53750.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=971240992",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/6992fdd70a90f1cc530a7775/2396_69a2df3f9962efbf3f08b8ce__IMG_6930.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "BMW X5",
+        "subtitle": "xDr 45e M Sport Pano · HuD · Laser · Bowers&Wilkins",
+        "priceFormatted": "53.750 €",
+        "fuelDisplay": "Hybrid",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 73
+      }
+    },
+    {
+      "mobileAdId": "970116303",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-12-14T04:07:00.000Z",
+      "modificationDate": "2025-12-27T06:08:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "MERCEDES_BENZ",
+      "model": "GLC 300",
+      "modelDescription": "e 4Matic Panorama · Distronic · Leder",
+      "condition": "USED",
+      "firstRegistration": "201805",
+      "mileage": 132500,
+      "power": 190,
+      "fuel": "HYBRID",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "52750.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=970116303",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/6981d48575040552a4046191/2396_69988d846fb8b81bcd056ef8__IMG_6310.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz GLC 300",
+        "subtitle": "e 4Matic Panorama · Distronic · Leder",
+        "priceFormatted": "52.750 €",
+        "fuelDisplay": "Hybrid",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 74
+      }
+    },
+    {
+      "mobileAdId": "963550746",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-12-12T07:45:00.000Z",
+      "modificationDate": "2025-12-13T04:07:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "LAND_ROVER",
+      "model": "Range Rover Velar",
+      "modelDescription": "P400e R-Dynamic · Pano · HuD · ACC",
+      "condition": "USED",
+      "firstRegistration": "201802",
+      "mileage": 126500,
+      "power": 221,
+      "fuel": "HYBRID",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "51850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=963550746",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/691da5cff2e23e45230b6511/2396_692479eb2b6d707bce04bbce__IMG_2575.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Land Rover Range Rover Velar",
+        "subtitle": "P400e R-Dynamic · Pano · HuD · ACC",
+        "priceFormatted": "51.850 €",
+        "fuelDisplay": "Hybrid",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 75
+      }
+    },
+    {
+      "mobileAdId": "971596252",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-10-01T08:16:00.000Z",
+      "modificationDate": "2025-10-12T07:30:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Van",
+      "make": "MERCEDES_BENZ",
+      "model": "V 300",
+      "modelDescription": "d EDITION lang · MBUX · StHzg · Distronic · Spur.",
+      "condition": "USED",
+      "firstRegistration": "201808",
+      "mileage": 53300,
+      "power": 176,
+      "fuel": "DIESEL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "49850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=971596252",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/69986990c35a21d7600feb7a/2396_699d866bb3a640de48097396__IMG_6542.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz V 300",
+        "subtitle": "d EDITION lang · MBUX · StHzg · Distronic · Spur.",
+        "priceFormatted": "49.850 €",
+        "fuelDisplay": "Diesel",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 76
+      }
+    },
+    {
+      "mobileAdId": "961746539",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-02-24T08:14:00.000Z",
+      "modificationDate": "2026-03-08T02:45:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Limousine",
+      "make": "MERCEDES_BENZ",
+      "model": "C 63 AMG",
+      "modelDescription": "C 63 T AMG  · Pano · Virtual · Carbon · Perf-AGA",
+      "condition": "USED",
+      "firstRegistration": "201803",
+      "mileage": 109700,
+      "power": 375,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "49750.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=961746539",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/69021e1efb088b52670a8afa/2396_690ddd9f5367ec5f8e02c1f5__IMG_1857.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz C 63 AMG",
+        "subtitle": "C 63 T AMG  · Pano · Virtual · Carbon · Perf-AGA",
+        "priceFormatted": "49.750 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 77
+      }
+    },
+    {
+      "mobileAdId": "965963819",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-02-10T04:35:00.000Z",
+      "modificationDate": "2026-02-14T06:29:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Van",
+      "make": "MERCEDES_BENZ",
+      "model": "E 300",
+      "modelDescription": "e Avantgarde Advanced Plus · Distronic · 360°",
+      "condition": "USED",
+      "firstRegistration": "201809",
+      "mileage": 87700,
+      "power": 190,
+      "fuel": "HYBRID",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "47850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=965963819",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/694277dd4b4e12bc080ce581/2396_6949758625377004220e36a3__IMG_3872.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz E 300",
+        "subtitle": "e Avantgarde Advanced Plus · Distronic · 360°",
+        "priceFormatted": "47.850 €",
+        "fuelDisplay": "Hybrid",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 78
+      }
+    },
+    {
+      "mobileAdId": "970027594",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-10-01T02:24:00.000Z",
+      "modificationDate": "2025-10-08T05:29:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Limousine",
+      "make": "AUDI",
+      "model": "S3",
+      "modelDescription": "2.0 TFSI Q · Pano · Sonos · Matrix · KeylessGO · S-Sitz",
+      "condition": "USED",
+      "firstRegistration": "201601",
+      "mileage": 72000,
+      "power": 228,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "46950.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=970027594",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/698079fbaa0aab0a7108a885/2396_69a04ce0923f02baea0b3a54__IMG_6759.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Audi S3",
+        "subtitle": "2.0 TFSI Q · Pano · Sonos · Matrix · KeylessGO · S-Sitz",
+        "priceFormatted": "46.950 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 79
+      }
+    },
+    {
+      "mobileAdId": "964842313",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-01-09T02:47:00.000Z",
+      "modificationDate": "2026-01-14T10:45:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Limousine",
+      "make": "AUDI",
+      "model": "S3",
+      "modelDescription": "2.0 TFSI Q · Pano · Sonos · Matrix · KeylessGO · S-Sitz",
+      "condition": "USED",
+      "firstRegistration": "201807",
+      "mileage": 123900,
+      "power": 228,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "46850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=964842313",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/69315af9cab23e30b8028d5c/2396_6932aa373a5faebbe706102f__DSC00298.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Audi S3",
+        "subtitle": "2.0 TFSI Q · Pano · Sonos · Matrix · KeylessGO · S-Sitz",
+        "priceFormatted": "46.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 80
+      }
+    },
+    {
+      "mobileAdId": "964858085",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-12-02T09:59:00.000Z",
+      "modificationDate": "2025-12-09T03:25:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "HYUNDAI",
+      "model": "SANTA FE",
+      "modelDescription": "1.6 T-GDI Plug-In Hybrid 4WD Blackline",
+      "condition": "USED",
+      "firstRegistration": "201810",
+      "mileage": 103100,
+      "power": 132,
+      "fuel": "HYBRID",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "46750.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=964858085",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/69319894ff942027c30af588/2396_693839bdea023da4050ad6fd__IMG_3164.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Hyundai SANTA FE",
+        "subtitle": "1.6 T-GDI Plug-In Hybrid 4WD Blackline",
+        "priceFormatted": "46.750 €",
+        "fuelDisplay": "Hybrid",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 81
+      }
+    },
+    {
+      "mobileAdId": "970721949",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-12-19T02:38:00.000Z",
+      "modificationDate": "2025-12-30T06:07:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "KIA",
+      "model": "Sorento",
+      "modelDescription": "Platinum 4WD · 6-Sitzer · Pano · HuD · AHK",
+      "condition": "USED",
+      "firstRegistration": "201608",
+      "mileage": 117800,
+      "power": 147,
+      "fuel": "DIESEL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "45850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=970721949",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/698b124b35b711b8080654b0/2396_6995cafe1c46264da900d97d__IMG_6188.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Kia Sorento",
+        "subtitle": "Platinum 4WD · 6-Sitzer · Pano · HuD · AHK",
+        "priceFormatted": "45.850 €",
+        "fuelDisplay": "Diesel",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 82
+      }
+    },
+    {
+      "mobileAdId": "970044614",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-12-29T03:20:00.000Z",
+      "modificationDate": "2026-01-06T05:54:00.000Z",
+      "vehicleClass": "Car",
+      "category": "EstateCar",
+      "make": "VOLVO",
+      "model": "V90",
+      "modelDescription": "Ultimate Bright Recharge Vollausstattung",
+      "condition": "USED",
+      "firstRegistration": "201812",
+      "mileage": 107500,
+      "power": 186,
+      "fuel": "HYBRID",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "43850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=970044614",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/6980bc73abcd83069b0b550b/2396_698b5c0e0110c754800fbf69__IMG_5748.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Volvo V90",
+        "subtitle": "Ultimate Bright Recharge Vollausstattung",
+        "priceFormatted": "43.850 €",
+        "fuelDisplay": "Hybrid",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 83
+      }
+    },
+    {
+      "mobileAdId": "961753979",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-11-08T10:46:00.000Z",
+      "modificationDate": "2025-11-13T01:28:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "VOLKSWAGEN",
+      "model": "Touareg",
+      "modelDescription": "Elegance 4Motion eHybrid · Pano · HuD",
+      "condition": "USED",
+      "firstRegistration": "201801",
+      "mileage": 63300,
+      "power": 210,
+      "fuel": "HYBRID",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "43850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=961753979",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/69023b27bce0d88f950e142e/2396_6908cfe51b7840445d0e3476__IMG_1520.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "VW Touareg",
+        "subtitle": "Elegance 4Motion eHybrid · Pano · HuD",
+        "priceFormatted": "43.850 €",
+        "fuelDisplay": "Hybrid",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 84
+      }
+    },
+    {
+      "mobileAdId": "965548587",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-12-13T08:46:00.000Z",
+      "modificationDate": "2025-12-25T06:07:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "PORSCHE",
+      "model": "Macan",
+      "modelDescription": "GTS · Sport-Aga · Pano · Luft · 4xSHZ · Sport-Design",
+      "condition": "USED",
+      "firstRegistration": "201810",
+      "mileage": 123400,
+      "power": 265,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "42750.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=965548587",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/693c21d63aa99f9e07097d54/2396_69442fa6ed97bb944505e393__IMG_3653.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Porsche Macan",
+        "subtitle": "GTS · Sport-Aga · Pano · Luft · 4xSHZ · Sport-Design",
+        "priceFormatted": "42.750 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 85
+      }
+    },
+    {
+      "mobileAdId": "966498720",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-01-01T06:28:00.000Z",
+      "modificationDate": "2026-01-05T01:33:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Coupe",
+      "make": "MERCEDES_BENZ",
+      "model": "E 200",
+      "modelDescription": "Coupe AMG · Panorama · Totwinkel · Kamera",
+      "condition": "USED",
+      "firstRegistration": "201602",
+      "mileage": 150500,
+      "power": 145,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "42700.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=966498720",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/694aa14a4cde560ae00518a9/2396_6952b1fdcd3ad7bc130c92f4__IMG_4121.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz E 200",
+        "subtitle": "Coupe AMG · Panorama · Totwinkel · Kamera",
+        "priceFormatted": "42.700 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 86
+      }
+    },
+    {
+      "mobileAdId": "965963514",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-09-14T04:19:00.000Z",
+      "modificationDate": "2025-09-23T04:31:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "MAZDA",
+      "model": "CX-60",
+      "modelDescription": "e-SKYACTIV-D 200 Homura  · Head-Up · AHK",
+      "condition": "USED",
+      "firstRegistration": "201808",
+      "mileage": 123300,
+      "power": 147,
+      "fuel": "DIESEL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "41850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=965963514",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/694276a3c09bcdb6c9035e36/2396_694be1565278667e4e09cefd__IMG_4037.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mazda CX-60",
+        "subtitle": "e-SKYACTIV-D 200 Homura  · Head-Up · AHK",
+        "priceFormatted": "41.850 €",
+        "fuelDisplay": "Diesel",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 87
+      }
+    },
+    {
+      "mobileAdId": "953201405",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-02-25T09:17:00.000Z",
+      "modificationDate": "2026-03-07T10:42:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Van",
+      "make": "VOLKSWAGEN",
+      "model": "T7 Multivan",
+      "modelDescription": "1.5 16V TSI DSG Kamera 7-Sitzer",
+      "condition": "USED",
+      "firstRegistration": "201611",
+      "mileage": 89200,
+      "power": 110,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "41750.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=953201405",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/687fbaa59f9fcbf5b6049bf5/2396_68a857b59075a586b600c9fd__IMG_8002.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "VW T7 Multivan",
+        "subtitle": "1.5 16V TSI DSG Kamera 7-Sitzer",
+        "priceFormatted": "41.750 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 88
+      }
+    },
+    {
+      "mobileAdId": "961746020",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-01-31T09:09:00.000Z",
+      "modificationDate": "2026-01-31T00:40:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "MERCEDES_BENZ",
+      "model": "GLE 500",
+      "modelDescription": "e 4Matic · Pano · 360° · AHK · H&K · Distronic",
+      "condition": "USED",
+      "firstRegistration": "201809",
+      "mileage": 142500,
+      "power": 335,
+      "fuel": "HYBRID",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "40850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=961746020",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/69021c0bfea45f19930f1ff4/2396_6911db83314d45342c0a30f4__IMG_2017.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz GLE 500",
+        "subtitle": "e 4Matic · Pano · 360° · AHK · H&K · Distronic",
+        "priceFormatted": "40.850 €",
+        "fuelDisplay": "Hybrid",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 89
+      }
+    },
+    {
+      "mobileAdId": "965899390",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-01-07T06:28:00.000Z",
+      "modificationDate": "2026-01-16T07:11:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Limousine",
+      "make": "MERCEDES_BENZ",
+      "model": "C 63 AMG",
+      "modelDescription": "C 63S T · AMG Head-Up · Driver's · Kamera · Perf-AGA",
+      "condition": "USED",
+      "firstRegistration": "201711",
+      "mileage": 163200,
+      "power": 375,
+      "fuel": "PETROL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "39850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=965899390",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/69417c247ca818951509cbee/2396_6949760f3edf4ca64c0152e9__IMG_3830.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz C 63 AMG",
+        "subtitle": "C 63S T · AMG Head-Up · Driver's · Kamera · Perf-AGA",
+        "priceFormatted": "39.850 €",
+        "fuelDisplay": "Benzin",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 90
+      }
+    },
+    {
+      "mobileAdId": "970630912",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-01-17T09:12:00.000Z",
+      "modificationDate": "2026-01-23T08:20:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Van",
+      "make": "MERCEDES_BENZ",
+      "model": "Vito",
+      "modelDescription": "116 CDI Pro lang Aut. 9-Sitzer Navi  AHK",
+      "condition": "USED",
+      "firstRegistration": "201705",
+      "mileage": 138600,
+      "power": 100,
+      "fuel": "DIESEL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "35850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=970630912",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/6989aea5b862eca8b70ddaac/2396_698d9c927eb4c0794d08d430__IMG_5760.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz Vito",
+        "subtitle": "116 CDI Pro lang Aut. 9-Sitzer Navi  AHK",
+        "priceFormatted": "35.850 €",
+        "fuelDisplay": "Diesel",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 91
+      }
+    },
+    {
+      "mobileAdId": "964166066",
+      "mobileSellerId": "2396",
+      "creationDate": "2026-01-18T01:13:00.000Z",
+      "modificationDate": "2026-01-18T01:16:00.000Z",
+      "vehicleClass": "Car",
+      "category": "OffRoad",
+      "make": "MERCEDES_BENZ",
+      "model": "GLC 300",
+      "modelDescription": "e 4Matic · Panorama · 360° · AHK · KeylessGO",
+      "condition": "USED",
+      "firstRegistration": "201810",
+      "mileage": 83600,
+      "power": 190,
+      "fuel": "HYBRID",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "35750.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=964166066",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/69270956580de77d1605c43e/2396_6942d51b000070e9e9093686__IMG_3575.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "Mercedes-Benz GLC 300",
+        "subtitle": "e 4Matic · Panorama · 360° · AHK · KeylessGO",
+        "priceFormatted": "35.750 €",
+        "fuelDisplay": "Hybrid",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 92
+      }
+    },
+    {
+      "mobileAdId": "946455243",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-10-06T08:13:00.000Z",
+      "modificationDate": "2025-10-15T06:42:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Limousine",
+      "make": "BMW",
+      "model": "740",
+      "modelDescription": "d · HuD · DrivingAssist+ · Aktivlenkung · Soft · Keyl.",
+      "condition": "USED",
+      "firstRegistration": "201611",
+      "mileage": 75600,
+      "power": 235,
+      "fuel": "DIESEL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "23850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=946455243",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/6818ca6e462db3b499087dd2/2396_684d622d67eb26efde0686dd__IMG_4919.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "BMW 740",
+        "subtitle": "d · HuD · DrivingAssist+ · Aktivlenkung · Soft · Keyl.",
+        "priceFormatted": "23.850 €",
+        "fuelDisplay": "Diesel",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 93
+      }
+    },
+    {
+      "mobileAdId": "946455244",
+      "mobileSellerId": "2396",
+      "creationDate": "2025-10-06T08:13:00.000Z",
+      "modificationDate": "2025-10-15T06:42:00.000Z",
+      "vehicleClass": "Car",
+      "category": "Limousine",
+      "make": "BMW",
+      "model": "740",
+      "modelDescription": "d · HuD · DrivingAssist+ · Aktivlenkung · Soft · Keyl.",
+      "condition": "USED",
+      "firstRegistration": "201611",
+      "mileage": 75600,
+      "power": 235,
+      "fuel": "DIESEL",
+      "gearbox": "AUTOMATIC_GEAR",
+      "consumerPriceGross": "23850.00",
+      "currency": "EUR",
+      "damageUnrepaired": false,
+      "detailPageUrl": "https://suchen.mobile.de/fahrzeuge/details.html?id=946455244",
+      "images": [
+        {
+          "ref": "https://bildon.audaris.icu/o/400q75/2396/vehicles/6818ca6e462db3b499087dd2/2396_684d622d67eb26efde0686dd__IMG_4919.jpeg",
+          "position": 0
+        }
+      ],
+      "seller": {
+        "mobileSellerId": "2396",
+        "type": "DEALER",
+        "companyName": "Yaman Exclusive Automobile"
+      },
+      "_source": {
+        "title": "BMW 740",
+        "subtitle": "d · HuD · DrivingAssist+ · Aktivlenkung · Soft · Keyl.",
+        "priceFormatted": "23.850 €",
+        "fuelDisplay": "Diesel",
+        "transmissionDisplay": "Automatik",
+        "conditionDisplay": "Gebrauchtwagen",
+        "htmlIndex": 94
+      }
+    }
+  ]
+}
