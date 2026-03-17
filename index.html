@@ -17,12 +17,10 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <!-- Header with only top bar -->
     <header class="site-header">
-      <div class="promo-banner">
-        <p>Tuning Treff 2026 — Coming Soon</p>
-      </div>
 
       <div class="topbar-container">
         <div class="topbar-right">
@@ -82,8 +80,8 @@
             <li><a href="fahrzeugsuche.html">Fahrzeuge</a></li>
             <li><a href="wohnmobile.html">Wohnmobile</a></li>
             <li><a href="#services-section">Leistungen</a></li>
-            <li><a href="#about-section">Über uns</a></li>
-            <li><a href="#team-section">Team</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="team.html">Team</a></li>
             <li><a href="#contact-section" class="navbar-cta">Kontakt</a></li>
           </ul>
 
@@ -96,8 +94,8 @@
           <a href="fahrzeugsuche.html">Fahrzeuge</a>
           <a href="wohnmobile.html">Wohnmobile</a>
           <a href="#services-section">Leistungen</a>
-          <a href="#about-section">Über uns</a>
-          <a href="#team-section">Team</a>
+          <a href="ueber-uns.html">Über uns</a>
+          <a href="team.html">Team</a>
           <a href="#contact-section">Kontakt</a>
         </div>
       </nav>
@@ -268,7 +266,9 @@
       </div>
     </section>
 
-    <div class="divider"><div class="divider-line"></div></div>
+    <div class="divider">
+      <div class="divider-line"></div>
+    </div>
 
     <!-- ABOUT / WILLKOMMEN -->
     <section class="about" id="about-section">
@@ -286,14 +286,14 @@
         </p>
 
         <div style="display: flex; gap: 1rem; flex-wrap: wrap">
-          <!-- <a href="#" class="btn-primary">Mehr Erfahren</a> -->
+          <a href="ueber-uns.html" class="btn-primary">Mehr Erfahren</a>
           <!-- <a href="#" class="btn-outline">Jetzt zu unseren Autos</a> -->
-          <a href="#" class="btn-primary">Jetzt zu unseren Autos</a>
+          <!-- <a href="#" class="btn-primary">Jetzt zu unseren Autos</a> -->
         </div>
       </div>
       <div class="about-image-container reveal-right">
         <img
-          src="images/hero-fallback.png"
+          src="images/team-photo-maxresdefault.jpg"
           alt="GÖKSU Exclusive Automobile Showroom"
           class="about-image"
         />
@@ -301,58 +301,30 @@
       </div>
     </section>
 
-    <section class="quote-banner" id="team-section">
-      <div class="quote-banner-inner">
-        <div class="quote-banner-text reveal-left">
-          <div class="quote-mark">&ldquo;</div>
-          <div class="quote-accent-line"></div>
-          <p>
-            Gerne beraten wir Sie telefonisch, per E-Mail oder persönlich vor
-            Ort kompetent und ausführlich zu unseren Serviceangeboten. Wir
-            freuens uns darauf, Ihnen weiterzuhelfen.
-          </p>
-          <div class="quote-author">— GÖKSU Autocenter Mülheim</div>
-        </div>
+    <div class="divider">
+      <div class="divider-line"></div>
+    </div>
 
-        <div class="team-list-container reveal-right">
-          <div class="team-roster">
-            <div class="team-member">
-              <div class="member-photo icon-placeholder">
-                <i class="fas fa-user"></i>
-                <img src="" alt="Bülent Göksu" class="team-img" />
-              </div>
-              <div class="member-info">
-                <h3>Bülent Göksu</h3>
-                <span class="member-tag">Experte</span>
-              </div>
-            </div>
-
-            <div class="team-member">
-              <div class="member-photo icon-placeholder">
-                <i class="fas fa-user"></i>
-                <img src="" alt="Hayrullah Göksu" class="team-img" />
-              </div>
-              <div class="member-info">
-                <h3>Hayrullah Göksu</h3>
-                <span class="member-tag">Experte</span>
-              </div>
-            </div>
-
-            <div class="team-member">
-              <div class="member-photo icon-placeholder">
-                <i class="fas fa-user"></i>
-                <img
-                  src="images/aerial.png"
-                  alt="Yasin Göksu"
-                  class="team-img"
-                />
-              </div>
-              <div class="member-info">
-                <h3>Yasin Göksu</h3>
-                <span class="member-tag">Experte</span>
-              </div>
-            </div>
-          </div>
+    <!-- TEAM SECTION — mirrored layout: photo left, text right -->
+    <section class="about" id="team-section">
+      <div class="about-image-container reveal-left">
+        <img
+          src="images/team-photo-maxresdefault.jpg"
+          alt="Das GÖKSU Autocenter Team"
+          class="about-image"
+        />
+        <div class="about-image-frame"></div>
+      </div>
+      <div class="about-text reveal-right">
+        <h2>Das Team hinter <em>GÖKSU</em></h2>
+        <p>
+          Drei Söhne, die von klein auf mitangepackt haben. Ein Team, das
+          Ihnen nicht nur Autos verkauft, sondern echte Beratung bietet.
+          Jeder Handschlag zählt — ob beim Fahrzeugkauf, beim Wohnmobil oder
+          beim After-Sales-Service. Persönlich, ehrlich, mit Leidenschaft.
+        </p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap">
+          <a href="team.html" class="btn-outline">Team kennenlernen</a>
         </div>
       </div>
     </section>
@@ -645,8 +617,8 @@
             <li><a href="fahrzeugsuche.html">Fahrzeuge</a></li>
             <li><a href="wohnmobile.html">Wohnmobile</a></li>
             <li><a href="#services-section">Leistungen</a></li>
-            <li><a href="#about-section">Über uns</a></li>
-            <li><a href="#team-section">Team</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="team.html">Team</a></li>
             <li><a href="#contact-section">Kontakt</a></li>
           </ul>
         </div>
@@ -713,7 +685,7 @@
         const contactContainer = document.querySelector(".floating-contact");
 
         let ticking = false;
-        const BANNER_HEIGHT = 40; // Height of your new sticky promo banner
+        const BANNER_HEIGHT = 0; // Promo banner removed
 
         const initVideoOptimization = () => {
           if (!heroVideo) return;
@@ -750,18 +722,18 @@
           const topbarHeight = topbar ? topbar.offsetHeight : 0;
           const heroHeight = hero ? hero.offsetHeight : 600;
 
-          // Stick logic for Promo Banner + Topbar + Navbar
+          // Stick logic for Topbar + Navbar
           if (scrollY > topbarHeight) {
-            // Scrolled past topbar: Navbar locks under Promo Banner (40px)
+            // Scrolled past topbar: Navbar locks at the top
             navbar.classList.add("sticky");
-            navbar.style.setProperty("--nav-top", `${BANNER_HEIGHT}px`);
+            navbar.style.setProperty("--nav-top", `0px`);
           } else {
             // Still at the top: Navbar sits under Topbar
             navbar.classList.remove("sticky");
-            // Calculation: (Banner + Topbar) - current scroll
+            // Calculation: Topbar - current scroll
             navbar.style.setProperty(
               "--nav-top",
-              `${BANNER_HEIGHT + topbarHeight - scrollY}px`,
+              `${topbarHeight - scrollY}px`,
             );
           }
 

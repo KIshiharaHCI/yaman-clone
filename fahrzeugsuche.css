@@ -12,13 +12,13 @@
 
 .breadcrumb {
   font-size: 0.75rem;
-  color: var(--text-muted);
+  color: var(--text-primary);
   margin-bottom: 1rem;
   letter-spacing: 0.05em;
 }
 
 .breadcrumb a {
-  color: var(--text-muted);
+  color: var(--text-primary);
   transition: color 0.3s ease;
 }
 
@@ -28,7 +28,7 @@
 
 .breadcrumb-sep {
   margin: 0 0.5rem;
-  color: var(--text-muted);
+  color: var(--text-primary);
   opacity: 0.5;
 }
 
@@ -65,7 +65,7 @@
   overflow-y: auto;
   max-height: calc(100vh - 70px);
   position: sticky;
-  top: 70px;
+  top: 120px;
 }
 
 .sidebar-close {

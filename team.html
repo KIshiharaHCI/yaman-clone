@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unser Team - GÖKSU Autocenter Mülheim</title>
+  <link rel="icon" type="image/png" href="images/logo_favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Bebas+Neue&family=Great+Vibes&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="fahrzeugsuche.css" />
+  <style>
+    .team-page-main {
+      max-width: 1300px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+
+    .team-hero-wrapper {
+      width: 100%;
+      height: 60vh;
+      min-height: 400px;
+      margin-bottom: 4rem;
+      border-radius: 4px;
+      position: relative;
+      /* Using a container that allows the image to grow without being immediately cropped at the screen edges */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-secondary);
+      overflow: hidden;
+    }
+
+    .team-hero-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      /* Balanced position */
+      transform-origin: center;
+      will-change: transform;
+      transition: transform 0.1s linear;
+    }
+
+    /* CAROUSEL STYLES */
+    .team-carousel-container {
+      position: relative;
+      margin-top: 5rem;
+      /* Extra horizontal space so buttons aren't clipped */
+      padding: 0 3.5rem;
+    }
+
+    .team-scroll-wrapper {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      gap: 2rem;
+      padding: 2rem 0;
+      scrollbar-width: none;
+      /* Firefox */
+    }
+
+    .team-scroll-wrapper::-webkit-scrollbar {
+      display: none;
+      /* Chrome/Safari */
+    }
+
+    .team-member-card {
+      flex: 0 0 calc(33.333% - 1.35rem);
+      min-width: 280px;
+      scroll-snap-align: start;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 3rem 2rem;
+      text-align: center;
+      transition: all 0.4s var(--transition-smooth);
+      position: relative;
+    }
+
+    .team-member-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .member-avatar-wrapper {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 2rem;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid var(--border-color);
+      background: var(--bg-accent);
+      transition: border-color 0.4s ease;
+    }
+
+    .team-member-card:hover .member-avatar-wrapper {
+      border-color: var(--gold);
+    }
+
+    .member-avatar-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.8;
+      transition: opacity 0.4s ease;
+    }
+
+    .team-member-card:hover .member-avatar-wrapper img {
+      opacity: 1;
+    }
+
+    .member-name {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+    }
+
+    .member-role {
+      font-family: var(--font-hero);
+      font-size: 1.1rem;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .member-desc {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ARROW BUTTONS */
+    .carousel-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      background: var(--gold);
+      border: none;
+      color: var(--bg-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      /* Desktop rest: 0.75 for intuitiveness */
+      opacity: 0.75;
+      transition: opacity 0.3s ease, background 0.3s ease, transform 0.3s ease;
+      font-size: 1.1rem;
+    }
+
+    .team-carousel-container:hover .carousel-nav:not(.disabled) {
+      opacity: 1;
+    }
+
+    .carousel-nav.prev {
+      left: 0;
+    }
+
+    .carousel-nav.next {
+      right: 0;
+    }
+
+    .carousel-nav:hover:not(.disabled) {
+      background: var(--gold-light, #d4a843);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .carousel-nav.disabled {
+      opacity: 0 !important;
+      pointer-events: none;
+    }
+
+    /* Tablet: 2 cards, show buttons */
+    @media (max-width: 992px) {
+      .team-carousel-container {
+        padding: 0 3rem;
+      }
+
+      .team-member-card {
+        flex: 0 0 calc(50% - 1rem);
+      }
+
+      .carousel-nav {
+        opacity: 1;
+        /* Full opacity on tablet since we can't detect hover */
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+      }
+
+      .team-carousel-container:hover .carousel-nav:not(.disabled) {
+        opacity: 1;
+      }
+    }
+
+    /* Mobile: 1 card, compact buttons */
+    @media (max-width: 600px) {
+      .team-carousel-container {
+        padding: 0 2.5rem;
+      }
+
+      .team-member-card {
+        flex: 0 0 100%;
+      }
+
+      .carousel-nav {
+        width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
+        opacity: 1;
+        /* Full opacity on mobile */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header with only top bar -->
+  <header class="site-header">
+
+    <div class="topbar-container">
+      <div class="topbar-right">
+        <div class="topbar-group">
+          <a href="https://wa.me/491771761759" class="topbar-item" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> +49 (0) 177 176 175 9
+          </a>
+          <a href="tel:+49208875000" class="topbar-item">
+            <i class="fas fa-phone"></i> +49 (0) 208 87 50 00
+          </a>
+        </div>
+
+        <div class="topbar-group">
+          <a href="mailto:info@ac-o.de" class="topbar-item">
+            <i class="far fa-envelope"></i> info@ac-o.de
+          </a>
+        </div>
+
+        <div class="topbar-group">
+          <a href="#" class="social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Nav + Mobile menu wrapper (sticky independently) -->
+  <div class="navbar-wrapper">
+    <nav class="navbar" id="navbar">
+      <div class="navbar-container">
+        <a href="index.html" class="navbar-logo">
+          <img src="images/logo_white_text.svg" alt="Light Logo" class="logo-light" />
+          <img src="images/logo_dark_text.svg" alt="Dark Logo" class="logo-dark" />
+        </a>
+
+        <ul class="navbar-links">
+          <li><a href="fahrzeugsuche.html">Fahrzeuge</a></li>
+          <li><a href="wohnmobile.html">Wohnmobile</a></li>
+          <li><a href="index.html#services-section">Leistungen</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="team.html" class="active">Team</a></li>
+          <li>
+            <a href="index.html#contact-section" class="navbar-cta">Kontakt</a>
+          </li>
+        </ul>
+
+        <div class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="fahrzeugsuche.html">Fahrzeuge</a>
+        <a href="wohnmobile.html">Wohnmobile</a>
+        <a href="index.html#services-section">Leistungen</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="team.html" class="active">Team</a>
+        <a href="index.html#contact-section">Kontakt</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="page-header-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Startseite</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Team</span>
+      </div>
+      <h1>Unser Team</h1>
+      <p>Lernen Sie die Menschen hinter GÖKSU Autocenter kennen.</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="team-page-main">
+    <div class="team-hero-wrapper reveal">
+      <img id="zoomImage" src="images/team-photo-maxresdefault.jpg" alt="Das Yaman Team" />
+    </div>
+
+    <div class="team-carousel-container reveal">
+      <button class="carousel-nav prev disabled" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+      <div class="team-scroll-wrapper" id="scrollWrapper">
+        <!-- Team Member 1 -->
+        <div class="team-member-card">
+          <div class="member-avatar-wrapper">
+            <img src="team_member_avatar_placeholder_1773739333849.png" alt="Bülent Göksu" />
+          </div>
+          <h3 class="member-name">Bülent Göksu</h3>
+          <div class="member-role">Geschäftsleitung</div>
+          <p class="member-desc">Leidenschaftlicher Automobilexperte mit über 20 Jahren Erfahrung im Premiumsegment.</p>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="team-member-card">
+          <div class="member-avatar-wrapper">
+            <img src="team_member_avatar_placeholder_1773739333849.png" alt="Hayrullah Göksu" />
+          </div>
+          <h3 class="member-name">Hayrullah Göksu</h3>
+          <div class="member-role">Verkauf & Beratung</div>
+          <p class="member-desc">Spezialist für exklusive Wohnmobile und individuelle Kundenlösungen.</p>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="team-member-card">
+          <div class="member-avatar-wrapper">
+            <img src="team_member_avatar_placeholder_1773739333849.png" alt="Yasin Göksu" />
+          </div>
+          <h3 class="member-name">Yasin Göksu</h3>
+          <div class="member-role">Einkauf & Logistik</div>
+          <p class="member-desc">Zuständig für die akribische Auswahl unseres handverlesenen Fahrzeugbestands.</p>
+        </div>
+
+        <!-- Team Member 4 (Placeholder) -->
+        <div class="team-member-card">
+          <div class="member-avatar-wrapper">
+            <img src="team_member_avatar_placeholder_1773739333849.png" alt="Team Mitglied" />
+          </div>
+          <h3 class="member-name">Max Mustermann</h3>
+          <div class="member-role">Werkstattleiter</div>
+          <p class="member-desc">Garant für die technische Perfektion und Aufbereitung jedes Fahrzeugs.</p>
+        </div>
+
+        <!-- Team Member 5 (Placeholder) -->
+        <div class="team-member-card">
+          <div class="member-avatar-wrapper">
+            <img src="team_member_avatar_placeholder_1773739333849.png" alt="Team Mitglied" />
+          </div>
+          <h3 class="member-name">Erika Musterfrau</h3>
+          <div class="member-role">Kundenbetreuung</div>
+          <p class="member-desc">Die gute Seele des Hauses und Ihre erste Ansprechpartnerin für alle Servicefragen.</p>
+        </div>
+      </div>
+      <button class="carousel-nav next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </main>
+
+  <!-- PRE-FOOTER LOGO & SOCIAL -->
+  <section class="pre-footer">
+    <!-- Same as other pages -->
+    <div class="pre-footer-logo">
+      <div class="logo-wrapper">
+        <svg class="animated-logo" version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600.9 232.4" xml:space="preserve">
+          <polygon class="svg-elem-1"
+            points="7.9,113.6 5.1,113.6 0.7,112.7 0.2,109.9 0,99.6 4.6,95.6 16.9,87.5 26.8,82.5 37.2,78.3 50.6,73.5 63.5,68.7 75.9,64.6 84.4,61.7 90.1,60.4 96.7,59.3 106.4,58.2 119.4,57.1 138.7,54.7 157.9,52.5 176.1,51.2 185.3,49.9 191.1,49 213.1,38.3 244.3,23 276.2,7.9 281,5.3 285.4,3.9 290.4,2.4 297,1.8 312.7,0 329.8,-0.9 348.7,-0.9 363.4,-0.7 376.4,2 402.4,7.9 431.6,16.2 450.3,24.1 457.8,28.7 471.4,36.8 496.7,48.8 511.6,54.7 523.3,58.6 538.9,63.5 556.9,69.6 564.8,73.5 573.2,78.3 580.7,82.1 584.4,83.2 587.7,81.6 592.3,81 596.1,81.2 598.5,83.6 599.1,86.4 598.9,90.8 597.4,93.9 596.1,96.5 598.9,99.4 599.6,102 599.4,106.1 599.6,110.5 599.1,113.8 597.2,114.2 593.4,113.6 591,111.6 583.1,105.3 580.9,103.1 580,98.9 577.2,95.4 574.1,95.8 571.2,94.5 559.8,87.8 542,79.7 520.6,73.7 505.3,69.4 486.6,62.1 465.2,52.1 452.3,43.8 439.7,36.5 424.6,29.8 404.8,23.4 384.5,18.4 361.9,14.2 345.9,13.1 329.4,13.1 312.9,15.3 301,16.2 292,18.4 285.8,20.6 274,26 210,57.8 202.7,61.3 196.3,62.8 188.6,63.9 153.7,67.6 121.8,70.7 100.7,73.3 93,74.6 86.8,76.2 71.7,81.2 51,88 36.9,93 28.1,96.9 19.8,102.2 14.3,107.2 11,110.7">
+          </polygon>
+          <path class="svg-elem-2"
+            d="M111.6,121.2v15.5H20.2c-1.1,0-1.8,0.4-2.2,1.1c-0.4,0.7-0.6,1.6-0.6,2.8v21.4c0,1.2,0.2,2.1,0.7,2.8c0.5,0.7,1.1,1.1,1.9,1.1h72.6c0.8,0,1.5-0.3,2.1-1.1c0.6-0.7,0.9-1.6,0.9-2.8v-0.7c-0.2-0.9-0.5-1.5-0.9-1.8c-0.4-0.3-1.1-0.4-2-0.4H41.4v-15.6H98c1.8,0,3.5,0.3,5.2,1c1.7,0.7,3.1,1.6,4.3,2.8c1.2,1.2,2.2,2.7,3,4.5c0.7,1.7,1.1,3.7,1.1,5.8v9.8c0,2.2-0.4,4.2-1.2,5.9c-0.8,1.7-1.8,3.2-3.1,4.4c-1.3,1.2-2.7,2.1-4.4,2.7c-1.7,0.6-3.3,0.9-5.1,0.9H15c-1.7,0-3.4-0.3-5.1-0.9c-1.7-0.6-3.1-1.5-4.4-2.7c-1.3-1.2-2.3-2.7-3-4.4s-1.1-3.7-1.1-5.9v-32.1c0-2.2,0.4-4.2,1.1-5.9c0.7-1.7,1.8-3.2,3-4.4c1.3-1.2,2.7-2.1,4.4-2.7c1.7-0.6,3.3-0.9,5.1-0.9H111.6z">
+          </path>
+          <path class="svg-elem-3"
+            d="M220.5,120.4c1.7,0,3.4,0.3,5.1,1c1.7,0.7,3.1,1.6,4.4,2.8c1.3,1.2,2.3,2.7,3.1,4.5c0.8,1.7,1.2,3.7,1.2,5.8v32.6c0,2.2-0.4,4.2-1.2,6c-0.8,1.8-1.8,3.3-3.1,4.5c-1.3,1.2-2.7,2.1-4.4,2.7c-1.7,0.6-3.3,0.9-5.1,0.9h-82.9c-1.7,0-3.4-0.3-5.1-0.9c-1.7-0.6-3.1-1.5-4.4-2.7c-1.3-1.2-2.3-2.7-3-4.5c-0.7-1.8-1.1-3.8-1.1-6v-32.6c0-2.2,0.4-4.2,1.1-6c0.7-1.8,1.8-3.3,3-4.5c1.3-1.2,2.7-2.1,4.4-2.7c1.7-0.6,3.3-0.9,5.1-0.9H220.5z M215.1,165.5c0.8,0,1.5-0.4,2.1-1.1c0.6-0.7,0.9-1.6,0.9-2.8v-21.8c0-1.2-0.2-2.1-0.7-2.7c-0.5-0.7-1.2-1-2.2-1h-72.5c-1.1,0-1.8,0.3-2.2,1c-0.4,0.7-0.6,1.6-0.6,2.7v21.8c0,1.2,0.2,2.1,0.7,2.8c0.5,0.7,1.1,1.1,1.9,1.1H215.1z M172.9,116.6h-16v-15.7h16V116.6z M185.2,100.9h16v15.7h-16V100.9z">
+          </path>
+          <path class="svg-elem-4"
+            d="M246.6,181.2v-60.1h16v22.2h68.9l9.7-22.2h16.5l-12.3,30l12.3,30.1h-16.5l-9.7-22.3h-68.9v22.3H246.6z">
+          </path>
+          <path class="svg-elem-5"
+            d="M459.3,165.8c0.8,0,1.5-0.2,2.1-0.7c0.6-0.5,0.9-1.2,0.9-2.3v-1.1c0-1.1-0.2-1.8-0.7-2.2c-0.5-0.4-1.2-0.6-2.2-0.6h-77.8c-1.8,0-3.5-0.3-5.1-0.9c-1.6-0.6-3-1.5-4.3-2.7c-1.2-1.2-2.2-2.7-3-4.4c-0.7-1.7-1.1-3.7-1.1-5.9v-9.8c0-2.2,0.4-4.2,1.1-5.9c0.7-1.7,1.7-3.2,3-4.4c1.2-1.2,2.7-2.1,4.3-2.7c1.6-0.6,3.3-0.9,5.1-0.9h96.7v15.5h-91.4c-0.9,0-1.6,0.2-2.1,0.6c-0.5,0.4-0.7,1.1-0.7,2.2v1.1c0,1.1,0.3,1.8,0.9,2.2c0.6,0.4,1.3,0.6,2.1,0.6h77.7c1.8,0,3.5,0.3,5.2,1c1.7,0.7,3.1,1.6,4.3,2.8c1.2,1.2,2.2,2.7,3,4.5c0.7,1.7,1.1,3.7,1.1,5.8v9.8c0,2.2-0.4,4.2-1.1,5.9c-0.7,1.7-1.7,3.2-3,4.4c-1.2,1.2-2.7,2.1-4.3,2.7c-1.7,0.6-3.4,0.9-5.2,0.9h-96.6v-15.5H459.3z">
+          </path>
+          <path class="svg-elem-6"
+            d="M584.8,165.8v-44.6h16.1v60.1h-96.6c-1.7,0-3.4-0.3-5.1-0.9c-1.7-0.6-3.1-1.5-4.4-2.7c-1.3-1.2-2.3-2.7-3-4.4c-0.7-1.7-1.1-3.7-1.1-5.9v-46.1h16v40.7c0,1.2,0.2,2.1,0.7,2.8c0.5,0.7,1.1,1.1,1.9,1.1H584.8z">
+          </path>
+        </svg>
+        <span class="logo-arrival-text">Neuuuuu eingetroffen ©</span>
+      </div>
+    </div>
+
+    <div class="pre-footer-cta">
+      <p>Bereit für Ihren neuen Exklusivwagen?</p>
+      <a href="fahrzeugsuche.html" class="footer-cta-btn">Fahrzeugbestand entdecken</a>
+    </div>
+
+    <div class="pre-footer-social">
+      <a href="https://www.facebook.com/people/GÖKSU-Exclusive/100077934512477/" target="_blank" rel="noopener"
+        aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/GÖKSU_exclusive/?hl=de" target="_blank" rel="noopener" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.google.com/search?q=GÖKSU+EXCLUSIVE+AUTOMOBILE" target="_blank" rel="noopener"
+        aria-label="Google">
+        <i class="fab fa-google"></i>
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer" id="kontakt">
+    <!-- Same as other pages -->
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="images/logo_white_text.svg" alt="GÖKSU Autocenter Mülheim logo" />
+        <p>
+          Vertrauen ist gut – Kontrolle ist besser! Wir untersuchen jeden
+          Gebrauchtwagen auf Herz und Nieren. Und nur wenn alles stimmt,
+          bekommt er das Siegel
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-nav-links">
+          <li><a href="fahrzeugsuche.html">Fahrzeuge</a></li>
+          <li><a href="wohnmobile.html">Wohnmobile</a></li>
+          <li><a href="index.html#services-section">Leistungen</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="index.html#contact-section">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Öffnungszeiten</h4>
+        <div class="footer-contact-item">Mo – Fr: 09:00 – 19:00 Uhr</div>
+        <div class="footer-contact-item">Sa: 09:00 – 15:00 Uhr</div>
+        <div class="footer-contact-item">So: geschlossen</div>
+      </div>
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <div class="footer-contact-item">
+          <a href="tel:+49208875000">+49 (0) 208 87 50 00</a>
+        </div>
+        <div class="footer-contact-item">
+          <a href="mailto:info@ac-o.de">info@ac-o.de</a>
+        </div>
+        <div class="footer-contact-item">
+          Steinkampstraße 65<br />D-45476 Mülheim a.d. Ruhr
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 GÖKSU Autocenter Mülheim. Alle Rechte vorbehalten.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Datenschutz</a>
+        <a href="#">Impressum</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING CONTACT -->
+  <div class="floating-contact">
+    <a href="tel:+49208875000" class="float-btn call" title="Anrufen">
+      <i class="fas fa-phone"></i>
+    </a>
+    <a href="mailto:info@ac-o.de" class="float-btn mail" title="E-Mail">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://wa.me/491771761759" class="float-btn whatsapp" target="_blank" rel="noopener" title="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <script>
+    (function () {
+      const navbar = document.getElementById("navbar");
+      const topbar = document.querySelector(".topbar-container");
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const pageHeader = document.querySelector(".page-header");
+      const zoomImage = document.getElementById("zoomImage");
+      const scrollWrapper = document.getElementById("scrollWrapper");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+
+      let ticking = false;
+      const BANNER_HEIGHT = 0; // Promo banner removed
+
+      const toggleMenu = (forceClose = false) => {
+        const isActive = mobileMenu.classList.contains("active");
+        if (forceClose || isActive) {
+          hamburger.classList.remove("active");
+          mobileMenu.classList.remove("active");
+        } else {
+          hamburger.classList.add("active");
+          mobileMenu.classList.add("active");
+        }
+      };
+
+      const updateNavButtons = () => {
+        if (!scrollWrapper) return;
+        const isAtStart = scrollWrapper.scrollLeft <= 10;
+        const isAtEnd = scrollWrapper.scrollLeft + scrollWrapper.clientWidth >= scrollWrapper.scrollWidth - 10;
+
+        prevBtn.classList.toggle("disabled", isAtStart);
+        nextBtn.classList.toggle("disabled", isAtEnd);
+      };
+
+      const handleScroll = () => {
+        const scrollY = window.scrollY;
+        const topbarHeight = topbar ? topbar.offsetHeight : 0;
+        const pageHeaderBottom = pageHeader
+          ? pageHeader.offsetTop + pageHeader.offsetHeight
+          : 300;
+
+        // Sticky logic
+        if (scrollY > topbarHeight) {
+          navbar.classList.add("sticky");
+          navbar.style.setProperty("--nav-top", `0px`);
+        } else {
+          navbar.classList.remove("sticky");
+          navbar.style.setProperty(
+            "--nav-top",
+            `${topbarHeight - scrollY}px`,
+          );
+        }
+
+        // Light/Dark mode swap
+        if (scrollY > pageHeaderBottom - 80) {
+          navbar.classList.add("light");
+        } else {
+          navbar.classList.remove("light");
+        }
+
+        // Close mobile menu on scroll
+        if (mobileMenu.classList.contains("active") && scrollY > 100) {
+          toggleMenu(true);
+        }
+
+        // SCALING EFFECT (Instead of Zoom)
+        // We start slightly smaller and 'grow' to full size, or just scale down subtly.
+        // The user wants to avoid cutting off, so we'll scale from 1.05 down to 1.0 or similar.
+        if (zoomImage) {
+          // Map scroll 0 -> 1000 to scale 1.1 -> 1.0 (shrinking effect to show more context)
+          const scaleAmount = Math.max(1.0, 1.15 - (scrollY * 0.0002));
+          zoomImage.style.transform = `scale(${scaleAmount})`;
+        }
+      };
+
+      // Carousel Navigation
+      if (prevBtn && nextBtn && scrollWrapper) {
+        prevBtn.addEventListener("click", () => {
+          scrollWrapper.scrollBy({ left: -scrollWrapper.clientWidth / 2, behavior: 'smooth' });
+        });
+        nextBtn.addEventListener("click", () => {
+          scrollWrapper.scrollBy({ left: scrollWrapper.clientWidth / 2, behavior: 'smooth' });
+        });
+        scrollWrapper.addEventListener("scroll", updateNavButtons);
+        window.addEventListener("resize", updateNavButtons);
+        updateNavButtons();
+      }
+
+      window.addEventListener("scroll", () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            handleScroll();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }, { passive: true });
+
+      hamburger.addEventListener("click", (e) => {
+        e.stopPropagation();
+        toggleMenu();
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!navbar.contains(e.target) && mobileMenu.classList.contains("active")) {
+          toggleMenu(true);
+        }
+      });
+
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => toggleMenu(true));
+      });
+
+      const initObservers = () => {
+        const footerLogoObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("is-visible");
+            else entry.target.classList.remove("is-visible");
+          });
+        }, { threshold: 0.25 });
+
+        const preFooter = document.querySelector(".pre-footer");
+        if (preFooter) footerLogoObserver.observe(preFooter);
+
+        const revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("visible");
+          });
+        }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+
+        document.querySelectorAll(".reveal, .reveal-left, .reveal-right, .reveal-scale").forEach((el) => revealObserver.observe(el));
+      };
+
+      handleScroll();
+      initObservers();
+      window.addEventListener("resize", handleScroll);
+    })();
+  </script>
+</body>
+
+</html>

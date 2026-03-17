@@ -1,238 +1,567 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fahrzeugdetail - Yaman Exclusive Automobile</title>
-    <link rel="icon" type="image/png" href="images/logo_favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fahrzeugdetail - GÖKSU Autocenter Mülheim</title>
+    <link rel="icon" type="image/png" href="images/logo_favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Bebas+Neue&family=Great+Vibes&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="fahrzeug.css">
-</head>
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Bebas+Neue&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fahrzeug.css" />
+  </head>
 
-<body>
+  <body>
+    <!-- Header with only top bar -->
+    <header class="site-header">
+      <div class="topbar-container">
+        <div class="topbar-right">
+          <div class="topbar-group">
+            <a
+              href="https://wa.me/491771761759"
+              class="topbar-item"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-whatsapp"></i> +49 (0) 177 176 175 9
+            </a>
+            <a href="tel:+49208875000" class="topbar-item">
+              <i class="fas fa-phone"></i> +49 (0) 208 87 50 00
+            </a>
+          </div>
 
-    <!-- NAVBAR -->
-    <nav class="navbar scrolled" id="navbar">
-        <a href="index.html" class="navbar-logo">
-            <img src="images/logo.png" alt="Yaman Exclusive Automobile Logo">
-        </a>
-        <ul class="navbar-links">
-            <li><a href="index.html">Startseite</a></li>
-            <li><a href="fahrzeugsuche.html">Fahrzeuge</a></li>
-            <li><a href="index.html#unternehmen">Unternehmen</a></li>
-            <li><a href="index.html#galerie">Galerie</a></li>
-            <li><a href="#">Karriere</a></li>
-            <li><a href="index.html#kontakt" class="navbar-cta">Kontakt</a></li>
-        </ul>
-        <div class="hamburger" id="hamburger">
-            <span></span><span></span><span></span>
+          <div class="topbar-group">
+            <a href="mailto:info@ac-o.de" class="topbar-item">
+              <i class="far fa-envelope"></i> info@ac-o.de
+            </a>
+          </div>
+
+          <div class="topbar-group">
+            <a href="#" class="social" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="social" aria-label="YouTube"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
         </div>
-    </nav>
+      </div>
+    </header>
 
-    <!-- MOBILE MENU -->
-    <div class="mobile-menu" id="mobileMenu">
-        <button class="mobile-close" id="mobileClose">&times;</button>
-        <a href="index.html">Startseite</a>
-        <a href="fahrzeugsuche.html">Fahrzeuge</a>
-        <a href="index.html#unternehmen">Unternehmen</a>
-        <a href="index.html#galerie">Galerie</a>
-        <a href="#">Karriere</a>
-        <a href="index.html#kontakt">Kontakt</a>
+    <!-- Nav + Mobile menu wrapper (sticky independently) -->
+    <div class="navbar-wrapper">
+      <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+          <a href="index.html" class="navbar-logo">
+            <img
+              src="images/logo_white_text.svg"
+              alt="Light Logo"
+              class="logo-light"
+            />
+            <img
+              src="images/logo_dark_text.svg"
+              alt="Dark Logo"
+              class="logo-dark"
+            />
+          </a>
+
+          <ul class="navbar-links">
+            <li><a href="fahrzeugsuche.html" class="active">Fahrzeuge</a></li>
+            <li><a href="wohnmobile.html">Wohnmobile</a></li>
+            <li><a href="index.html#services-section">Leistungen</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li>
+              <a href="index.html#contact-section" class="navbar-cta"
+                >Kontakt</a
+              >
+            </li>
+          </ul>
+
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+          <a href="fahrzeugsuche.html" class="active">Fahrzeuge</a>
+          <a href="wohnmobile.html">Wohnmobile</a>
+          <a href="index.html#services-section">Leistungen</a>
+          <a href="ueber-uns.html">Über uns</a>
+          <a href="team.html">Team</a>
+          <a href="index.html#contact-section">Kontakt</a>
+        </div>
+      </nav>
     </div>
 
     <!-- LOADING STATE -->
     <div class="detail-loading" id="detailLoading">
-        <div class="loading-spinner"></div>
-        <p>Fahrzeug wird geladen...</p>
+      <div class="loading-spinner"></div>
+      <p>Fahrzeug wird geladen...</p>
     </div>
 
     <!-- ERROR STATE -->
-    <div class="detail-error" id="detailError" style="display:none;">
-        <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-            <path d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
-        </svg>
-        <p>Fahrzeug nicht gefunden.</p>
-        <a href="fahrzeugsuche.html" class="back-link">&larr; Zurück zur Fahrzeugsuche</a>
+    <div class="detail-error" id="detailError" style="display: none">
+      <svg
+        width="48"
+        height="48"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
+        />
+      </svg>
+      <p>Fahrzeug nicht gefunden.</p>
+      <a href="fahrzeugsuche.html" class="back-link"
+        >&larr; Zurück zur Fahrzeugsuche</a
+      >
     </div>
 
     <!-- VEHICLE DETAIL (hidden until loaded) -->
-    <div class="detail-page" id="detailPage" style="display:none;">
+    <div class="detail-page" id="detailPage" style="display: none">
+      <!-- PAGE HEADER -->
+      <section class="detail-header">
+        <div class="detail-header-inner">
+          <div class="breadcrumb">
+            <a href="index.html">Startseite</a>
+            <span class="breadcrumb-sep">/</span>
+            <a href="fahrzeugsuche.html">Fahrzeugsuche</a>
+            <span class="breadcrumb-sep">/</span>
+            <span id="breadcrumbTitle"></span>
+          </div>
+          <div class="detail-header-actions">
+            <a href="fahrzeugsuche.html" class="detail-back-btn">
+              <svg
+                width="18"
+                height="18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M19 12H5m7-7l-7 7 7 7" />
+              </svg>
+              Zurück
+            </a>
+          </div>
+        </div>
+      </section>
 
-        <!-- PAGE HEADER -->
-        <section class="detail-header">
-            <div class="detail-header-inner">
-                <div class="breadcrumb">
-                    <a href="index.html">Startseite</a>
-                    <span class="breadcrumb-sep">/</span>
-                    <a href="fahrzeugsuche.html">Fahrzeugsuche</a>
-                    <span class="breadcrumb-sep">/</span>
-                    <span id="breadcrumbTitle"></span>
-                </div>
-                <div class="detail-header-actions">
-                    <a href="fahrzeugsuche.html" class="detail-back-btn">
-                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
-                            viewBox="0 0 24 24">
-                            <path d="M19 12H5m7-7l-7 7 7 7" />
-                        </svg>
-                        Zurück
-                    </a>
-                </div>
-            </div>
-        </section>
+      <!-- VEHICLE TITLE -->
+      <section class="detail-title-section">
+        <h1 class="detail-title" id="vehicleTitle"></h1>
+        <p class="detail-subtitle" id="vehicleSubtitle"></p>
+      </section>
 
-        <!-- VEHICLE TITLE -->
-        <section class="detail-title-section">
-            <h1 class="detail-title" id="vehicleTitle"></h1>
-            <p class="detail-subtitle" id="vehicleSubtitle"></p>
-        </section>
+      <!-- IMAGE GALLERY -->
+      <section class="gallery-section">
+        <div class="gallery-main">
+          <button class="gallery-nav gallery-prev" id="galleryPrev">
+            <svg
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              viewBox="0 0 24 24"
+            >
+              <path d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <img id="galleryMainImg" src="" alt="" class="gallery-main-img" />
+          <button class="gallery-nav gallery-next" id="galleryNext">
+            <svg
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              viewBox="0 0 24 24"
+            >
+              <path d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+          <div class="gallery-counter" id="galleryCounter">1 / 1</div>
+        </div>
+        <div class="gallery-thumbs" id="galleryThumbs">
+          <!-- Thumbnails generated by JS -->
+        </div>
+      </section>
 
-        <!-- IMAGE GALLERY -->
-        <section class="gallery-section">
-            <div class="gallery-main">
-                <button class="gallery-nav gallery-prev" id="galleryPrev">
-                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
-                        viewBox="0 0 24 24">
-                        <path d="M15 19l-7-7 7-7" />
-                    </svg>
-                </button>
-                <img id="galleryMainImg" src="" alt="" class="gallery-main-img">
-                <button class="gallery-nav gallery-next" id="galleryNext">
-                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
-                        viewBox="0 0 24 24">
-                        <path d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
-                <div class="gallery-counter" id="galleryCounter">1 / 1</div>
-            </div>
-            <div class="gallery-thumbs" id="galleryThumbs">
-                <!-- Thumbnails generated by JS -->
-            </div>
-        </section>
+      <!-- PRICE & CONDITION -->
+      <section class="price-section">
+        <div class="price-block">
+          <span class="condition-badge" id="conditionBadge"
+            >GEBRAUCHTWAGEN</span
+          >
+          <span class="availability" id="availability">Sofort lieferbar</span>
+        </div>
+        <div class="price-amount" id="vehiclePrice"></div>
+        <div class="price-tax" id="priceTax">
+          Mehrwertsteuer nicht ausweisbar
+        </div>
+      </section>
 
-        <!-- PRICE & CONDITION -->
-        <section class="price-section">
-            <div class="price-block">
-                <span class="condition-badge" id="conditionBadge">GEBRAUCHTWAGEN</span>
-                <span class="availability" id="availability">Sofort lieferbar</span>
-            </div>
-            <div class="price-amount" id="vehiclePrice"></div>
-            <div class="price-tax" id="priceTax">Mehrwertsteuer nicht ausweisbar</div>
-        </section>
+      <!-- CONTACT CTA -->
+      <section class="contact-section">
+        <div class="contact-info">
+          <h3>Fragen zum Fahrzeug <span id="vehicleNr"></span></h3>
+          <p class="contact-subtitle">Ihr persönlicher Verkaufsberater</p>
+        </div>
+        <div class="contact-buttons">
+          <a href="tel:+4920830669016" class="contact-btn contact-phone">
+            <svg
+              width="18"
+              height="18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+              />
+            </svg>
+            +49 208-306690-16
+          </a>
+          <a
+            href="mailto:info@yaman-automobile.de"
+            class="contact-btn contact-email"
+          >
+            <svg
+              width="18"
+              height="18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 6.093L2.25 6.75"
+              />
+            </svg>
+            Fahrzeuganfrage
+          </a>
+        </div>
+      </section>
 
-        <!-- CONTACT CTA -->
-        <section class="contact-section">
-            <div class="contact-info">
-                <h3>Fragen zum Fahrzeug <span id="vehicleNr"></span></h3>
-                <p class="contact-subtitle">Ihr persönlicher Verkaufsberater</p>
-            </div>
-            <div class="contact-buttons">
-                <a href="tel:+4920830669016" class="contact-btn contact-phone">
-                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path
-                            d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-                    </svg>
-                    +49 208-306690-16
-                </a>
-                <a href="mailto:info@yaman-automobile.de" class="contact-btn contact-email">
-                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path
-                            d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 6.093L2.25 6.75" />
-                    </svg>
-                    Fahrzeuganfrage
-                </a>
-            </div>
-        </section>
+      <!-- TECHNICAL SPECS -->
+      <section class="specs-section">
+        <h2 class="section-heading">Technische Daten</h2>
+        <div class="specs-grid" id="specsGrid">
+          <!-- Populated by JS -->
+        </div>
+      </section>
 
-        <!-- TECHNICAL SPECS -->
-        <section class="specs-section">
-            <h2 class="section-heading">Technische Daten</h2>
-            <div class="specs-grid" id="specsGrid">
-                <!-- Populated by JS -->
-            </div>
-        </section>
-
-        <!-- EQUIPMENT / FEATURES -->
-        <section class="equipment-section" id="equipmentSection" style="display:none;">
-            <h2 class="section-heading">Ausstattungsmerkmale</h2>
-            <div class="equipment-list" id="equipmentList">
-                <!-- Populated by JS -->
-            </div>
-        </section>
-
+      <!-- EQUIPMENT / FEATURES -->
+      <section
+        class="equipment-section"
+        id="equipmentSection"
+        style="display: none"
+      >
+        <h2 class="section-heading">Ausstattungsmerkmale</h2>
+        <div class="equipment-list" id="equipmentList">
+          <!-- Populated by JS -->
+        </div>
+      </section>
     </div>
 
-    <!-- FOOTER -->
+    <!-- PRE-FOOTER LOGO & SOCIAL -->
+    <section class="pre-footer">
+      <div class="pre-footer-logo">
+        <div class="logo-wrapper">
+          <svg
+            class="animated-logo"
+            version="1.1"
+            id="Ebene_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 600.9 232.4"
+            xml:space="preserve"
+          >
+            <polygon
+              class="svg-elem-1"
+              points="7.9,113.6 5.1,113.6 0.7,112.7 0.2,109.9 0,99.6 4.6,95.6 16.9,87.5 26.8,82.5 37.2,78.3 50.6,73.5 63.5,68.7 75.9,64.6 84.4,61.7 90.1,60.4 96.7,59.3 106.4,58.2 119.4,57.1 138.7,54.7 157.9,52.5 176.1,51.2 185.3,49.9 191.1,49 213.1,38.3 244.3,23 276.2,7.9 281,5.3 285.4,3.9 290.4,2.4 297,1.8 312.7,0 329.8,-0.9 348.7,-0.9 363.4,-0.7 376.4,2 402.4,7.9 431.6,16.2 450.3,24.1 457.8,28.7 471.4,36.8 496.7,48.8 511.6,54.7 523.3,58.6 538.9,63.5 556.9,69.6 564.8,73.5 573.2,78.3 580.7,82.1 584.4,83.2 587.7,81.6 592.3,81 596.1,81.2 598.5,83.6 599.1,86.4 598.9,90.8 597.4,93.9 596.1,96.5 598.9,99.4 599.6,102 599.4,106.1 599.6,110.5 599.1,113.8 597.2,114.2 593.4,113.6 591,111.6 583.1,105.3 580.9,103.1 580,98.9 577.2,95.4 574.1,95.8 571.2,94.5 559.8,87.8 542,79.7 520.6,73.7 505.3,69.4 486.6,62.1 465.2,52.1 452.3,43.8 439.7,36.5 424.6,29.8 404.8,23.4 384.5,18.4 361.9,14.2 345.9,13.1 329.4,13.1 312.9,15.3 301,16.2 292,18.4 285.8,20.6 274,26 210,57.8 202.7,61.3 196.3,62.8 188.6,63.9 153.7,67.6 121.8,70.7 100.7,73.3 93,74.6 86.8,76.2 71.7,81.2 51,88 36.9,93 28.1,96.9 19.8,102.2 14.3,107.2 11,110.7"
+            ></polygon>
+            <path
+              class="svg-elem-2"
+              d="M111.6,121.2v15.5H20.2c-1.1,0-1.8,0.4-2.2,1.1c-0.4,0.7-0.6,1.6-0.6,2.8v21.4c0,1.2,0.2,2.1,0.7,2.8c0.5,0.7,1.1,1.1,1.9,1.1h72.6c0.8,0,1.5-0.3,2.1-1.1c0.6-0.7,0.9-1.6,0.9-2.8v-0.7c-0.2-0.9-0.5-1.5-0.9-1.8c-0.4-0.3-1.1-0.4-2-0.4H41.4v-15.6H98c1.8,0,3.5,0.3,5.2,1c1.7,0.7,3.1,1.6,4.3,2.8c1.2,1.2,2.2,2.7,3,4.5c0.7,1.7,1.1,3.7,1.1,5.8v9.8c0,2.2-0.4,4.2-1.2,5.9c-0.8,1.7-1.8,3.2-3.1,4.4c-1.3,1.2-2.7,2.1-4.4,2.7c-1.7,0.6-3.3,0.9-5.1,0.9H15c-1.7,0-3.4-0.3-5.1-0.9c-1.7-0.6-3.1-1.5-4.4-2.7c-1.3-1.2-2.3-2.7-3-4.4s-1.1-3.7-1.1-5.9v-32.1c0-2.2,0.4-4.2,1.1-5.9c0.7-1.7,1.8-3.2,3-4.4c1.3-1.2,2.7-2.1,4.4-2.7c1.7-0.6,3.3-0.9,5.1-0.9H111.6z"
+            ></path>
+            <path
+              class="svg-elem-3"
+              d="M220.5,120.4c1.7,0,3.4,0.3,5.1,1c1.7,0.7,3.1,1.6,4.4,2.8c1.3,1.2,2.3,2.7,3.1,4.5c0.8,1.7,1.2,3.7,1.2,5.8v32.6c0,2.2-0.4,4.2-1.2,6c-0.8,1.8-1.8,3.3-3.1,4.5c-1.3,1.2-2.7,2.1-4.4,2.7c-1.7,0.6-3.3,0.9-5.1,0.9h-82.9c-1.7,0-3.4-0.3-5.1-0.9c-1.7-0.6-3.1-1.5-4.4-2.7c-1.3-1.2-2.3-2.7-3-4.5c-0.7-1.8-1.1-3.8-1.1-6v-32.6c0-2.2,0.4-4.2,1.1-6c0.7-1.8,1.8-3.3,3-4.5c1.3-1.2,2.7-2.1,4.4-2.7c1.7-0.6,3.3-0.9,5.1-0.9H220.5z M215.1,165.5c0.8,0,1.5-0.4,2.1-1.1c0.6-0.7,0.9-1.6,0.9-2.8v-21.8c0-1.2-0.2-2.1-0.7-2.7c-0.5-0.7-1.2-1-2.2-1h-72.5c-1.1,0-1.8,0.3-2.2,1c-0.4,0.7-0.6,1.6-0.6,2.7v21.8c0,1.2,0.2,2.1,0.7,2.8c0.5,0.7,1.1,1.1,1.9,1.1H215.1z M172.9,116.6h-16v-15.7h16V116.6z M185.2,100.9h16v15.7h-16V100.9z"
+            ></path>
+            <path
+              class="svg-elem-4"
+              d="M246.6,181.2v-60.1h16v22.2h68.9l9.7-22.2h16.5l-12.3,30l12.3,30.1h-16.5l-9.7-22.3h-68.9v22.3H246.6z"
+            ></path>
+            <path
+              class="svg-elem-5"
+              d="M459.3,165.8c0.8,0,1.5-0.2,2.1-0.7c0.6-0.5,0.9-1.2,0.9-2.3v-1.1c0-1.1-0.2-1.8-0.7-2.2c-0.5-0.4-1.2-0.6-2.2-0.6h-77.8c-1.8,0-3.5-0.3-5.1-0.9c-1.6-0.6-3-1.5-4.3-2.7c-1.2-1.2-2.2-2.7-3-4.4c-0.7-1.7-1.1-3.7-1.1-5.9v-9.8c0-2.2,0.4-4.2,1.1-5.9c0.7-1.7,1.7-3.2,3-4.4c1.2-1.2,2.7-2.1,4.3-2.7c1.6-0.6,3.3-0.9,5.1-0.9h96.7v15.5h-91.4c-0.9,0-1.6,0.2-2.1,0.6c-0.5,0.4-0.7,1.1-0.7,2.2v1.1c0,1.1,0.3,1.8,0.9,2.2c0.6,0.4,1.3,0.6,2.1,0.6h77.7c1.8,0,3.5,0.3,5.2,1c1.7,0.7,3.1,1.6,4.3,2.8c1.2,1.2,2.2,2.7,3,4.5c0.7,1.7,1.1,3.7,1.1,5.8v9.8c0,2.2-0.4,4.2-1.1,5.9c-0.7,1.7-1.7,3.2-3,4.4c-1.2,1.2-2.7,2.1-4.3,2.7c-1.7,0.6-3.4,0.9-5.2,0.9h-96.6v-15.5H459.3z"
+            ></path>
+            <path
+              class="svg-elem-6"
+              d="M584.8,165.8v-44.6h16.1v60.1h-96.6c-1.7,0-3.4-0.3-5.1-0.9c-1.7-0.6-3.1-1.5-4.4-2.7c-1.3-1.2-2.3-2.7-3-4.4c-0.7-1.7-1.1-3.7-1.1-5.9v-46.1h16v40.7c0,1.2,0.2,2.1,0.7,2.8c0.5,0.7,1.1,1.1,1.9,1.1H584.8z"
+            ></path>
+          </svg>
+          <span class="logo-arrival-text">Neuuuuu eingetroffen ©</span>
+        </div>
+      </div>
+
+      <div class="pre-footer-cta">
+        <p>Bereit für Ihren neuen Exklusivwagen?</p>
+        <a href="fahrzeugsuche.html" class="footer-cta-btn"
+          >Fahrzeugbestand entdecken</a
+        >
+      </div>
+
+      <div class="pre-footer-social">
+        <a
+          href="https://www.facebook.com/people/GÖKSU-Exclusive/100077934512477/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Facebook"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/GÖKSU_exclusive/?hl=de"
+          target="_blank"
+          rel="noopener"
+          aria-label="Instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://www.google.com/search?q=GÖKSU+EXCLUSIVE+AUTOMOBILE"
+          target="_blank"
+          rel="noopener"
+          aria-label="Google"
+        >
+          <i class="fab fa-google"></i>
+        </a>
+      </div>
+    </section>
+
     <footer class="footer" id="kontakt">
-        <div class="footer-main">
-            <div class="footer-brand">
-                <img src="images/logo.png" alt="Yaman Exclusive Automobile">
-                <p>Bei Yaman Exclusive Automobile erleben Sie die Fusion aus zeitloser Eleganz und moderner Technologie
-                    – für
-                    Ihre einzigartige Verbindung zu Ihrem Traumauto.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Navigation</h4>
-                <ul>
-                    <li><a href="index.html">Startseite</a></li>
-                    <li><a href="fahrzeugsuche.html">Fahrzeuge</a></li>
-                    <li><a href="index.html#unternehmen">Unternehmen</a></li>
-                    <li><a href="index.html#galerie">Galerie</a></li>
-                    <li><a href="#">Karriere</a></li>
-                    <li><a href="index.html#kontakt">Kontakt</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Öffnungszeiten</h4>
-                <div class="footer-contact-item">Mo – Fr: 09:00 – 18:00 Uhr</div>
-                <div class="footer-contact-item">Sa: 09:00 – 14:30 Uhr</div>
-                <div class="footer-contact-item">So: geschlossen</div>
-            </div>
-            <div class="footer-col">
-                <h4>Kontakt</h4>
-                <div class="footer-contact-item"><a href="tel:020837645323">+49 (0) 2083 764 532 3</a></div>
-                <div class="footer-contact-item"><a href="mailto:info@yaman-automobile.de">info@yaman-automobile.de</a>
-                </div>
-                <div class="footer-contact-item">Nebenbank 9<br>D-45472 Mülheim a.d. Ruhr</div>
-            </div>
+      <div class="footer-main">
+        <div class="footer-brand">
+          <img
+            src="images/logo_white_text.svg"
+            alt="GÖKSU Autocenter Mülheim logo"
+          />
+          <p>
+            Vertrauen ist gut – Kontrolle ist besser! Wir untersuchen jeden
+            Gebrauchtwagen auf Herz und Nieren. Und nur wenn alles stimmt,
+            bekommt er das Siegel
+          </p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Yaman Exclusive Automobile. Alle Rechte vorbehalten.</p>
-            <div class="footer-bottom-links">
-                <a href="#">Datenschutz</a>
-                <a href="#">Impressum</a>
-            </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-nav-links">
+            <li><a href="fahrzeugsuche.html">Fahrzeuge</a></li>
+            <li><a href="wohnmobile.html">Wohnmobile</a></li>
+            <li><a href="index.html#services-section">Leistungen</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="index.html#contact-section">Kontakt</a></li>
+          </ul>
         </div>
+        <div class="footer-col">
+          <h4>Öffnungszeiten</h4>
+          <div class="footer-contact-item">Mo – Fr: 09:00 – 19:00 Uhr</div>
+          <div class="footer-contact-item">Sa: 09:00 – 15:00 Uhr</div>
+          <div class="footer-contact-item">So: geschlossen</div>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <div class="footer-contact-item">
+            <a href="tel:+49208875000">+49 (0) 208 87 50 00</a>
+          </div>
+          <div class="footer-contact-item">
+            <a href="mailto:info@ac-o.de">info@ac-o.de</a>
+          </div>
+          <div class="footer-contact-item">
+            Steinkampstraße 65<br />D-45476 Mülheim a.d. Ruhr
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 GÖKSU Autocenter Mülheim. Alle Rechte vorbehalten.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Datenschutz</a>
+          <a href="#">Impressum</a>
+        </div>
+      </div>
     </footer>
 
     <!-- FLOATING CONTACT -->
     <div class="floating-contact">
-        <a href="tel:020837645323" class="float-btn" title="Anrufen">
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path
-                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-            </svg>
-        </a>
-        <a href="mailto:info@yaman-automobile.de" class="float-btn" title="E-Mail">
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path
-                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 6.093L2.25 6.75" />
-            </svg>
-        </a>
-        <a href="https://wa.me/" class="float-btn" title="WhatsApp">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-                <path
-                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-            </svg>
-        </a>
+      <a href="tel:+49208875000" class="float-btn call" title="Anrufen">
+        <i class="fas fa-phone"></i>
+      </a>
+      <a href="mailto:info@ac-o.de" class="float-btn mail" title="E-Mail">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a
+        href="https://wa.me/491771761759"
+        class="float-btn whatsapp"
+        target="_blank"
+        rel="noopener"
+        title="WhatsApp"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
     </div>
 
     <script src="fahrzeug.js"></script>
-</body>
+    <script>
+      (function () {
+        const navbar = document.getElementById("navbar");
+        const topbar = document.querySelector(".topbar-container");
+        const hamburger = document.getElementById("hamburger");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const contactContainer = document.querySelector(".floating-contact");
+        // Use the loading state as the dark-zone boundary (detail-header is hidden until loaded)
+        const detailHeader =
+          document.querySelector(".detail-loading") ||
+          document.querySelector(".detail-header");
 
+        let ticking = false;
+        const BANNER_HEIGHT = 0; // Promo banner removed
+
+        const toggleMenu = (forceClose = false) => {
+          const isActive = mobileMenu.classList.contains("active");
+          if (forceClose || isActive) {
+            hamburger.classList.remove("active");
+            mobileMenu.classList.remove("active");
+            if (contactContainer) {
+              contactContainer.style.opacity = "1";
+              contactContainer.style.pointerEvents = "auto";
+            }
+          } else {
+            hamburger.classList.add("active");
+            mobileMenu.classList.add("active");
+            if (contactContainer) {
+              contactContainer.style.opacity = "0";
+              contactContainer.style.pointerEvents = "none";
+            }
+          }
+        };
+
+        const handleScroll = () => {
+          const scrollY = window.scrollY;
+          const topbarHeight = topbar ? topbar.offsetHeight : 0;
+          const headerBottom = detailHeader
+            ? detailHeader.offsetTop + detailHeader.offsetHeight
+            : 300;
+
+          // Sticky logic
+          if (scrollY > topbarHeight) {
+            navbar.classList.add("sticky");
+            navbar.style.setProperty("--nav-top", `0px`);
+          } else {
+            navbar.classList.remove("sticky");
+            navbar.style.setProperty(
+              "--nav-top",
+              `${topbarHeight - scrollY}px`,
+            );
+          }
+
+          // Light/Dark mode swap
+          if (scrollY > headerBottom - 80) {
+            navbar.classList.add("light");
+          } else {
+            navbar.classList.remove("light");
+          }
+
+          // Close mobile menu on scroll
+          if (mobileMenu.classList.contains("active") && scrollY > 100) {
+            toggleMenu(true);
+          }
+        };
+
+        window.addEventListener(
+          "scroll",
+          () => {
+            if (!ticking) {
+              window.requestAnimationFrame(() => {
+                handleScroll();
+                ticking = false;
+              });
+              ticking = true;
+            }
+          },
+          { passive: true },
+        );
+
+        hamburger.addEventListener("click", (e) => {
+          e.stopPropagation();
+          toggleMenu();
+        });
+
+        document.addEventListener("click", (e) => {
+          if (
+            !navbar.contains(e.target) &&
+            mobileMenu.classList.contains("active")
+          ) {
+            toggleMenu(true);
+          }
+        });
+
+        mobileMenu.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => toggleMenu(true));
+        });
+
+        const initObservers = () => {
+          const footerLogoObserver = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting)
+                  entry.target.classList.add("is-visible");
+                else entry.target.classList.remove("is-visible");
+              });
+            },
+            { threshold: 0.25 },
+          );
+
+          const preFooter = document.querySelector(".pre-footer");
+          if (preFooter) footerLogoObserver.observe(preFooter);
+
+          const revealObserver = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) entry.target.classList.add("visible");
+              });
+            },
+            { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
+          );
+
+          document
+            .querySelectorAll(
+              ".reveal, .reveal-left, .reveal-right, .reveal-scale",
+            )
+            .forEach((el) => revealObserver.observe(el));
+        };
+
+        handleScroll();
+        initObservers();
+        window.addEventListener("resize", handleScroll);
+      })();
+    </script>
+  </body>
 </html>

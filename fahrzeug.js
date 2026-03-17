@@ -86,26 +86,9 @@ function formatEmissionStandard(std) {
 
 // ===== INIT =====
 document.addEventListener('DOMContentLoaded', () => {
-    initNavbar();
-    initMobileMenu();
     loadVehicle();
 });
 
-// ===== NAVBAR =====
-function initNavbar() {
-    // Already scrolled on this page
-}
-
-// ===== MOBILE MENU =====
-function initMobileMenu() {
-    const hamburger = document.getElementById('hamburger');
-    const menu = document.getElementById('mobileMenu');
-    const closeBtn = document.getElementById('mobileClose');
-    if (!hamburger || !menu) return;
-    hamburger.addEventListener('click', () => menu.classList.add('open'));
-    closeBtn.addEventListener('click', () => menu.classList.remove('open'));
-    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
-}
 
 // ===== LOAD VEHICLE =====
 async function loadVehicle() {
