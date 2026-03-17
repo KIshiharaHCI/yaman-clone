@@ -24,7 +24,12 @@
         <div class="topbar-right">
           <!-- Group 1: WhatsApp + Phone -->
           <div class="topbar-group">
-            <a href="https://wa.me/491771761759" class="topbar-item">
+            <a
+              href="https://wa.me/491771761759"
+              class="topbar-item"
+              target="_blank"
+              rel="noopener"
+            >
               <i class="fab fa-whatsapp"></i> +49 (0) 177 176 175 9
             </a>
             <a href="tel:+49208875000" class="topbar-item">
@@ -58,44 +63,44 @@
     <!-- Nav + Mobile menu wrapper (sticky independently) -->
     <div class="navbar-wrapper">
       <nav class="navbar" id="navbar">
-        <a href="#" class="navbar-logo">
-          <img
-            src="images/logo_white_text.svg"
-            alt="Light Logo"
-            class="logo logo-light"
-          />
-          <img
-            src="images/logo_dark_text.svg"
-            alt="Dark Logo"
-            class="logo logo-dark"
-          />
-        </a>
+        <div class="navbar-container">
+          <a href="index.html" class="navbar-logo">
+            <img
+              src="images/logo_white_text.svg"
+              alt="Light Logo"
+              class="logo-light"
+            />
+            <img
+              src="images/logo_dark_text.svg"
+              alt="Dark Logo"
+              class="logo-dark"
+            />
+          </a>
 
-        <ul class="navbar-links">
-          <li><a href="#">Startseite</a></li>
-          <li><a href="fahrzeugsuche.html">Fahrzeuge</a></li>
-          <li><a href="#unternehmen">Unternehmen</a></li>
-          <li><a href="#galerie">Galerie</a></li>
-          <li><a href="#">Karriere</a></li>
-          <li><a href="#" class="navbar-cta">Kontakt</a></li>
-        </ul>
+          <ul class="navbar-links">
+            <li><a href="fahrzeugsuche.html">Fahrzeuge</a></li>
+            <li><a href="wohnmobile.html">Wohnmobile</a></li>
+            <li><a href="#services-section">Leistungen</a></li>
+            <li><a href="#about-section">Über uns</a></li>
+            <li><a href="#team-section">Team</a></li>
+            <li><a href="#contact-section" class="navbar-cta">Kontakt</a></li>
+          </ul>
 
-        <div class="hamburger" id="hamburger">
-          <span></span><span></span><span></span>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
         </div>
-        <!-- MOBILE MENU inside wrapper -->
+
         <div class="mobile-menu" id="mobileMenu">
-          <a href="#">Startseite</a>
           <a href="fahrzeugsuche.html">Fahrzeuge</a>
-          <a href="#unternehmen">Unternehmen</a>
-          <a href="#galerie">Galerie</a>
-          <a href="#">Karriere</a>
-          <a href="#">Kontakt</a>
+          <a href="wohnmobile.html">Wohnmobile</a>
+          <a href="#services-section">Leistungen</a>
+          <a href="#about-section">Über uns</a>
+          <a href="#team-section">Team</a>
+          <a href="#contact-section">Kontakt</a>
         </div>
       </nav>
     </div>
-
-    <!-- HERO WITH VIDEO -->
     <section class="hero" id="startseite">
       <video
         class="hero-video"
@@ -103,23 +108,18 @@
         muted
         loop
         playsinline
+        preload="auto"
         poster="images/hero-fallback.png"
       >
-        <source
-          src="https://1298.dimata.dev//wp-content//uploads//2024//01//video.mp4"
-          type="video/mp4"
-        />
+        <source src="videos/hero-vid-cropped.mp4" type="video/mp4" />
       </video>
-      <img
-        src="images/hero-fallback.png"
-        alt="Yaman Automobile"
-        class="hero-fallback"
-      />
+
       <div class="hero-overlay"></div>
+
       <div class="hero-content">
         <div class="hero-script">Exclusive</div>
         <h1>
-          <span class="hero-bold">YAMAN</span
+          <span class="hero-bold">GÖKSU</span
           ><span class="hero-light">AUTOMOBILE</span>
         </h1>
         <div class="hero-tagline">
@@ -155,6 +155,7 @@
           </a>
         </div>
       </div>
+
       <div class="scroll-indicator">
         <span>Scroll</span>
         <div class="scroll-line"></div>
@@ -175,42 +176,10 @@
       </div>
     </section>
 
-    <!-- ABOUT / WILLKOMMEN -->
-    <section class="about" id="unternehmen">
-      <div class="about-text reveal-left">
-        <div class="about-text-overline">
-          Willkommen bei Yaman Exclusive Automobile
-        </div>
-        <h2>Ihr Partner für <em>exklusive</em> Automobile</h2>
-        <p>
-          Bei Yaman Exclusive Automobile erleben Sie die Fusion aus zeitloser
-          Eleganz und moderner Technologie. Wir sind stolz darauf, Ihnen nicht
-          nur Fahrzeuge, sondern auch eine Geschichte der Leidenschaft und
-          Hingabe zu bieten – für eine einzigartige Verbindung zwischen Ihnen
-          und Ihrem Traumauto.
-        </p>
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap">
-          <a href="#" class="btn-primary">Mehr Erfahren</a>
-          <a href="#" class="btn-outline">Jetzt zu unseren Autos</a>
-        </div>
-      </div>
-      <div class="about-image-container reveal-right">
-        <img
-          src="images/hero-fallback.png"
-          alt="Yaman Exclusive Automobile Showroom"
-          class="about-image"
-        />
-        <div class="about-image-frame"></div>
-      </div>
-    </section>
-
-    <div class="divider"><div class="divider-line"></div></div>
-
-    <!-- SERVICES -->
-    <section class="services">
+    <section id="services-section" class="services">
       <div class="services-header reveal">
-        <div class="overline">Yaman Exclusive Automobile</div>
-        <h2>Exklusiver Autohandel</h2>
+        <!-- <div class="overline">GÖKSU Exclusive Automobile</div> -->
+        <h2>Leistungen</h2>
         <p>
           Bei uns dreht sich alles um Ihre automobilen Wünsche und Bedürfnisse.
           Als renommierter Autohändler bieten wir eine exklusive Palette an
@@ -219,93 +188,202 @@
       </div>
       <div class="services-grid">
         <div class="service-item reveal" style="transition-delay: 0s">
-          <h4>Verkauf von Fahrzeugen</h4>
+          <div class="service-icon">
+            <i class="fas fa-file-signature"></i>
+          </div>
+          <h4>Zulassungsservice &amp; Kennzeichen</h4>
           <p>
-            Neu-, Jahres- und Gebrauchtwagen aus unserem handverlesenen Bestand.
+            Gerne melden wir Ihr neuerworbenes Fahrzeug für Sie an, so ersparen
+            Sie sich lästige Wartezeiten und erhalten Ihr Fahrzeug
+            schnellstmöglich angemeldet ausgehändigt. Sie möchten Ihr Fahrzeug
+            innerhalb Deutschlands oder gar ins Ausland überführen? Kein
+            Problem, wir kümmern uns selbstverständlich um die passenden
+            Kennzeichen für Sie.
           </p>
         </div>
+
         <div class="service-item reveal" style="transition-delay: 0.1s">
-          <h4>Leasing &amp; Finanzierung</h4>
+          <div class="service-icon">
+            <i class="fas fa-shield-check"></i>
+            <i class="fas fa-certificate"></i>
+          </div>
+          <h4>Dekra Siegel</h4>
           <p>
-            Flexible Leasing-, Finanzierungs- und Garantieversicherungsoptionen.
+            Ist ein DEKRA Siegel drauf, dann ist auch die höchste Qualität drin.
+            Mit dem DEKRA Siegel können Produkte, Unternehmen, Prozesse, Anlagen
+            und Geräte sowie Personen ausgezeichnet werden. Je nach
+            Anwendungsbereich bestätigt das Siegel dabei die Einhaltung sehr
+            unterschiedlicher Vorschriften und Standards. Das DEKRA Siegel für
+            Gebrauchtfahrzeuge gibt Sicherheit beim Gebrauchtwagenkauf und
+            -verkauf.
           </p>
         </div>
+
         <div class="service-item reveal" style="transition-delay: 0.2s">
-          <h4>Fahrzeugankauf</h4>
-          <p>Wir kaufen Ihr Fahrzeug – schnell, fair und unkompliziert.</p>
+          <div class="service-icon">
+            <i class="fas fa-plane-arrival"></i>
+          </div>
+          <h4>Airportservice</h4>
+          <p>
+            Sie Rufen uns einfach ein bis zwei Tage vorher unter +49 208 87 50
+            00 oder +49 151 658 750 00 an und nennen uns Flugnummer, Abflug- und
+            Ankunftszeit und wir holen sie vom Flughafen ab.
+          </p>
         </div>
+
         <div class="service-item reveal" style="transition-delay: 0.3s">
-          <h4>Fahrzeugaufbereitung</h4>
+          <div class="service-icon">
+            <i class="fas fa-car-side"></i>
+          </div>
+          <h4>Ersatzfahrzeug</h4>
           <p>
-            Lackpolitur, Versiegelung, Polster- und Lederpflege sowie
-            Ozonbehandlung.
+            Bei uns bleiben Sie Mobil. Im Falle eines Fahrzeugausfalls bieten
+            wir Ihnen ein gleichwertiges Ersatzfahrzeug an.
           </p>
         </div>
+
         <div class="service-item reveal" style="transition-delay: 0.4s">
-          <h4>Scheiben &amp; Smart Repair</h4>
+          <div class="service-icon">
+            <i class="fas fa-hand-holding-dollar"></i>
+          </div>
+          <h4>Ihr Gebrauchtwagen</h4>
           <p>
-            Scheibenreparatur, Austausch, Felgen- &amp; Lackreparatur,
-            Beulendoktor.
+            Sie wollen ihr Fahrzeug verkaufen ,und haben keine Zeit dafür ? Kein
+            Problem, wir holen Ihr Fahrzeug selbstverständlich vor Ihrer Haustür
+            ab.
           </p>
         </div>
+
         <div class="service-item reveal" style="transition-delay: 0.5s">
-          <h4>Folierungen</h4>
+          <div class="service-icon">
+            <i class="fas fa-file-invoice-dollar"></i>
+          </div>
+          <h4>Finanzierung</h4>
           <p>
-            Scheibentönungen, Steinschlagschutz- und Dekorfolien nach Wunsch.
+            Sich einen Traum erfüllen und trotzdem liquide bleiben. Ein Wunsch,
+            den wir Ihnen gerne erfüllen.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- QUOTE BANNER WITH IMAGE -->
-    <section class="quote-banner" id="galerie">
+    <div class="divider"><div class="divider-line"></div></div>
+
+    <!-- ABOUT / WILLKOMMEN -->
+    <section class="about" id="about-section">
+      <div class="about-text reveal-left">
+        <!-- <div class="about-text-overline">
+          Herzlich willkommen beim Göksu Autocenter in Mülheim
+        </div> -->
+        <h2>Herzlich willkommen beim Göksu <em>Autocenter</em> in Mülheim</h2>
+        <p>
+          Unser Anspruch ist es Sie kompetent und serviceorientiert bei Ihrem
+          Autokauf zu unterstützen. Die Leidenschaft zu unseren Autos, eine
+          professionelle Abwicklung und unsere Qualität zeichnen uns hierbei
+          aus. Wir nehmen uns Zeit für Sie und bieten Ihnen einen umfangreichen
+          rundum Service.
+        </p>
+
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap">
+          <!-- <a href="#" class="btn-primary">Mehr Erfahren</a> -->
+          <!-- <a href="#" class="btn-outline">Jetzt zu unseren Autos</a> -->
+          <a href="#" class="btn-primary">Jetzt zu unseren Autos</a>
+        </div>
+      </div>
+      <div class="about-image-container reveal-right">
+        <img
+          src="images/hero-fallback.png"
+          alt="GÖKSU Exclusive Automobile Showroom"
+          class="about-image"
+        />
+        <div class="about-image-frame"></div>
+      </div>
+    </section>
+
+    <section class="quote-banner" id="team-section">
       <div class="quote-banner-inner">
         <div class="quote-banner-text reveal-left">
           <div class="quote-mark">&ldquo;</div>
           <div class="quote-accent-line"></div>
           <p>
-            Mit Leidenschaft für Exklusivität und Fachkompetenz in Sport- und
-            Luxuswagen bringen wir automobile Träume auf die Straße.
+            Gerne beraten wir Sie telefonisch, per E-Mail oder persönlich vor
+            Ort kompetent und ausführlich zu unseren Serviceangeboten. Wir
+            freuens uns darauf, Ihnen weiterzuhelfen.
           </p>
-          <div class="quote-author">— Yaman Exclusive Automobile</div>
+          <div class="quote-author">— GÖKSU Autocenter Mülheim</div>
         </div>
-        <div class="quote-banner-image reveal-right">
-          <img
-            src="images/showroom.jpg"
-            alt="Yaman Exclusive Automobile Showroom"
-          />
+
+        <div class="team-list-container reveal-right">
+          <div class="team-roster">
+            <div class="team-member">
+              <div class="member-photo icon-placeholder">
+                <i class="fas fa-user"></i>
+                <img src="" alt="Bülent Göksu" class="team-img" />
+              </div>
+              <div class="member-info">
+                <h3>Bülent Göksu</h3>
+                <span class="member-tag">Experte</span>
+              </div>
+            </div>
+
+            <div class="team-member">
+              <div class="member-photo icon-placeholder">
+                <i class="fas fa-user"></i>
+                <img src="" alt="Hayrullah Göksu" class="team-img" />
+              </div>
+              <div class="member-info">
+                <h3>Hayrullah Göksu</h3>
+                <span class="member-tag">Experte</span>
+              </div>
+            </div>
+
+            <div class="team-member">
+              <div class="member-photo icon-placeholder">
+                <i class="fas fa-user"></i>
+                <img
+                  src="images/aerial.png"
+                  alt="Yasin Göksu"
+                  class="team-img"
+                />
+              </div>
+              <div class="member-info">
+                <h3>Yasin Göksu</h3>
+                <span class="member-tag">Experte</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- REVIEWS -->
-    <section class="reviews">
-      <div class="overline reveal">Bewertungen</div>
-      <h2 class="reveal" style="transition-delay: 0.1s">
-        Was Kunden über uns sagen
-      </h2>
-      <div class="reviews-logos reveal" style="transition-delay: 0.2s">
-        <a
-          href="https://www.google.com/search?q=yaman+automobile"
-          target="_blank"
-          class="review-logo"
-        >
-          <img src="images/google-reviews.png" alt="Google Bewertungen" />
-        </a>
-        <a
-          href="https://www.autoscout24.de/haendler/yaman-automobile/bewertungen"
-          target="_blank"
-          class="review-logo"
-        >
-          <img src="images/autoscout24.png" alt="AutoScout24 Bewertungen" />
-        </a>
-        <a
-          href="https://www.mobile.de/bewertungen/YAMANAUTOMOBILE"
-          target="_blank"
-          class="review-logo"
-        >
-          <img src="images/mobile-de.png" alt="mobile.de Bewertungen" />
-        </a>
+    <section class="reviews stats-section" id="stats-counter">
+      <div class="overline reveal">Erfolge</div>
+      <h2 class="reveal" style="transition-delay: 0.1s">GÖKSU in Zahlen</h2>
+
+      <div class="stats-grid reveal" style="transition-delay: 0.2s">
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fas fa-car-side"></i></div>
+          <div class="stat-number" data-target="1561">0</div>
+          <div class="stat-label">Verkaufte Autos</div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fas fa-handshake"></i></div>
+          <div class="stat-number" data-target="856">0</div>
+          <div class="stat-label">Wiederverkäufer</div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fas fa-users"></i></div>
+          <div class="stat-number" data-target="1389">0</div>
+          <div class="stat-label">Zufriedene Kunden</div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fas fa-star"></i></div>
+          <div class="stat-number" data-target="956">0</div>
+          <div class="stat-label">Bewertungen</div>
+        </div>
       </div>
     </section>
 
@@ -323,105 +401,275 @@
       </div>
     </section>
 
+    <section id="contact-section" class="contact-section">
+      <div class="contact-container">
+        <div class="contact-form-wrapper reveal-left">
+          <div class="overline">Wir sind für Sie da</div>
+          <h2 class="contact-title">Kontaktieren Sie uns</h2>
+          <p class="contact-desc">
+            Haben Sie Fragen zu einem Fahrzeug oder unseren Leistungen? Unser
+            Expertenteam berät Sie gerne persönlich.
+          </p>
+
+          <form class="luxury-form">
+            <div class="form-row">
+              <div class="input-group">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  autocomplete="name"
+                  required
+                  placeholder=" "
+                />
+                <label for="name"
+                  >Name <span class="required-mark">*</span></label
+                >
+              </div>
+              <div class="input-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                  placeholder=" "
+                />
+                <label for="email"
+                  >E-Mail <span class="required-mark">*</span></label
+                >
+              </div>
+            </div>
+            <div class="input-group">
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                autocomplete="tel"
+                required
+                placeholder=" "
+              />
+              <label for="phone"
+                >Telefon <span class="required-mark">*</span></label
+              >
+            </div>
+            <div class="input-group">
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+                placeholder=" "
+              ></textarea>
+              <label for="message"
+                >Nachricht <span class="required-mark">*</span></label
+              >
+            </div>
+            <button type="submit" class="btn-primary">Anfrage Senden</button>
+          </form>
+        </div>
+
+        <div class="contact-info-wrapper reveal-right">
+          <div class="info-card">
+            <h3>Details</h3>
+
+            <div class="info-item">
+              <i class="fas fa-location-dot"></i>
+              <div>
+                <strong>Adresse</strong>
+                <p>Steinkampstraße 65<br />45476 Mülheim</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <strong>Telefon & WhatsApp</strong>
+                <div class="phone-list">
+                  <a href="tel:+49208875000" class="phone-link"
+                    >+49 (0) 208 87 50 00</a
+                  >
+
+                  <div class="whatsapp-row">
+                    <a href="tel:+491771761759" class="phone-link"
+                      >+49 (0) 177 176 175 9</a
+                    >
+                    <span class="wa-tag">WhatsApp</span>
+                  </div>
+
+                  <a href="tel:+491732887740" class="phone-link"
+                    >+49 (0) 173 288 77 40</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <strong>E-Mail</strong>
+                <p><a href="mailto:info@ac-o.de">info@ac-o.de</a></p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <strong>Öffnungszeiten</strong>
+                <table class="hours-table">
+                  <tr>
+                    <td>Mo - Fr:</td>
+                    <td>09:00 - 19:00 Uhr</td>
+                  </tr>
+                  <tr>
+                    <td>Samstag:</td>
+                    <td>09:00 - 15:00 Uhr</td>
+                  </tr>
+                  <tr>
+                    <td>Sonntag:</td>
+                    <td>Geschlossen</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-fullwidth reveal">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2486.624037068293!2d6.841382575797418!3d51.446698071799496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x417034c01a279cef%3A0x6411ee127f2f0f73!2sAuto%20Center%20Oberhausen!5e0!3m2!1snl!2snl!4v1773576374851!5m2!1snl!2snl"
+          width="100%"
+          height="500"
+          style="border: 0; display: block"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+
     <!-- PRE-FOOTER LOGO & SOCIAL -->
     <section class="pre-footer">
       <div class="pre-footer-logo">
-        <img src="images/logo.png" alt="Yaman Autohaus Exclusive" />
+        <div class="logo-wrapper">
+          <svg
+            class="animated-logo"
+            version="1.1"
+            id="Ebene_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 600.9 232.4"
+            xml:space="preserve"
+          >
+            <polygon
+              class="svg-elem-1"
+              points="7.9,113.6 5.1,113.6 0.7,112.7 0.2,109.9 0,99.6 4.6,95.6 16.9,87.5 26.8,82.5 37.2,78.3 50.6,73.5 63.5,68.7 75.9,64.6 84.4,61.7 90.1,60.4 96.7,59.3 106.4,58.2 119.4,57.1 138.7,54.7 157.9,52.5 176.1,51.2 185.3,49.9 191.1,49 213.1,38.3 244.3,23 276.2,7.9 281,5.3 285.4,3.9 290.4,2.4 297,1.8 312.7,0 329.8,-0.9 348.7,-0.9 363.4,-0.7 376.4,2 402.4,7.9 431.6,16.2 450.3,24.1 457.8,28.7 471.4,36.8 496.7,48.8 511.6,54.7 523.3,58.6 538.9,63.5 556.9,69.6 564.8,73.5 573.2,78.3 580.7,82.1 584.4,83.2 587.7,81.6 592.3,81 596.1,81.2 598.5,83.6 599.1,86.4 598.9,90.8 597.4,93.9 596.1,96.5 598.9,99.4 599.6,102 599.4,106.1 599.6,110.5 599.1,113.8 597.2,114.2 593.4,113.6 591,111.6 583.1,105.3 580.9,103.1 580,98.9 577.2,95.4 574.1,95.8 571.2,94.5 559.8,87.8 542,79.7 520.6,73.7 505.3,69.4 486.6,62.1 465.2,52.1 452.3,43.8 439.7,36.5 424.6,29.8 404.8,23.4 384.5,18.4 361.9,14.2 345.9,13.1 329.4,13.1 312.9,15.3 301,16.2 292,18.4 285.8,20.6 274,26 210,57.8 202.7,61.3 196.3,62.8 188.6,63.9 153.7,67.6 121.8,70.7 100.7,73.3 93,74.6 86.8,76.2 71.7,81.2 51,88 36.9,93 28.1,96.9 19.8,102.2 14.3,107.2 11,110.7"
+            ></polygon>
+            <path
+              class="svg-elem-2"
+              d="M111.6,121.2v15.5H20.2c-1.1,0-1.8,0.4-2.2,1.1c-0.4,0.7-0.6,1.6-0.6,2.8v21.4c0,1.2,0.2,2.1,0.7,2.8c0.5,0.7,1.1,1.1,1.9,1.1h72.6c0.8,0,1.5-0.3,2.1-1.1c0.6-0.7,0.9-1.6,0.9-2.8v-0.7c-0.2-0.9-0.5-1.5-0.9-1.8c-0.4-0.3-1.1-0.4-2-0.4H41.4v-15.6H98c1.8,0,3.5,0.3,5.2,1c1.7,0.7,3.1,1.6,4.3,2.8c1.2,1.2,2.2,2.7,3,4.5c0.7,1.7,1.1,3.7,1.1,5.8v9.8c0,2.2-0.4,4.2-1.2,5.9c-0.8,1.7-1.8,3.2-3.1,4.4c-1.3,1.2-2.7,2.1-4.4,2.7c-1.7,0.6-3.3,0.9-5.1,0.9H15c-1.7,0-3.4-0.3-5.1-0.9c-1.7-0.6-3.1-1.5-4.4-2.7c-1.3-1.2-2.3-2.7-3-4.4s-1.1-3.7-1.1-5.9v-32.1c0-2.2,0.4-4.2,1.1-5.9c0.7-1.7,1.8-3.2,3-4.4c1.3-1.2,2.7-2.1,4.4-2.7c1.7-0.6,3.3-0.9,5.1-0.9H111.6z"
+            ></path>
+            <path
+              class="svg-elem-3"
+              d="M220.5,120.4c1.7,0,3.4,0.3,5.1,1c1.7,0.7,3.1,1.6,4.4,2.8c1.3,1.2,2.3,2.7,3.1,4.5c0.8,1.7,1.2,3.7,1.2,5.8v32.6c0,2.2-0.4,4.2-1.2,6c-0.8,1.8-1.8,3.3-3.1,4.5c-1.3,1.2-2.7,2.1-4.4,2.7c-1.7,0.6-3.3,0.9-5.1,0.9h-82.9c-1.7,0-3.4-0.3-5.1-0.9c-1.7-0.6-3.1-1.5-4.4-2.7c-1.3-1.2-2.3-2.7-3-4.5c-0.7-1.8-1.1-3.8-1.1-6v-32.6c0-2.2,0.4-4.2,1.1-6c0.7-1.8,1.8-3.3,3-4.5c1.3-1.2,2.7-2.1,4.4-2.7c1.7-0.6,3.3-0.9,5.1-0.9H220.5z M215.1,165.5c0.8,0,1.5-0.4,2.1-1.1c0.6-0.7,0.9-1.6,0.9-2.8v-21.8c0-1.2-0.2-2.1-0.7-2.7c-0.5-0.7-1.2-1-2.2-1h-72.5c-1.1,0-1.8,0.3-2.2,1c-0.4,0.7-0.6,1.6-0.6,2.7v21.8c0,1.2,0.2,2.1,0.7,2.8c0.5,0.7,1.1,1.1,1.9,1.1H215.1z M172.9,116.6h-16v-15.7h16V116.6z M185.2,100.9h16v15.7h-16V100.9z"
+            ></path>
+            <path
+              class="svg-elem-4"
+              d="M246.6,181.2v-60.1h16v22.2h68.9l9.7-22.2h16.5l-12.3,30l12.3,30.1h-16.5l-9.7-22.3h-68.9v22.3H246.6z"
+            ></path>
+            <path
+              class="svg-elem-5"
+              d="M459.3,165.8c0.8,0,1.5-0.2,2.1-0.7c0.6-0.5,0.9-1.2,0.9-2.3v-1.1c0-1.1-0.2-1.8-0.7-2.2c-0.5-0.4-1.2-0.6-2.2-0.6h-77.8c-1.8,0-3.5-0.3-5.1-0.9c-1.6-0.6-3-1.5-4.3-2.7c-1.2-1.2-2.2-2.7-3-4.4c-0.7-1.7-1.1-3.7-1.1-5.9v-9.8c0-2.2,0.4-4.2,1.1-5.9c0.7-1.7,1.7-3.2,3-4.4c1.2-1.2,2.7-2.1,4.3-2.7c1.6-0.6,3.3-0.9,5.1-0.9h96.7v15.5h-91.4c-0.9,0-1.6,0.2-2.1,0.6c-0.5,0.4-0.7,1.1-0.7,2.2v1.1c0,1.1,0.3,1.8,0.9,2.2c0.6,0.4,1.3,0.6,2.1,0.6h77.7c1.8,0,3.5,0.3,5.2,1c1.7,0.7,3.1,1.6,4.3,2.8c1.2,1.2,2.2,2.7,3,4.5c0.7,1.7,1.1,3.7,1.1,5.8v9.8c0,2.2-0.4,4.2-1.1,5.9c-0.7,1.7-1.7,3.2-3,4.4c-1.2,1.2-2.7,2.1-4.3,2.7c-1.7,0.6-3.4,0.9-5.2,0.9h-96.6v-15.5H459.3z"
+            ></path>
+            <path
+              class="svg-elem-6"
+              d="M584.8,165.8v-44.6h16.1v60.1h-96.6c-1.7,0-3.4-0.3-5.1-0.9c-1.7-0.6-3.1-1.5-4.4-2.7c-1.3-1.2-2.3-2.7-3-4.4c-0.7-1.7-1.1-3.7-1.1-5.9v-46.1h16v40.7c0,1.2,0.2,2.1,0.7,2.8c0.5,0.7,1.1,1.1,1.9,1.1H584.8z"
+            ></path>
+          </svg>
+          <span class="logo-arrival-text">Neuuuuu eingetroffen ©</span>
+        </div>
       </div>
+
+      <div class="pre-footer-cta">
+        <p>Bereit für Ihren neuen Exklusivwagen?</p>
+        <a href="fahrzeugsuche.html" class="footer-cta-btn"
+          >Fahrzeugbestand entdecken</a
+        >
+      </div>
+
       <div class="pre-footer-social">
         <a
-          href="https://www.facebook.com/people/Yaman-Exclusive/100077934512477/"
+          href="https://www.facebook.com/people/GÖKSU-Exclusive/100077934512477/"
           target="_blank"
           rel="noopener"
           aria-label="Facebook"
         >
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 1.09.044 1.613.115v3.31c-.449-.048-.997-.07-1.463-.07-1.527 0-2.132.58-2.132 2.095v2.108h3.475l-.597 3.667h-2.878v8.091C19.62 23.29 24 18.67 24 13.044 24 6.533 18.627 1.163 12.001 1.163S0 6.533 0 13.044c0 5.137 3.632 9.426 8.468 10.477l.633.17z"
-            />
-          </svg>
+          <i class="fab fa-facebook-f"></i>
         </a>
         <a
-          href="https://www.instagram.com/yaman_exclusive/?hl=de"
+          href="https://www.instagram.com/GÖKSU_exclusive/?hl=de"
           target="_blank"
           rel="noopener"
           aria-label="Instagram"
         >
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
-            />
-          </svg>
+          <i class="fab fa-instagram"></i>
         </a>
         <a
-          href="https://www.google.com/search?q=YAMAN+EXCLUSIVE+AUTOMOBILE"
+          href="https://www.google.com/search?q=GÖKSU+EXCLUSIVE+AUTOMOBILE"
           target="_blank"
           rel="noopener"
           aria-label="Google"
         >
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"
-            />
-            <path
-              d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
-            />
-            <path
-              d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
-            />
-            <path
-              d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
-            />
-          </svg>
+          <i class="fab fa-google"></i>
         </a>
       </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer" id="kontakt">
       <div class="footer-main">
         <div class="footer-brand">
-          <img src="images/logo.png" alt="Yaman Exclusive Automobile" />
+          <img
+            src="images/logo_white_text.svg"
+            alt="GÖKSU Autocenter Mülheim logo"
+          />
           <p>
-            Bei Yaman Exclusive Automobile erleben Sie die Fusion aus zeitloser
-            Eleganz und moderner Technologie – für Ihre einzigartige Verbindung
-            zu Ihrem Traumauto.
+            Vertrauen ist gut – Kontrolle ist besser! Wir untersuchen jeden
+            Gebrauchtwagen auf Herz und Nieren. Und nur wenn alles stimmt,
+            bekommt er das Siegel
           </p>
         </div>
         <div class="footer-col">
           <h4>Navigation</h4>
-          <ul>
-            <li><a href="#">Startseite</a></li>
+          <ul class="footer-nav-links">
             <li><a href="fahrzeugsuche.html">Fahrzeuge</a></li>
-            <li><a href="#unternehmen">Unternehmen</a></li>
-            <li><a href="#galerie">Galerie</a></li>
-            <li><a href="#">Karriere</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="wohnmobile.html">Wohnmobile</a></li>
+            <li><a href="#services-section">Leistungen</a></li>
+            <li><a href="#about-section">Über uns</a></li>
+            <li><a href="#team-section">Team</a></li>
+            <li><a href="#contact-section">Kontakt</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Öffnungszeiten</h4>
-          <div class="footer-contact-item">Mo – Fr: 09:00 – 18:00 Uhr</div>
-          <div class="footer-contact-item">Sa: 09:00 – 14:30 Uhr</div>
+          <div class="footer-contact-item">Mo – Fr: 09:00 – 19:00 Uhr</div>
+          <div class="footer-contact-item">Sa: 09:00 – 15:00 Uhr</div>
           <div class="footer-contact-item">So: geschlossen</div>
         </div>
         <div class="footer-col">
           <h4>Kontakt</h4>
           <div class="footer-contact-item">
-            <a href="tel:020837645323">+49 (0) 2083 764 532 3</a>
+            <a href="tel:+49208875000">+49 (0) 208 87 50 00</a>
           </div>
           <div class="footer-contact-item">
-            <a href="mailto:info@yaman-automobile.de"
-              >info@yaman-automobile.de</a
-            >
+            <a href="mailto:info@ac-o.de">info@ac-o.de</a>
           </div>
           <div class="footer-contact-item">
-            Nebenbank 9<br />D-45472 Mülheim a.d. Ruhr
+            Steinkampstraße 65<br />D-45476 Mülheim a.d. Ruhr
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Yaman Exclusive Automobile. Alle Rechte vorbehalten.</p>
+        <p>&copy; 2026 GÖKSU Autocenter Mülheim. Alle Rechte vorbehalten.</p>
         <div class="footer-bottom-links">
           <a href="#">Datenschutz</a>
           <a href="#">Impressum</a>
@@ -431,166 +679,217 @@
 
     <!-- FLOATING CONTACT -->
     <div class="floating-contact">
-      <a href="tel:020837645323" class="float-btn" title="Anrufen">
-        <svg
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
-          />
-        </svg>
+      <a href="tel:020837645323" class="float-btn call" title="Anrufen">
+        <i class="fas fa-phone"></i>
       </a>
       <a
-        href="mailto:info@yaman-automobile.de"
-        class="float-btn"
+        href="mailto:info@GÖKSU-automobile.de"
+        class="float-btn mail"
         title="E-Mail"
       >
-        <svg
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 6.093L2.25 6.75"
-          />
-        </svg>
+        <i class="fas fa-envelope"></i>
       </a>
-      <a href="https://wa.me/" class="float-btn" title="WhatsApp">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
-          />
-        </svg>
+      <a
+        href="https://wa.me/491771761759"
+        class="float-btn whatsapp"
+        target="_blank"
+        rel="noopener"
+        title="WhatsApp"
+      >
+        <i class="fab fa-whatsapp"></i>
       </a>
     </div>
 
     <script>
-      // Elements
-      const navbarWrapper = document.querySelector(".navbar-wrapper");
-      const navbar = document.getElementById("navbar");
-      const topbar = document.querySelector(".topbar-container");
-      const hero = document.querySelector(".hero");
-      const hamburger = document.getElementById("hamburger");
-      const mobileMenu = document.getElementById("mobileMenu");
-      const mobileClose = document.getElementById("mobileClose");
+      (function () {
+        const navbar = document.getElementById("navbar");
+        const topbar = document.querySelector(".topbar-container");
+        const hero = document.querySelector(".hero");
+        const hamburger = document.getElementById("hamburger");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const heroVideo = document.querySelector(".hero-video");
+        const heroFallback = document.querySelector(".hero-fallback");
+        const contactContainer = document.querySelector(".floating-contact");
 
-      // Heights
-      let topbarHeight = topbar ? topbar.offsetHeight : 0;
-      let heroHeight = hero ? hero.offsetHeight : 0;
+        let ticking = false;
 
-      function updateHeights() {
-        topbarHeight = topbar ? topbar.offsetHeight : 0;
-        heroHeight = hero ? hero.offsetHeight : 0;
-        // Set CSS variable for top offset
-        navbar.style.top = `${topbarHeight - 2}px`;
-      }
+        const initVideoOptimization = () => {
+          if (!heroVideo) return;
 
-      window.addEventListener("resize", updateHeights);
-      updateHeights();
+          const playVideo = () => {
+            heroVideo.play().catch((error) => {
+              console.log("Autoplay interaction requirement:", error);
+            });
+          };
 
-      // Update handleScroll to ensure navbar top logic is clean
-      function handleScroll() {
-        const scrollY = window.scrollY;
+          playVideo();
 
-        if (scrollY > topbarHeight) {
-          navbar.classList.add("sticky");
-          navbar.style.top = "0px";
-        } else {
-          navbar.classList.remove("sticky");
-          // This ensures the navbar stays attached to the topbar when at the top
-          navbar.style.top = `${Math.max(0, topbarHeight - scrollY)}px`;
-        }
+          document.addEventListener("touchstart", playVideo, { once: true });
+        };
 
-        // Light mode logic
-        if (heroHeight && scrollY > heroHeight) {
-          navbar.classList.add("light");
-        } else {
-          navbar.classList.remove("light");
-        }
-      }
-
-      let ticking = false;
-      window.addEventListener("scroll", () => {
-        if (!ticking) {
-          window.requestAnimationFrame(() => {
-            handleScroll();
-            ticking = false;
-          });
-          ticking = true;
-        }
-      });
-
-      handleScroll(); // Run on load
-
-      const toggleMenu = () => {
-        hamburger.classList.toggle("active");
-        mobileMenu.classList.toggle("active");
-        // REMOVED: document.body.style.overflow = "hidden";
-      };
-
-      hamburger.addEventListener("click", (e) => {
-        e.stopPropagation(); // Prevents the document click listener from firing immediately
-        toggleMenu();
-      });
-
-      // Close menu when clicking ANY link inside it
-      mobileMenu.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-          if (mobileMenu.classList.contains("active")) toggleMenu();
-        });
-      });
-
-      // FEATURE: Click Outside to Close
-      document.addEventListener("click", (event) => {
-        const isClickInside = navbar.contains(event.target);
-
-        if (!isClickInside && mobileMenu.classList.contains("active")) {
-          toggleMenu();
-        }
-      });
-
-      // FEATURE: Scroll to Close (Feels very premium)
-      window.addEventListener(
-        "scroll",
-        () => {
-          if (mobileMenu.classList.contains("active")) {
-            // We use a small threshold or just close it immediately
+        const toggleMenu = (forceClose = false) => {
+          const isActive = mobileMenu.classList.contains("active");
+          if (forceClose || isActive) {
             hamburger.classList.remove("active");
             mobileMenu.classList.remove("active");
-          }
-        },
-        { passive: true },
-      );
-
-      // Optional: scroll reveal animations
-      const revealElements = document.querySelectorAll(
-        ".reveal, .reveal-left, .reveal-right, .reveal-scale",
-      );
-      const revealObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
+            if (contactContainer) {
+              contactContainer.style.opacity = "1";
+              contactContainer.style.pointerEvents = "auto";
             }
-          });
-        },
-        { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
-      );
-      revealElements.forEach((el) => revealObserver.observe(el));
+          } else {
+            hamburger.classList.add("active");
+            mobileMenu.classList.add("active");
+            if (contactContainer) {
+              contactContainer.style.opacity = "0";
+              contactContainer.style.pointerEvents = "none";
+            }
+          }
+        };
 
-      // Video fallback — show poster image if video fails to load
-      const heroVideo = document.querySelector(".hero-video");
-      const heroFallback = document.querySelector(".hero-fallback");
-      if (heroVideo) {
-        heroVideo.addEventListener("error", () => {
-          heroVideo.style.display = "none";
-          heroFallback.style.display = "block";
+        const handleScroll = () => {
+          const scrollY = window.scrollY;
+          const topbarHeight = topbar ? topbar.offsetHeight : 0;
+          const heroHeight = hero ? hero.offsetHeight : 600;
+
+          if (scrollY < topbarHeight) {
+            navbar.classList.remove("sticky");
+            navbar.style.setProperty(
+              "--nav-top",
+              `${topbarHeight - scrollY}px`,
+            );
+          } else {
+            navbar.classList.add("sticky");
+            navbar.style.setProperty("--nav-top", "0px");
+          }
+
+          if (scrollY > heroHeight - 80) {
+            navbar.classList.add("light");
+          } else {
+            navbar.classList.remove("light");
+          }
+
+          if (mobileMenu.classList.contains("active") && scrollY > 100) {
+            toggleMenu(true);
+          }
+        };
+
+        window.addEventListener(
+          "scroll",
+          () => {
+            if (!ticking) {
+              window.requestAnimationFrame(() => {
+                handleScroll();
+                ticking = false;
+              });
+              ticking = true;
+            }
+          },
+          { passive: true },
+        );
+
+        hamburger.addEventListener("click", (e) => {
+          e.stopPropagation();
+          toggleMenu();
         });
-      }
+
+        document.addEventListener("click", (e) => {
+          if (
+            !navbar.contains(e.target) &&
+            mobileMenu.classList.contains("active")
+          ) {
+            toggleMenu(true);
+          }
+        });
+
+        mobileMenu.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => toggleMenu(true));
+        });
+
+        const animateCount = (el) => {
+          const target = parseInt(el.getAttribute("data-target"));
+          const duration = 2000;
+          const frameRate = 1000 / 60;
+          const totalFrames = Math.round(duration / frameRate);
+          let frame = 0;
+
+          const count = () => {
+            frame++;
+            const progress = frame / totalFrames;
+            const easeOut = 1 - Math.pow(1 - progress, 3);
+            const current = Math.round(target * easeOut);
+            el.innerText = current.toLocaleString();
+            if (frame < totalFrames) requestAnimationFrame(count);
+            else el.innerText = target.toLocaleString();
+          };
+          requestAnimationFrame(count);
+        };
+
+        const initObservers = () => {
+          // --- LOGO & TEXT ANIMATION OBSERVER (WITH REPLAY) ---
+          const footerLogoObserver = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  // Re-trigger animation
+                  entry.target.classList.add("is-visible");
+                } else {
+                  // Reset state when user scrolls away so it can play again
+                  entry.target.classList.remove("is-visible");
+                }
+              });
+            },
+            { threshold: 0.25 },
+          );
+
+          const preFooter = document.querySelector(".pre-footer");
+          if (preFooter) footerLogoObserver.observe(preFooter);
+
+          const statsObserver = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  animateCount(entry.target);
+                  statsObserver.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.5 },
+          );
+
+          document
+            .querySelectorAll(".stat-number")
+            .forEach((s) => statsObserver.observe(s));
+
+          const revealObserver = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("visible");
+                }
+              });
+            },
+            { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
+          );
+
+          document
+            .querySelectorAll(
+              ".reveal, .reveal-left, .reveal-right, .reveal-scale",
+            )
+            .forEach((el) => revealObserver.observe(el));
+        };
+
+        if (heroVideo) {
+          heroVideo.addEventListener("error", () => {
+            heroVideo.style.display = "none";
+            if (heroFallback) heroFallback.style.display = "block";
+          });
+        }
+
+        handleScroll();
+        initVideoOptimization();
+        initObservers();
+        window.addEventListener("resize", handleScroll);
+      })();
     </script>
   </body>
 </html>
