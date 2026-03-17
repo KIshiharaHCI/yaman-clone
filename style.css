@@ -114,20 +114,78 @@ img {
   transform: scale(1);
 }
 
-/* =====  TOPBAR ===== */
+/* ===== PROMO BANNER (Rhythmic Blink) ===== */
+.promo-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.promo-banner p {
+  margin: 0;
+  color: var(--text-primary); /* Ensuring pure black for legibility */
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  /* text-transform: uppercase; */
+  /* 4s total: 3 blinks (~1.5s) + 2.5s steady pause */
+  animation: rhythmic-blink 4s steps(1) infinite;
+}
+
+@keyframes rhythmic-blink {
+  /* Blink 1 */
+  0% {
+    opacity: 1;
+  }
+  12% {
+    opacity: 0;
+  }
+  /* Blink 2 */
+  25% {
+    opacity: 1;
+  }
+  37% {
+    opacity: 0;
+  }
+  /* Blink 3 */
+  50% {
+    opacity: 1;
+  }
+  62% {
+    opacity: 0;
+  }
+  /* Steady State (4) */
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ===== TOPBAR ===== */
 .site-header {
-  /* position: relative; */
   z-index: 1000;
   font-weight: 400;
 }
 
 .topbar-container {
+  margin-top: 40px; /* Offset for sticky promo-banner */
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 10px 48px; /* match navbar padding */
+  padding: 10px 48px;
   background-color: #111;
   transition: padding 0.3s ease;
+  position: relative;
 }
 
 .topbar-right {
@@ -136,19 +194,11 @@ img {
   gap: 16px;
 }
 
-.topbar-group:last-child {
-  padding-left: 0; /* no extra padding for social group */
-}
-
-.topbar-group:last-child .social:last-child {
-  margin-right: 0; /* flush alignment with navbar */
-}
-
 .topbar-group {
   display: flex;
   align-items: center;
-  gap: 12px; /* internal spacing inside group */
-  padding-left: 12px; /* space for subtle border */
+  gap: 12px;
+  padding-left: 12px;
   position: relative;
 }
 
@@ -160,13 +210,13 @@ img {
   transform: translateY(-50%);
   width: 1px;
   height: 18px;
-  background-color: rgba(255, 255, 255, 0.2); /* very subtle divider */
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .topbar-item {
   display: flex;
   align-items: center;
-  gap: 6px; /* spacing between icon and text */
+  gap: 6px;
   font-size: 0.75rem;
   color: #eee;
   text-decoration: none;
@@ -175,13 +225,13 @@ img {
 }
 
 .topbar-item:hover {
-  color: #fff; /* soft hover effect */
+  color: #fff;
 }
 
 .social i {
   color: var(--gold-light);
   font-size: 0.85rem;
-  margin: 0 4px; /* enough spacing for premium feel */
+  margin: 0 4px;
   transition:
     transform 0.3s ease,
     color 0.3s ease;
@@ -189,8 +239,7 @@ img {
 
 .social:hover i {
   color: #fff;
-  text-shadow: 0 0 8px rgba(209, 26, 17, 0.6);
-  /* transform: translateY(-1px); */
+  text-shadow: 0 0 8px rgba(197, 160, 89, 0.6);
   transform: scale(1.1);
 }
 
@@ -198,37 +247,33 @@ img {
 .navbar-wrapper {
   height: 80px;
   width: 100%;
-  position: relative; /* Acts as a placeholder */
+  position: relative;
 }
 
 /* ===== NAVBAR BASE ===== */
 .navbar {
   position: fixed;
-  /* This variable will be updated by JS to sit below the topbar */
-  top: var(--nav-top, 0px);
+  top: var(--nav-top, 40px); /* Defaults to sit under banner */
   left: 0;
   width: 100%;
   height: 80px;
-  z-index: 1000;
+  z-index: 1500; /* Sits between topbar and promo-banner */
   display: flex;
   align-items: center;
-  background: rgba(10, 10, 10, 0.7); /* Dark frosted start */
+  background: rgba(10, 10, 10, 0.7);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  /* Transition background and shadow, but NOT 'top' to avoid shaking */
   transition:
-    background 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-    border 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
-/* Sticky State (Scrolled past topbar) */
 .navbar.sticky {
+  top: 40px !important; /* Locks under the 40px promo-banner */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   background: rgba(10, 10, 10, 0.95);
 }
 
-/* Light Mode (Controlled by JS based on Hero section) */
 .navbar.light {
   background: rgba(255, 255, 255, 0.98);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
@@ -244,19 +289,15 @@ img {
   padding: 0 2rem;
 }
 
-/* NAVBAR LOGO */
 .navbar-logo {
   display: flex;
   align-items: center;
   height: 45px;
 }
-
 .navbar-logo img {
   height: 45px;
   transition: opacity 0.3s ease;
 }
-
-/* Logo Swap Logic */
 .logo-dark {
   display: none;
 }
@@ -267,7 +308,6 @@ img {
   display: block;
 }
 
-/* LINKS */
 .navbar-links {
   display: flex;
   gap: 2.5rem;
@@ -290,12 +330,11 @@ img {
 .navbar.light .navbar-links a:not(.navbar-cta) {
   color: #111111;
 }
-
 .navbar-links a:hover {
   color: var(--gold);
 }
 
-/* CTA BUTTON - CONSISTENT BRANDING */
+/* CTA BUTTON */
 .navbar-cta {
   padding: 0.7rem 1.4rem;
   border: 1px solid var(--gold);
@@ -324,7 +363,7 @@ img {
   border-color: #111111;
 }
 
-/* MOBILE HAMBURGER */
+/* MOBILE ELEMENTS */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -339,22 +378,10 @@ img {
   background: #ffffff;
   transition: all 0.3s ease;
 }
-
 .navbar.light .hamburger span {
   background: #111111;
 }
 
-.hamburger.active span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.active span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
-
-/* MOBILE MENU */
 .mobile-menu {
   position: absolute;
   top: 80px;
@@ -372,24 +399,20 @@ img {
 .mobile-menu.active {
   display: flex;
 }
-
 .navbar.light .mobile-menu {
   background: #ffffff;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
-
 .mobile-menu a {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 600;
 }
-
 .navbar.light .mobile-menu a {
   color: #111111;
 }
 
-/* MOBILE MENU CTA BUTTON */
 .mobile-menu a:last-child {
   background: var(--gold) !important;
   color: #ffffff !important;
@@ -400,22 +423,15 @@ img {
   transition: all 0.3s ease;
 }
 
-.mobile-menu a:last-child:hover {
-  background: transparent !important;
-  color: var(--gold) !important;
-}
-
-/* Ensure navbar.light doesn't turn this button's text black */
-.navbar.light .mobile-menu a:last-child {
-  color: #ffffff !important;
-}
-/* RESPONSIVE */
 @media (max-width: 992px) {
   .navbar-links {
     display: none;
   }
   .hamburger {
     display: flex;
+  }
+  .topbar-container {
+    padding: 10px 20px;
   }
 }
 /* ===== HERO WITH VIDEO - FINAL OPTIMIZED ===== */
