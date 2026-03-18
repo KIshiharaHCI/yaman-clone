@@ -25,7 +25,7 @@
 
   /* Updated border to 15% opacity red */
   --border-color: rgba(255, 77, 77, 0.25);
-  --font-display: "Playfair Display", Georgia, serif;
+  --font-display: "Oswald", sans-serif;
   --font-hero: "Bebas Neue", "Arial Narrow", sans-serif;
   --font-script: "Great Vibes", cursive;
   --font-body: "Montserrat", "Helvetica Neue", sans-serif;
@@ -60,6 +60,17 @@ a:hover {
 img {
   max-width: 100%;
   display: block;
+}
+
+/* Emphasized headers - Logical Italics Sprinkle */
+h1 em,
+h2 em,
+h3 em,
+h4 em,
+h5 em,
+h6 em {
+  font-style: italic;
+  color: var(--gold);
 }
 
 /* ===== SCROLL ANIMATIONS ===== */
@@ -114,7 +125,6 @@ img {
   opacity: 1;
   transform: scale(1);
 }
-
 
 /* ===== TOPBAR ===== */
 .site-header {
@@ -174,19 +184,38 @@ img {
   color: #fff;
 }
 
+/* Social Icons - Default State */
 .social i {
-  color: var(--gold-light);
+  /* Match the other topbar items (#eee) */
+  color: #eee;
   font-size: 0.85rem;
-  margin: 0 4px;
+  margin: 0;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Sharp edges for a masculine, professional look */
+  border-radius: 0;
+  background: transparent;
+
   transition:
-    transform 0.3s ease,
+    background 0.3s ease,
     color 0.3s ease;
 }
 
+/* Social Icons - Hover State */
 .social:hover i {
-  color: #fff;
-  text-shadow: 0 0 8px rgba(197, 160, 89, 0.6);
-  transform: scale(1.1);
+  /* Brand Red Color (#ad0b04) */
+  color: var(--gold) !important;
+
+  /* White Background */
+  background: #ffffff !important;
+
+  /* Ensure no rounded corners or shadows interfere */
+  text-shadow: none !important;
+  transform: none !important;
 }
 
 /* ===== NAVBAR WRAPPER ===== */
@@ -200,12 +229,10 @@ img {
 .navbar {
   position: fixed;
   top: var(--nav-top, 0);
-  /* Defaults to top */
   left: 0;
   width: 100%;
   height: 80px;
   z-index: 1500;
-  /* Sits between topbar and promo-banner */
   display: flex;
   align-items: center;
   background: rgba(10, 10, 10, 0.7);
@@ -218,7 +245,6 @@ img {
 
 .navbar.sticky {
   top: 0 !important;
-  /* Locks under the top */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   background: rgba(10, 10, 10, 0.95);
 }
@@ -238,29 +264,160 @@ img {
   padding: 0 2rem;
 }
 
+/* ===== NAVBAR LOGO & TYPEWRITER FIX ===== */
+
 .navbar-logo {
   display: flex;
-  align-items: center;
-  height: 45px;
+  align-items: center; /* Aligns logo and text vertically */
+  gap: 12px; /* Space between logo and typewriter text */
+  text-decoration: none;
+  height: 100%;
 }
 
-.navbar-logo img {
-  height: 45px;
-  transition: opacity 0.3s ease;
+.navbar-logo svg {
+  height: 38px; /* Scales logo to fit comfortably in 80px navbar */
+  width: auto;
+  flex-shrink: 0;
 }
 
-.logo-dark {
-  display: none;
+/* --- NAVBAR LOGO ANIMATION CORE --- */
+
+/* 1. Base State: Everything starts hidden/transparent */
+.navbar-logo .logo-red-part,
+.navbar-logo .dynamic-text,
+.navbar-logo .logo-automobile-paths path,
+.navbar-logo .logo-goksu-paths path,
+.navbar-logo path {
+  fill: transparent;
+  /* Faster fill like footer */
+  transition: fill 0.3s ease;
 }
 
-.navbar.light .logo-light {
-  display: none;
+/* 2. Revealed State: Only when .animate-ready is present */
+.animate-logo.animate-ready .logo-red-part {
+  fill: var(--gold);
+  transition-delay: 0.1s;
 }
 
-.navbar.light .logo-dark {
-  display: block;
+.animate-logo.animate-ready .dynamic-text,
+.animate-ready .logo-automobile-paths path,
+.animate-ready .logo-goksu-paths path {
+  fill: var(--text-primary);
 }
 
+/* 3. Staggered Entrance (0.1s to 0.5s) */
+.animate-ready .logo-goksu-paths path:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.animate-ready .logo-goksu-paths path:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.animate-ready .logo-goksu-paths path:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.animate-ready .logo-goksu-paths path:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.animate-ready .logo-goksu-paths path:nth-child(5) {
+  transition-delay: 0.5s;
+}
+
+/* 4. Typewriter Text Styling (Base State) */
+#typewriter-text {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--text-primary);
+  letter-spacing: 2.5px;
+  white-space: nowrap;
+  display: inline-block;
+
+  /* Start Hidden */
+  opacity: 0;
+  clip-path: inset(0 100% 0 0);
+
+  /* Standard transition for the 'Reveal' */
+  transition:
+    clip-path 1.1s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s ease,
+    color 0.4s ease;
+}
+
+/* 4b. THE SNAP RESET (Only for Theme Swaps) */
+/* This only kills the transition when we are ACTIVELY resetting via JS */
+.navbar-logo:not(.animate-ready) #typewriter-text,
+.navbar-logo:not(.animate-ready) path {
+  transition: none !important;
+  opacity: 0;
+  fill: transparent;
+  clip-path: inset(0 100% 0 0);
+}
+
+/* 5. Reveal Trigger (The "First Load" & "Re-trigger" State) */
+/* We use the .animate-logo class to ensure it shows up on load */
+.animate-logo.animate-ready #typewriter-text {
+  opacity: 1;
+  clip-path: inset(0 0% 0 0);
+  transition-delay: 0.8s; /* Tight 0.8s delay like the footer */
+}
+
+/* 5b. Theme-Specific Transitions (Scroll/Sticky/Light) */
+#navbar.sticky .animate-logo.animate-ready #typewriter-text,
+#navbar.light .animate-logo.animate-ready #typewriter-text {
+  transition-delay: 0.8s;
+}
+
+/* 5b. Theme-Specific Transitions (Scroll/Sticky/Light) */
+/* Keep the 0.8s delay consistent for theme swaps */
+#navbar.sticky .navbar-logo.animate-ready #typewriter-text,
+#navbar.light .navbar-logo.animate-ready #typewriter-text {
+  transition-delay: 0.8s;
+}
+
+/* 6. Theme Swaps (Light Mode - Brand Accurate) */
+
+/* 6a. These parts STAY RED (#AD0B04) in light mode */
+/* Targets the Red Swoop and the first 11 paths of Automobile (A-U-T-O-C-E-N-T-E-R-) */
+#navbar.light .animate-ready .logo-red-part,
+#navbar.light
+  .animate-ready
+  .logo-automobile-paths
+  path:nth-child(n + 1):nth-child(-n + 11) {
+  fill: #ad0b04; /* The specific brand red */
+}
+
+/* 6b. These parts TURN DARK (#1A1A1A) for contrast */
+/* Targets GOKSU and all paths after the 11th hyphen */
+#navbar.light .animate-ready .logo-goksu-paths path,
+#navbar.light .animate-ready .logo-automobile-paths path:nth-child(n + 12) {
+  fill: #1a1a1a; /* A clean dark grey/black */
+}
+
+/* 6c. Typewriter also matches the brand red */
+#navbar.light #typewriter-text {
+  color: #ad0b04;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  #typewriter-text {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-logo {
+    gap: 8px;
+  }
+  .navbar-logo svg {
+    height: 30px;
+  }
+  #typewriter-text {
+    font-size: 10px;
+  }
+}
+
+/* ===== NAVIGATION LINKS ===== */
 .navbar-links {
   display: flex;
   gap: 2.5rem;
@@ -332,7 +489,7 @@ img {
   border-color: #111111;
 }
 
-/* MOBILE ELEMENTS */
+/* ===== MOBILE ELEMENTS ===== */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -353,7 +510,6 @@ img {
   background: #111111;
 }
 
-/* Hamburger → X animation */
 .hamburger.active span:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
@@ -430,71 +586,39 @@ img {
   transition: all 0.3s ease;
 }
 
+/* ===== MEDIA QUERIES ===== */
 @media (max-width: 992px) {
   .navbar-links {
     display: none;
   }
-
   .hamburger {
     display: flex;
-  }
-
-  .topbar-container {
-    padding: 10px 20px;
   }
 }
 
 @media (max-width: 768px) {
-  .topbar-right {
-    flex-direction: column;
-    gap: 6px;
-    align-items: center;
-  }
-
-  .topbar-group {
-    gap: 8px;
-  }
-
-  .topbar-item {
-    font-size: 0.72rem;
-  }
-
-
-  .navbar {
-    height: 65px;
-  }
-
+  .navbar,
   .navbar-wrapper {
     height: 65px;
   }
-
-  .navbar-logo img {
+  #header-logo-svg {
     height: 38px;
   }
-
+  .logo-typewriter {
+    font-size: 7px;
+    letter-spacing: 1.8px;
+    margin-top: -4px;
+  }
   .mobile-menu {
     top: 65px;
   }
 }
 
 @media (max-width: 480px) {
-  .topbar-container {
-    padding: 8px 12px;
-  }
-
-  .topbar-item {
-    font-size: 0.68rem;
-  }
-
-  .social i {
-    font-size: 0.78rem;
-  }
-
   .navbar-container {
     padding: 0 1rem;
   }
-
-  .navbar-logo img {
+  #header-logo-svg {
     height: 32px;
   }
 }
@@ -767,6 +891,45 @@ img {
   }
 }
 
+/* Specific Contact Form Button Override */
+.contact-section .btn-primary {
+  /* Dimensions & Layout */
+  padding: 0.7rem 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Colors & Border */
+  background: var(--gold) !important; /* #ad0b04 */
+  color: #ffffff !important;
+  border: 1px solid var(--gold);
+
+  /* Typography */
+  font-size: 0.75rem;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+
+  /* Animation - Color only, no lift */
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-section .btn-primary:hover {
+  /* Flip to Black on White Background (Match navbar.light logic) */
+  background: #111111 !important;
+  color: #ffffff !important;
+  border-color: #111111;
+
+  /* Explicitly disabling the lift/shadow effects from global styles */
+  transform: none !important;
+  box-shadow: none !important;
+}
+
 /* ===== TWO-COLUMN CARDS ===== */
 .dual-cards {
   display: grid;
@@ -869,11 +1032,6 @@ img {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
-}
-
-.about-text h2 em {
-  color: var(--gold);
-  font-style: italic;
 }
 
 .about-text p {
@@ -1283,104 +1441,156 @@ img {
   }
 }
 
-/* ===== STATS COUNTER ===== */
-.stats-section {
-  padding: 8rem 3rem;
-  max-width: 1300px;
+/* ===== AUTOMOTIVE ROAD TIMELINE ===== */
+.stats-timeline-section {
+  padding: 8rem 2rem;
+  max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+  background: #000;
+  overflow: hidden;
 }
 
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  margin-top: 4rem;
-}
-
-.stat-item {
-  padding: 2rem;
+.timeline-container {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  margin-top: 5rem;
+  padding: 4rem 0;
+  /* Driven by JS progress calculation */
+  --path-progress: 0%;
 }
 
-/* Vertical divider lines between stats */
-.stat-item:not(:last-child)::after {
+/* Base Road (Dashed Gray/Dimmed) */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 50%,
+    transparent 100%
+  );
+  background-size: 2px 30px;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Active Road (Dashed Pure White) */
+.timeline-line::after {
   content: "";
   position: absolute;
-  right: -1rem;
-  top: 15%;
-  /* Adjusted to better frame the icon + number */
-  height: 70%;
-  width: 1px;
-  background: rgba(255, 255, 255, 0.1);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--path-progress);
+  background-image: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #ffffff 50%,
+    transparent 50%,
+    transparent 100%
+  );
+  background-size: 2px 30px;
+  /* Light glow at the "front" of the path */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  /* Snappy height update to follow scroll */
+  transition: height 0.1s linear;
 }
 
-/* Icon Styling */
-.stat-icon {
-  margin-bottom: 1.5rem;
-  font-size: 1.8rem;
-  color: var(--gold);
-  opacity: 0.75;
-  transition: all 0.4s var(--transition-smooth);
+.timeline-item {
+  position: relative;
+  width: 50%;
+  margin-bottom: 8rem;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  /* Start 50px below final position */
+  transform: translateY(50px);
+  /* Reduced transition time so it follows the scroll speed instead of a fixed delay */
+  transition:
+    opacity 0.2s ease-out,
+    transform 0.2s ease-out;
+  will-change: transform, opacity;
+  z-index: 2;
+}
+
+.timeline-item.left {
+  left: 0;
+  justify-content: flex-end;
+  padding-right: 6rem;
+}
+
+.timeline-item.right {
+  left: 50%;
+  justify-content: flex-start;
+  padding-left: 6rem;
+}
+
+/* Reveal State: Controlled by JS Distance */
+.timeline-item.is-visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+
+/* Premium Card Styling */
+.stat-content {
+  background: linear-gradient(
+    145deg,
+    rgba(20, 20, 20, 0.9) 0%,
+    rgba(5, 5, 5, 1) 100%
+  );
+  backdrop-filter: blur(10px);
+  padding: 2.5rem;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 380px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+.left .stat-content {
+  border-left: 4px solid var(--gold);
+  text-align: right;
+}
+.right .stat-content {
+  border-right: 4px solid var(--gold);
+  text-align: left;
 }
 
 .stat-number {
   font-family: var(--font-hero);
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
-  color: var(--gold);
-  font-weight: 400;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  color: #fff;
   margin-bottom: 0.5rem;
   display: block;
 }
 
-.stat-label {
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--text-primary);
-  opacity: 0.8;
-}
-
-/* Hover States for Interaction */
-.stat-item:hover .stat-icon {
-  opacity: 1;
-  /* transform: translateY(-5px); */
-}
-
-.stat-item:hover .stat-number {
-  transform: scale(1.05);
-  transition: transform 0.4s var(--transition-smooth);
-}
-
-/* Responsive adjustment */
-@media (max-width: 992px) {
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
+/* Tablet & Mobile */
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 30px;
+    transform: none;
   }
-
-  /* Hide divider after 2nd item in 2x2 grid */
-  .stat-item:nth-child(2)::after {
-    display: none;
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 70px !important;
+    padding-right: 20px !important;
+    justify-content: flex-start !important;
+    /* Maintain vertical slide on mobile */
+    transform: translateY(40px);
+  }
+  .stat-content {
+    text-align: left !important;
+    border-right: none !important;
+    border-left: 3px solid var(--gold) !important;
+    padding: 1.5rem;
   }
 }
-
-@media (max-width: 480px) {
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Hide all dividers in single column */
-  .stat-item::after {
-    display: none;
-  }
-}
-
 /* ===== CONTACT SECTION ===== */
 .contact-section {
   padding: 8rem 0 0;
@@ -1682,7 +1892,7 @@ img {
   }
 }
 
-/* ===== PRE-FOOTER LOGO & SOCIAL ===== */
+/* ===== PRE-FOOTER LOGO & SOCIAL (STRICT TYPEWRITER) ===== */
 .pre-footer {
   background: linear-gradient(0deg, #080808 0%, #1a1e21 100%);
   padding: 5rem 2rem 4rem;
@@ -1707,12 +1917,39 @@ img {
   flex-shrink: 0;
 }
 
-/* 1. LOGO INITIAL STATE */
-.pre-footer:not(.is-visible) [class^="svg-elem-"] {
+/* --- LOGO INITIAL STATE --- */
+[class^="svg-elem-"] {
   fill: transparent !important;
+  transition: fill 0.3s ease;
 }
 
-/* 2. TEXT INITIAL STATE */
+/* --- STAGGERED LOGO FILL (0.1s to 0.7s) --- */
+.pre-footer.is-visible .svg-elem-1 {
+  transition-delay: 0.1s;
+  fill: rgb(173, 11, 4) !important;
+}
+.pre-footer.is-visible .svg-elem-2 {
+  transition-delay: 0.2s;
+  fill: #ffffff !important;
+}
+.pre-footer.is-visible .svg-elem-3 {
+  transition-delay: 0.3s;
+  fill: #ffffff !important;
+}
+.pre-footer.is-visible .svg-elem-4 {
+  transition-delay: 0.4s;
+  fill: #ffffff !important;
+}
+.pre-footer.is-visible .svg-elem-5 {
+  transition-delay: 0.5s;
+  fill: #ffffff !important;
+}
+.pre-footer.is-visible .svg-elem-6 {
+  transition-delay: 0.6s;
+  fill: #ffffff !important;
+}
+
+/* --- TYPEWRITER TEXT (Starts at 0.8s) --- */
 .logo-arrival-text {
   font-family: "Verdana", sans-serif;
   font-weight: bold;
@@ -1720,182 +1957,70 @@ img {
   color: #ffffff;
   white-space: nowrap;
   letter-spacing: 4px;
-  opacity: 0.95;
-  flex-shrink: 0;
+  opacity: 0;
   clip-path: inset(0 100% 0 0);
   display: inline-block;
-  vertical-align: middle;
 }
 
-/* 3. ANIMATION TRIGGERS */
 .pre-footer.is-visible .logo-arrival-text {
-  /* Reduced delay to 1.1s so it starts while logo is finishing */
-  animation: suaveTypewriter 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  animation-delay: 1.1s;
+  opacity: 0.95;
+  /* 1.2s duration for the typing feel, starting after logo is 100% done */
+  animation: strictTypewriter 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: 0.8s;
 }
 
-/* Tighter SVG delays for a punchier entrance */
-.pre-footer.is-visible .svg-elem-1 {
-  animation: animate-svg-fill-1 0.6s cubic-bezier(0.47, 0, 0.745, 0.715) 0.4s
-    both;
-}
-
-.pre-footer.is-visible .svg-elem-2 {
-  animation: animate-svg-fill-2 0.6s cubic-bezier(0.47, 0, 0.745, 0.715) 0.5s
-    both;
-}
-
-.pre-footer.is-visible .svg-elem-3 {
-  animation: animate-svg-fill-3 0.6s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s
-    both;
-}
-
-.pre-footer.is-visible .svg-elem-4 {
-  animation: animate-svg-fill-4 0.6s cubic-bezier(0.47, 0, 0.745, 0.715) 0.7s
-    both;
-}
-
-.pre-footer.is-visible .svg-elem-5 {
-  animation: animate-svg-fill-5 0.6s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s
-    both;
-}
-
-.pre-footer.is-visible .svg-elem-6 {
-  animation: animate-svg-fill-6 0.6s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s
-    both;
-}
-
-/* 4. CTA & SOCIAL STYLES */
-.pre-footer-cta p {
-  color: #ffffff;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  letter-spacing: 1px;
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
-.footer-cta-btn {
-  display: inline-block;
-  padding: 1rem 2.5rem;
-  border: 1px solid var(--gold);
-  color: var(--gold);
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.footer-cta-btn:hover {
-  background: var(--gold);
-  color: #fff;
-  box-shadow: 0 5px 20px rgba(173, 11, 4, 0.3);
-}
-
-.pre-footer-social {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  margin-top: 1rem;
-}
-
-.pre-footer-social a {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 1.4rem;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-}
-
-.pre-footer-social a:hover {
-  color: var(--gold);
-}
-
-/* 5. KEYFRAMES */
-@keyframes suaveTypewriter {
+@keyframes strictTypewriter {
   from {
     clip-path: inset(0 100% 0 0);
   }
-
   to {
     clip-path: inset(0 0% 0 0);
   }
 }
 
-@keyframes animate-svg-fill-1 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: rgb(173, 11, 4);
-  }
+/* Footer UI */
+.pre-footer-cta p {
+  color: #fff;
+  opacity: 0.7;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+.footer-cta-btn {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+.footer-cta-btn:hover {
+  background: var(--gold);
+  color: #fff;
+}
+.pre-footer-social {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.pre-footer-social a {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.3rem;
+  transition: 0.3s;
+}
+.pre-footer-social a:hover {
+  color: var(--gold);
 }
 
-@keyframes animate-svg-fill-2 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: #ffffff;
-  }
-}
-
-@keyframes animate-svg-fill-3 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: #ffffff;
-  }
-}
-
-@keyframes animate-svg-fill-4 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: #ffffff;
-  }
-}
-
-@keyframes animate-svg-fill-5 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: #ffffff;
-  }
-}
-
-@keyframes animate-svg-fill-6 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: #ffffff;
-  }
-}
-
-/* 6. MOBILE RESPONSIVENESS */
 @media (max-width: 600px) {
   .logo-wrapper {
     flex-direction: column;
     gap: 12px;
   }
-
   .logo-arrival-text {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     letter-spacing: 2px;
   }
 }
