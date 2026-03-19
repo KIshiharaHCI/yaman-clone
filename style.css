@@ -1539,60 +1539,44 @@ h6 em {
 
 /* ===== AUTOMOTIVE ROAD TIMELINE ===== */
 .stats-timeline-section {
-  padding: 8rem 2rem;
+  padding: 10rem 2rem;
+  background: var(--bg-primary);
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
-  background: #000;
   overflow: hidden;
 }
 
-/* Center the intro but keep the 'About' typography */
 .stats-intro {
   text-align: center;
   max-width: 800px;
   margin: 0 auto 4rem auto;
 }
 
-/* Match the exact H2 styling from your About section */
 .stats-title {
   font-family: var(--font-hero);
-  font-size: clamp(2.5rem, 5vw, 4rem); /* Scaled slightly for impact */
+  font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--text-primary);
-  margin-top: 1rem;
 }
 
-/* The signature red accent for 'Zahlen' */
 .stats-title em {
   font-style: italic;
   color: var(--gold);
 }
 
-/* Ensure the overline matches the 'About' section exactly */
-.stats-intro .about-text-overline {
-  margin-bottom: 0.5rem;
-  /* inherits: font-size: 0.7rem; color: var(--gold); letter-spacing: 0.3em; */
-}
-
-/* Optional: Subtle adjustment to the section padding to match About spacing */
-.stats-timeline-section {
-  padding: 10rem 3rem;
-  background: var(--bg-primary);
-}
-
 .timeline-container {
   position: relative;
   margin-top: 5rem;
-  padding: 4rem 0;
-  /* Driven by JS progress calculation */
+  padding: 2rem 0;
   --path-progress: 0%;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Base Road (Dashed Gray/Dimmed) */
 .timeline-line {
   position: absolute;
   left: 50%;
@@ -1601,17 +1585,15 @@ h6 em {
   width: 2px;
   background-image: linear-gradient(
     to bottom,
-    rgba(255, 255, 255, 0.1) 0%,
     rgba(255, 255, 255, 0.1) 50%,
-    transparent 50%,
-    transparent 100%
+    transparent 50%
   );
   background-size: 2px 30px;
   transform: translateX(-50%);
   z-index: 1;
+  clip-path: inset(0 0 540px 0);
 }
 
-/* Active Road (Dashed Pure White) */
 .timeline-line::after {
   content: "";
   position: absolute;
@@ -1619,61 +1601,53 @@ h6 em {
   left: 0;
   width: 100%;
   height: var(--path-progress);
-  background-image: linear-gradient(
-    to bottom,
-    #ffffff 0%,
-    #ffffff 50%,
-    transparent 50%,
-    transparent 100%
-  );
+  background-image: linear-gradient(to bottom, #ffffff 50%, transparent 50%);
   background-size: 2px 30px;
-  /* Light glow at the "front" of the path */
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
-  /* Snappy height update to follow scroll */
   transition: height 0.1s linear;
 }
 
 .timeline-item {
   position: relative;
   width: 50%;
-  margin-bottom: 8rem;
+  margin-bottom: 6rem;
   display: flex;
   opacity: 0;
   visibility: hidden;
-  /* Start 50px below final position */
-  transform: translateY(50px);
-  /* Reduced transition time so it follows the scroll speed instead of a fixed delay */
-  transition:
-    opacity 0.2s ease-out,
-    transform 0.2s ease-out;
-  will-change: transform, opacity;
+  transform: translateY(40px);
+  transition: all 0.4s ease-out;
   z-index: 2;
+}
+
+.timeline-item.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .timeline-item.left {
   left: 0;
   justify-content: flex-end;
-  padding-right: 6rem;
+  padding-right: 5rem;
 }
-
 .timeline-item.right {
   left: 50%;
   justify-content: flex-start;
-  padding-left: 6rem;
+  padding-left: 5rem;
 }
 
-/* Reveal State: Controlled by JS Distance */
-.timeline-item.is-visible {
-  opacity: 1 !important;
-  visibility: visible !important;
-  transform: translateY(0) !important;
+.timeline-item.center-stat {
+  width: 100%;
+  left: 0 !important;
+  justify-content: center !important;
+  margin-top: 4rem;
+  z-index: 3;
 }
 
-/* Premium Card Styling */
 .stat-content {
   background: linear-gradient(
     145deg,
-    rgba(20, 20, 20, 0.9) 0%,
+    rgba(25, 25, 25, 0.9) 0%,
     rgba(5, 5, 5, 1) 100%
   );
   backdrop-filter: blur(10px);
@@ -1681,8 +1655,8 @@ h6 em {
   border-radius: 4px;
   width: 100%;
   max-width: 380px;
-  border: 1px solid rgba(255, 255, 255, 0.03);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
 
 .left .stat-content {
@@ -1694,34 +1668,109 @@ h6 em {
   text-align: left;
 }
 
-.stat-number {
-  font-family: var(--font-hero);
-  font-size: clamp(2.2rem, 4vw, 3rem);
-  color: #fff;
-  margin-bottom: 0.5rem;
-  display: block;
+.center-stat .stat-content {
+  max-width: 550px;
+  border: 1px solid var(--gold);
+  border-top: 4px solid var(--gold);
+  text-align: center !important;
+  background: var(--bg-primary);
+  padding: 4.5rem 2.5rem;
+  position: relative;
 }
 
-/* Tablet & Mobile */
-@media (max-width: 768px) {
+.center-stat .stat-icon i {
+  font-size: 5.5rem;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 0 25px rgba(173, 11, 4, 0.8));
+  animation: trophy-shine 3s infinite ease-in-out;
+}
+
+@keyframes trophy-shine {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 10px rgba(173, 11, 4, 0.4));
+  }
+  50% {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 35px rgba(173, 11, 4, 0.9));
+  }
+}
+
+.stat-number {
+  font-family: var(--font-hero);
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  color: #fff;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+.stat-label {
+  color: var(--text-secondary);
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.stat-footer {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 0.95rem;
+}
+.brand-highlight {
+  color: var(--gold-light);
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
   .timeline-line {
-    left: 30px;
+    left: 40px;
     transform: none;
+    bottom: 0;
+    clip-path: none;
   }
   .timeline-item {
-    width: 100%;
+    width: 100% !important;
     left: 0 !important;
-    padding-left: 70px !important;
+    padding-left: 90px !important;
     padding-right: 20px !important;
     justify-content: flex-start !important;
-    /* Maintain vertical slide on mobile */
-    transform: translateY(40px);
+    margin-bottom: 4rem;
   }
   .stat-content {
+    max-width: 100% !important;
     text-align: left !important;
     border-right: none !important;
-    border-left: 3px solid var(--gold) !important;
-    padding: 1.5rem;
+    border-left: 4px solid var(--gold) !important;
+  }
+  .timeline-item.center-stat {
+    justify-content: flex-start !important;
+    padding-left: 90px !important;
+    padding-right: 20px !important;
+    margin-top: 2rem;
+  }
+  .center-stat .stat-content {
+    text-align: left !important;
+    max-width: 100% !important;
+    border-top: 1px solid var(--gold) !important;
+    padding: 3rem 2rem;
+  }
+  .center-stat .stat-icon i {
+    font-size: 3.5rem;
+    text-align: left;
+  }
+  .center-stat .stat-footer {
+    text-align: left !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-line {
+    left: 25px;
+  }
+  .timeline-item,
+  .timeline-item.center-stat {
+    padding-left: 65px !important;
   }
 }
 /* ===== CONTACT SECTION ===== */
