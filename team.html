@@ -360,6 +360,27 @@
           right: 4px;
         }
       }
+
+      .member-avatar-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--bg-secondary); /* or your preferred dark shade */
+      }
+
+      .team-placeholder-icon {
+        font-size: 3.5rem; /* Adjust size as needed */
+        color: var(--gold);
+        opacity: 0.6;
+        transition:
+          opacity 0.4s ease,
+          transform 0.4s ease;
+      }
+
+      .team-member-card:hover .team-placeholder-icon {
+        opacity: 1;
+        transform: scale(1.1);
+      }
     </style>
   </head>
 
@@ -529,7 +550,7 @@
           <ul class="navbar-links">
             <li><a href="index.html">Startseite</a></li>
             <li><a href="fahrzeugsuche.html">Fahrzeuge</a></li>
-            <li><a href="wohnmobile.html">Wohnmobile</a></li>
+            <!-- <li><a href="wohnmobile.html">Wohnmobile</a></li> -->
             <li><a href="index.html#services-section">Leistungen</a></li>
             <li><a href="ueber-uns.html">Über uns</a></li>
             <li><a href="team.html" class="active">Team</a></li>
@@ -548,7 +569,7 @@
         <div class="mobile-menu" id="mobileMenu">
           <a href="index.html">Startseite</a>
           <a href="fahrzeugsuche.html">Fahrzeuge</a>
-          <a href="wohnmobile.html">Wohnmobile</a>
+          <!-- <a href="wohnmobile.html">Wohnmobile</a> -->
           <a href="index.html#services-section">Leistungen</a>
           <a href="ueber-uns.html">Über uns</a>
           <a href="team.html" class="active">Team</a>
@@ -599,83 +620,72 @@
           <i class="fas fa-chevron-left"></i>
         </button>
         <div class="team-scroll-wrapper" id="scrollWrapper">
-          <!-- Team Member 1 -->
           <div class="team-member-card">
             <div class="member-avatar-wrapper">
-              <img
-                src="team_member_avatar_placeholder_1773739333849.png"
-                alt="Bülent Göksu"
-              />
+              <i class="fas fa-user-tie team-placeholder-icon"></i>
             </div>
             <h3 class="member-name">Bülent Göksu</h3>
-            <div class="member-role">Geschäftsleitung</div>
+            <div class="member-role">
+              Geschäftsleitung / Automotive Strategy
+            </div>
             <p class="member-desc">
-              Leidenschaftlicher Automobilexperte mit über 20 Jahren Erfahrung
-              im Premiumsegment.
+              Verantwortlich für die strategische Ausrichtung und das
+              Qualitätsmanagement. Er führt das Familienerbe mit Fokus auf
+              Exzellenz und Beständigkeit.
             </p>
           </div>
 
-          <!-- Team Member 2 -->
           <div class="team-member-card">
             <div class="member-avatar-wrapper">
-              <img
-                src="team_member_avatar_placeholder_1773739333849.png"
-                alt="Hayrullah Göksu"
-              />
+              <i class="fas fa-user-tie team-placeholder-icon"></i>
             </div>
             <h3 class="member-name">Hayrullah Göksu</h3>
-            <div class="member-role">Verkauf & Beratung</div>
+            <div class="member-role">Geschäftsleitung / Sales & Consulting</div>
             <p class="member-desc">
-              Spezialist für exklusive Wohnmobile und individuelle
-              Kundenlösungen.
+              Spezialist für exklusive Mobilitätskonzepte und Caravaning. Sein
+              Fokus liegt auf der individuellen Beratung und langfristigen
+              Kundenbeziehungen.
             </p>
           </div>
 
-          <!-- Team Member 3 -->
           <div class="team-member-card">
             <div class="member-avatar-wrapper">
-              <img
-                src="team_member_avatar_placeholder_1773739333849.png"
-                alt="Yasin Göksu"
-              />
+              <i class="fas fa-user-tie team-placeholder-icon"></i>
             </div>
             <h3 class="member-name">Yasin Göksu</h3>
-            <div class="member-role">Einkauf & Logistik</div>
+            <div class="member-role">
+              Geschäftsleitung / Procurement & Logistics
+            </div>
             <p class="member-desc">
-              Zuständig für die akribische Auswahl unseres handverlesenen
-              Fahrzeugbestands.
+              Verantwortlich für den strategischen Einkauf und die weltweite
+              Logistik. Er garantiert die Selektion unseres erstklassigen
+              Fahrzeugangebots.
             </p>
           </div>
 
-          <!-- Team Member 4 (Placeholder) -->
           <div class="team-member-card">
             <div class="member-avatar-wrapper">
-              <img
-                src="team_member_avatar_placeholder_1773739333849.png"
-                alt="Team Mitglied"
-              />
+              <i class="fas fa-user team-placeholder-icon"></i>
             </div>
             <h3 class="member-name">Max Mustermann</h3>
-            <div class="member-role">Werkstattleiter</div>
+            <div class="member-role">Technischer Betriebsleiter</div>
             <p class="member-desc">
-              Garant für die technische Perfektion und Aufbereitung jedes
-              Fahrzeugs.
+              Meister seines Fachs und Garant für die technische Perfektion
+              sowie die professionelle Aufbereitung jedes Fahrzeugs in unserem
+              Haus.
             </p>
           </div>
 
-          <!-- Team Member 5 (Placeholder) -->
           <div class="team-member-card">
             <div class="member-avatar-wrapper">
-              <img
-                src="team_member_avatar_placeholder_1773739333849.png"
-                alt="Team Mitglied"
-              />
+              <i class="fas fa-user team-placeholder-icon"></i>
             </div>
             <h3 class="member-name">Erika Musterfrau</h3>
-            <div class="member-role">Kundenbetreuung</div>
+            <div class="member-role">Leitung Office & Kundenservice</div>
             <p class="member-desc">
-              Die gute Seele des Hauses und Ihre erste Ansprechpartnerin für
-              alle Servicefragen.
+              Die zentrale Schnittstelle unseres Hauses und Ihre erste
+              Ansprechpartnerin für eine reibungslose und professionelle
+              Serviceabwicklung.
             </p>
           </div>
         </div>
@@ -735,7 +745,7 @@
         >
       </div>
 
-      <div class="pre-footer-social">
+      <!-- <div class="pre-footer-social">
         <a
           href="https://www.facebook.com/people/GÖKSU-Exclusive/100077934512477/"
           target="_blank"
@@ -760,7 +770,7 @@
         >
           <i class="fab fa-google"></i>
         </a>
-      </div>
+      </div> -->
     </section>
 
     <footer class="footer" id="kontakt">
@@ -781,7 +791,7 @@
           <h4>Navigation</h4>
           <ul class="footer-nav-links">
             <li><a href="fahrzeugsuche.html">Fahrzeuge</a></li>
-            <li><a href="wohnmobile.html">Wohnmobile</a></li>
+            <!-- <li><a href="wohnmobile.html">Wohnmobile</a></li> -->
             <li><a href="index.html#services-section">Leistungen</a></li>
             <li><a href="ueber-uns.html">Über uns</a></li>
             <li><a href="team.html">Team</a></li>

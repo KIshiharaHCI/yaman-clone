@@ -18,31 +18,85 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="fahrzeugsuche.css" />
     <style>
+      /* Base Container */
       .about-main {
-        max-width: 900px;
+        max-width: 1300px;
         margin: 4rem auto;
         padding: 0 2rem;
       }
 
+      /* Hero Image Wrapper - Exactly matching Team style */
       .about-image-wrapper {
         width: 100%;
-        height: 50vh;
-        min-height: 400px;
-        overflow: hidden;
-        margin-bottom: 3rem;
+        height: 80vh;
+        min-height: 500px;
+        margin-bottom: 4rem;
         border-radius: 4px;
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--bg-secondary);
+        overflow: hidden;
       }
 
       .about-image-wrapper img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transform-origin: center;
+        width: auto;
+        max-width: 90%;
+        height: auto;
+        max-height: 90%;
+        object-fit: contain;
+        object-position: center;
+        transform-origin: center center;
         will-change: transform;
+        transition: transform 0.1s linear;
       }
 
+      /* Intro Grid - Exactly matching Team style */
+      .team-intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        margin: 6rem 0;
+        align-items: end;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 4rem;
+      }
+
+      .intro-left .overline {
+        color: var(--gold);
+        font-family: var(--font-body);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 1rem;
+      }
+
+      .intro-left h2 {
+        font-family: var(--font-display);
+        font-size: 3rem;
+        text-transform: uppercase;
+        color: #ffffff;
+        line-height: 1;
+        margin: 0;
+      }
+
+      .intro-right p {
+        font-family: var(--font-body);
+        font-size: 1.15rem;
+        line-height: 1.8;
+        color: var(--text-secondary);
+        margin: 0;
+        border-left: 2px solid var(--gold);
+        padding-left: 2rem;
+      }
+
+      /* Content Styling */
       .about-content {
+        max-width: 850px; /* Centered narrow column for readability */
+        margin: 0 auto;
         font-size: 1.1rem;
         color: var(--text-primary);
         line-height: 1.8;
@@ -77,6 +131,69 @@
         text-align: center;
         margin-top: 3rem;
         letter-spacing: 2px;
+      }
+
+      /* Tablet Responsiveness (max-width: 992px) */
+      @media (max-width: 992px) {
+        .about-image-wrapper {
+          height: auto;
+          min-height: unset;
+          margin-bottom: 1.5rem;
+          padding: 20px 0;
+        }
+
+        .about-image-wrapper img {
+          max-width: 85%;
+        }
+
+        .team-intro {
+          margin: 2rem 0;
+          padding-top: 2rem;
+        }
+
+        .intro-left h2 {
+          font-size: 2.2rem;
+        }
+
+        .intro-right p {
+          padding-left: 0;
+          border-left: none;
+          font-size: 1.05rem;
+        }
+      }
+
+      /* Mobile Responsiveness (max-width: 600px) */
+      @media (max-width: 600px) {
+        .about-main {
+          margin: 1.5rem auto;
+          padding: 0 1.5rem;
+        }
+
+        .about-image-wrapper {
+          padding: 10px 0;
+          margin-bottom: 2rem;
+        }
+
+        .about-image-wrapper img {
+          max-width: 92%;
+        }
+
+        .team-intro {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+          text-align: left;
+          align-items: flex-start;
+        }
+
+        .intro-left h2 {
+          font-size: 1.85rem;
+          line-height: 1.2;
+        }
+
+        .about-tagline {
+          font-size: 1.6rem;
+        }
       }
     </style>
   </head>
@@ -247,7 +364,7 @@
           <ul class="navbar-links">
             <li><a href="index.html">Startseite</a></li>
             <li><a href="fahrzeugsuche.html">Fahrzeuge</a></li>
-            <li><a href="wohnmobile.html">Wohnmobile</a></li>
+            <!-- <li><a href="wohnmobile.html">Wohnmobile</a></li> -->
             <li><a href="index.html#services-section">Leistungen</a></li>
             <li><a href="ueber-uns.html" class="active">Über uns</a></li>
             <li><a href="team.html">Team</a></li>
@@ -266,7 +383,7 @@
         <div class="mobile-menu" id="mobileMenu">
           <a href="index.html">Startseite</a>
           <a href="fahrzeugsuche.html">Fahrzeuge</a>
-          <a href="wohnmobile.html">Wohnmobile</a>
+          <!-- <a href="wohnmobile.html">Wohnmobile</a> -->
           <a href="index.html#services-section">Leistungen</a>
           <a href="ueber-uns.html" class="active">Über uns</a>
           <a href="team.html">Team</a>
@@ -283,7 +400,7 @@
           <span class="breadcrumb-sep">/</span>
           <span>Über uns</span>
         </div>
-        <h1>Über uns</em></h1>
+        <h1>Über uns</h1>
         <p>
           Ein echtes Familienunternehmen – in dem Ehrlichkeit kein Slogan ist,
           sondern gelebter Alltag.
@@ -292,13 +409,27 @@
     </section>
 
     <!-- MAIN CONTENT -->
-    <main class="about-main">
-      <div class="about-image-wrapper reveal">
+    <main class="about-main team-page-main">
+      <div class="about-image-wrapper team-hero-wrapper reveal">
         <img
           id="zoomImage"
-          src="goksu_history_placeholder_1773739310335.png"
+          src="images/about-us-photo.jpg"
           alt="Göksu Historie"
         />
+      </div>
+
+      <div class="team-intro reveal">
+        <div class="intro-left">
+          <span class="overline">Tradition & Qualität</span>
+          <h2>Unsere Geschichte</h2>
+        </div>
+        <div class="intro-right">
+          <p>
+            Vom kleinen Dorf in Anatolien bis zum etablierten Autohaus in
+            Deutschland – erfahren Sie, wie Rafet Göksu den Grundstein für unser
+            Familienunternehmen legte.
+          </p>
+        </div>
       </div>
 
       <div class="about-content">
@@ -410,7 +541,7 @@
         >
       </div>
 
-      <div class="pre-footer-social">
+      <!-- <div class="pre-footer-social">
         <a
           href="https://www.facebook.com/people/GÖKSU-Exclusive/100077934512477/"
           target="_blank"
@@ -435,7 +566,7 @@
         >
           <i class="fab fa-google"></i>
         </a>
-      </div>
+      </div> -->
     </section>
 
     <footer class="footer" id="kontakt">
@@ -455,7 +586,7 @@
           <h4>Navigation</h4>
           <ul class="footer-nav-links">
             <li><a href="fahrzeugsuche.html">Fahrzeuge</a></li>
-            <li><a href="wohnmobile.html">Wohnmobile</a></li>
+            <!-- <li><a href="wohnmobile.html">Wohnmobile</a></li> -->
             <li><a href="index.html#services-section">Leistungen</a></li>
             <li><a href="ueber-uns.html">Über uns</a></li>
             <li><a href="team.html">Team</a></li>
