@@ -185,10 +185,20 @@
           <ul class="navbar-links">
             <li><a href="index.html">Startseite</a></li>
             <li><a href="fahrzeugsuche.html" class="active">Fahrzeuge</a></li>
-            <li><a href="wohnmobile.html">Wohnmobile</a></li>
-            <li><a href="index.html#services-section">Leistungen</a></li>
             <li><a href="ueber-uns.html">Über uns</a></li>
             <li><a href="team.html">Team</a></li>
+
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropdown-toggle">
+                Mediathek <span class="chevron"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="serie-eins.html">4 Händler 1 Deal</a></li>
+                <li><a href="serie-zwei.html">Tuning Treff</a></li>
+              </ul>
+            </li>
+
+            <li><a href="index.html#services-section">Leistungen</a></li>
             <li>
               <a href="index.html#contact-section" class="navbar-cta"
                 >Kontakt</a
@@ -199,16 +209,26 @@
           <div class="hamburger" id="hamburger">
             <span></span><span></span><span></span>
           </div>
-        </div>
 
-        <div class="mobile-menu" id="mobileMenu">
-          <a href="index.html">Startseite</a>
-          <a href="fahrzeugsuche.html" class="active">Fahrzeuge</a>
-          <a href="wohnmobile.html">Wohnmobile</a>
-          <a href="index.html#services-section">Leistungen</a>
-          <a href="ueber-uns.html">Über uns</a>
-          <a href="team.html">Team</a>
-          <a href="index.html#contact-section">Kontakt</a>
+          <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html">Startseite</a>
+            <a href="fahrzeugsuche.html" class="active">Fahrzeuge</a>
+            <a href="ueber-uns.html">Über uns</a>
+            <a href="team.html">Team</a>
+
+            <div class="dropdown">
+              <a href="javascript:void(0)" class="dropdown-toggle">
+                Mediathek <span class="chevron"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="serie-eins.html">4 Händler 1 Deal</a></li>
+                <li><a href="serie-zwei.html">Tuning Treff</a></li>
+              </ul>
+            </div>
+
+            <a href="index.html#services-section">Leistungen</a>
+            <a href="index.html#contact-section">Kontakt</a>
+          </div>
         </div>
       </nav>
     </div>
@@ -482,7 +502,7 @@
           <h4>Navigation</h4>
           <ul class="footer-nav-links">
             <li><a href="fahrzeugsuche.html">Fahrzeuge</a></li>
-            <li><a href="wohnmobile.html">Wohnmobile</a></li>
+            <!-- <li><a href="wohnmobile.html">Wohnmobile</a></li> -->
             <li><a href="index.html#services-section">Leistungen</a></li>
             <li><a href="ueber-uns.html">Über uns</a></li>
             <li><a href="team.html">Team</a></li>
@@ -658,9 +678,45 @@
           }
         });
 
-        mobileMenu.querySelectorAll("a").forEach((link) => {
-          link.addEventListener("click", () => toggleMenu(true));
-        });
+        const initMobileDropdowns = () => {
+          if (!mobileMenu) return;
+
+          const mobileDropdowns = mobileMenu.querySelectorAll(".dropdown");
+
+          mobileDropdowns.forEach((dropdown) => {
+            const toggle = dropdown.querySelector(".dropdown-toggle");
+
+            if (!toggle) return;
+
+            toggle.addEventListener("click", (e) => {
+              if (window.innerWidth <= 1024) {
+                e.preventDefault();
+                e.stopPropagation(); // ✅ CRITICAL
+
+                const isOpen = dropdown.classList.contains("mobile-open");
+
+                mobileDropdowns.forEach((d) =>
+                  d.classList.remove("mobile-open"),
+                );
+
+                if (!isOpen) {
+                  dropdown.classList.add("mobile-open");
+                }
+              }
+            });
+          });
+
+          mobileMenu.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", (e) => {
+              if (!link.classList.contains("dropdown-toggle")) {
+                mobileDropdowns.forEach((d) =>
+                  d.classList.remove("mobile-open"),
+                );
+                toggleMenu(true);
+              }
+            });
+          });
+        };
 
         const initObservers = () => {
           const footerLogoObserver = new IntersectionObserver(
@@ -696,6 +752,7 @@
         // Initialize
         handleScroll();
         initObservers();
+        initMobileDropdowns();
         initLogoAnimation();
         window.addEventListener("resize", handleScroll);
       })();

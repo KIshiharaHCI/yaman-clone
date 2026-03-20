@@ -550,10 +550,20 @@
           <ul class="navbar-links">
             <li><a href="index.html">Startseite</a></li>
             <li><a href="fahrzeugsuche.html">Fahrzeuge</a></li>
-            <!-- <li><a href="wohnmobile.html">Wohnmobile</a></li> -->
-            <li><a href="index.html#services-section">Leistungen</a></li>
             <li><a href="ueber-uns.html">Über uns</a></li>
             <li><a href="team.html" class="active">Team</a></li>
+
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropdown-toggle">
+                Mediathek <span class="chevron"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="serie-eins.html">4 Händler 1 Deal</a></li>
+                <li><a href="serie-zwei.html">Tuning Treff</a></li>
+              </ul>
+            </li>
+
+            <li><a href="index.html#services-section">Leistungen</a></li>
             <li>
               <a href="index.html#contact-section" class="navbar-cta"
                 >Kontakt</a
@@ -569,10 +579,20 @@
         <div class="mobile-menu" id="mobileMenu">
           <a href="index.html">Startseite</a>
           <a href="fahrzeugsuche.html">Fahrzeuge</a>
-          <!-- <a href="wohnmobile.html">Wohnmobile</a> -->
-          <a href="index.html#services-section">Leistungen</a>
           <a href="ueber-uns.html">Über uns</a>
           <a href="team.html" class="active">Team</a>
+
+          <div class="dropdown">
+            <a href="javascript:void(0)" class="dropdown-toggle">
+              Mediathek <span class="chevron"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="serie-eins.html">4 Händler 1 Deal</a></li>
+              <li><a href="serie-zwei.html">Tuning Treff</a></li>
+            </ul>
+          </div>
+
+          <a href="index.html#services-section">Leistungen</a>
           <a href="index.html#contact-section">Kontakt</a>
         </div>
       </nav>
@@ -857,7 +877,6 @@
         const prevBtn = document.getElementById("prevBtn");
         const nextBtn = document.getElementById("nextBtn");
 
-        // Logo Elements
         const logoContainer = document.querySelector(".navbar-logo");
         const typewriterElement = document.getElementById("typewriter-text");
 
@@ -866,57 +885,79 @@
         // --- LOGO INITIALIZATION ---
         const initLogoAnimation = () => {
           if (!logoContainer) return;
-          if (typewriterElement) {
+          if (typewriterElement)
             typewriterElement.textContent = "Neuuuuu eingetroffen ©";
-          }
           requestAnimationFrame(() => {
             logoContainer.classList.add("animate-logo", "animate-ready");
           });
         };
 
+        // --- MOBILE MENU TOGGLE ---
         const toggleMenu = (forceClose = false) => {
           const isActive = mobileMenu.classList.contains("active");
           if (forceClose || isActive) {
             hamburger.classList.remove("active");
             mobileMenu.classList.remove("active");
+            document
+              .querySelectorAll(".dropdown.mobile-open")
+              .forEach((d) => d.classList.remove("mobile-open"));
           } else {
             hamburger.classList.add("active");
             mobileMenu.classList.add("active");
           }
         };
 
-        const updateNavButtons = () => {
-          if (!scrollWrapper) return;
+        // --- MOBILE DROPDOWN INIT ---
+        const initMobileDropdowns = () => {
+          const mobileDropdowns = mobileMenu.querySelectorAll(".dropdown");
 
-          // Use a larger tolerance for mobile (padding-dependent)
-          const tolerance = window.innerWidth < 600 ? 80 : 20;
+          mobileDropdowns.forEach((dropdown) => {
+            const toggle = dropdown.querySelector(".dropdown-toggle");
+            if (!toggle) return;
 
-          const isAtStart = scrollWrapper.scrollLeft <= tolerance;
+            toggle.addEventListener("click", (e) => {
+              if (window.innerWidth <= 1024) {
+                e.preventDefault();
+                e.stopPropagation();
 
-          // Check if we are close enough to the end
-          // (ScrollLeft + Viewport >= TotalContentWidth - Tolerance)
-          const isAtEnd =
-            scrollWrapper.scrollLeft + scrollWrapper.clientWidth >=
-            scrollWrapper.scrollWidth - tolerance;
+                const isOpen = dropdown.classList.contains("mobile-open");
 
-          if (prevBtn) prevBtn.classList.toggle("disabled", isAtStart);
-          if (nextBtn) nextBtn.classList.toggle("disabled", isAtEnd);
+                // Close all dropdowns first
+                mobileDropdowns.forEach((d) =>
+                  d.classList.remove("mobile-open"),
+                );
+
+                // Toggle current
+                if (!isOpen) dropdown.classList.add("mobile-open");
+              }
+            });
+          });
+
+          // Close menu on normal link clicks (ignore dropdown-toggle)
+          mobileMenu.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+              if (!link.classList.contains("dropdown-toggle")) {
+                mobileDropdowns.forEach((d) =>
+                  d.classList.remove("mobile-open"),
+                );
+                toggleMenu(true);
+              }
+            });
+          });
         };
 
+        // --- SCROLL HANDLER ---
         const handleScroll = () => {
           const scrollY = window.scrollY;
           const topbarHeight = topbar ? topbar.offsetHeight : 0;
           const pageHeaderBottom = pageHeader
             ? pageHeader.offsetTop + pageHeader.offsetHeight
             : 300;
-
-          // Track theme state for logo reset
           const wasLight = navbar.classList.contains("light");
 
-          // 1. Sticky logic
           if (scrollY > topbarHeight) {
             navbar.classList.add("sticky");
-            navbar.style.setProperty("--nav-top", `0px`);
+            navbar.style.setProperty("--nav-top", "0px");
           } else {
             navbar.classList.remove("sticky");
             navbar.style.setProperty(
@@ -925,47 +966,37 @@
             );
           }
 
-          // 2. Light/Dark mode swap
-          if (scrollY > pageHeaderBottom - 80) {
-            navbar.classList.add("light");
-          } else {
-            navbar.classList.remove("light");
+          if (scrollY > pageHeaderBottom - 80) navbar.classList.add("light");
+          else navbar.classList.remove("light");
+
+          if (
+            wasLight !== navbar.classList.contains("light") &&
+            logoContainer
+          ) {
+            logoContainer.classList.remove("animate-ready");
+            void logoContainer.offsetWidth;
+            logoContainer.classList.add("animate-ready");
           }
 
-          // 3. LOGO THEME-FLIP RE-ANIMATION
-          if (wasLight !== navbar.classList.contains("light")) {
-            if (logoContainer) {
-              logoContainer.classList.remove("animate-ready");
-              void logoContainer.offsetWidth; // Trigger reflow
-              logoContainer.classList.add("animate-ready");
-            }
-          }
-
-          // 4. Close mobile menu on scroll
-          if (mobileMenu.classList.contains("active") && scrollY > 100) {
+          if (mobileMenu.classList.contains("active") && scrollY > 100)
             toggleMenu(true);
-          }
 
-          // 5. Scaling Effect
           if (zoomImage) {
             const scaleAmount = Math.max(1.0, 1.15 - scrollY * 0.0002);
             zoomImage.style.transform = `scale(${scaleAmount})`;
           }
         };
-        // Carousel Navigation
+
+        // --- CAROUSEL NAVIGATION ---
         if (prevBtn && nextBtn && scrollWrapper) {
           const getScrollAmount = () => {
             const card = scrollWrapper.querySelector(".team-member-card");
             if (!card) return scrollWrapper.clientWidth / 2;
-
             const cardStyle = window.getComputedStyle(scrollWrapper);
             const gap = parseFloat(cardStyle.gap) || 0;
-
-            if (window.innerWidth < 600) {
-              // Force a slightly larger jump on mobile to ensure we cross the 'snap' threshold
-              return card.offsetWidth + gap + 5;
-            }
-            return scrollWrapper.clientWidth * 0.8;
+            return window.innerWidth < 600
+              ? card.offsetWidth + gap + 5
+              : scrollWrapper.clientWidth * 0.8;
           };
 
           prevBtn.addEventListener("click", (e) => {
@@ -975,7 +1006,6 @@
             });
             e.currentTarget.blur();
           });
-
           nextBtn.addEventListener("click", (e) => {
             scrollWrapper.scrollBy({
               left: getScrollAmount(),
@@ -984,44 +1014,23 @@
             e.currentTarget.blur();
           });
 
-          // Keep existing observers
+          const updateNavButtons = () => {
+            if (!scrollWrapper) return;
+            const tolerance = window.innerWidth < 600 ? 80 : 20;
+            const isAtStart = scrollWrapper.scrollLeft <= tolerance;
+            const isAtEnd =
+              scrollWrapper.scrollLeft + scrollWrapper.clientWidth >=
+              scrollWrapper.scrollWidth - tolerance;
+            if (prevBtn) prevBtn.classList.toggle("disabled", isAtStart);
+            if (nextBtn) nextBtn.classList.toggle("disabled", isAtEnd);
+          };
+
           scrollWrapper.addEventListener("scroll", updateNavButtons);
           window.addEventListener("resize", updateNavButtons);
           updateNavButtons();
         }
 
-        window.addEventListener(
-          "scroll",
-          () => {
-            if (!ticking) {
-              window.requestAnimationFrame(() => {
-                handleScroll();
-                ticking = false;
-              });
-              ticking = true;
-            }
-          },
-          { passive: true },
-        );
-
-        hamburger.addEventListener("click", (e) => {
-          e.stopPropagation();
-          toggleMenu();
-        });
-
-        document.addEventListener("click", (e) => {
-          if (
-            !navbar.contains(e.target) &&
-            mobileMenu.classList.contains("active")
-          ) {
-            toggleMenu(true);
-          }
-        });
-
-        mobileMenu.querySelectorAll("a").forEach((link) => {
-          link.addEventListener("click", () => toggleMenu(true));
-        });
-
+        // --- OBSERVERS ---
         const initObservers = () => {
           const footerLogoObserver = new IntersectionObserver(
             (entries) => {
@@ -1053,10 +1062,39 @@
             .forEach((el) => revealObserver.observe(el));
         };
 
-        // Initialize everything
+        // --- EVENT LISTENERS ---
+        window.addEventListener(
+          "scroll",
+          () => {
+            if (!ticking) {
+              window.requestAnimationFrame(() => {
+                handleScroll();
+                ticking = false;
+              });
+              ticking = true;
+            }
+          },
+          { passive: true },
+        );
+
+        hamburger.addEventListener("click", (e) => {
+          e.stopPropagation();
+          toggleMenu();
+        });
+
+        document.addEventListener("click", (e) => {
+          if (
+            mobileMenu.classList.contains("active") &&
+            !navbar.contains(e.target)
+          )
+            toggleMenu(true);
+        });
+
+        // --- INITIALIZE ---
         handleScroll();
         initObservers();
         initLogoAnimation();
+        initMobileDropdowns();
         window.addEventListener("resize", handleScroll);
       })();
     </script>

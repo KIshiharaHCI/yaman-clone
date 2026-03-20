@@ -182,13 +182,27 @@
           </a>
 
           <ul class="navbar-links">
-            <li><a href="#" class="active">Startseite</a></li>
+            <li><a href="index.html" class="active">Startseite</a></li>
             <li><a href="fahrzeugsuche.html">Fahrzeuge</a></li>
-            <!-- <li><a href="wohnmobile.html">Wohnmobile</a></li> -->
-            <li><a href="#services-section">Leistungen</a></li>
             <li><a href="ueber-uns.html">Über uns</a></li>
             <li><a href="team.html">Team</a></li>
-            <li><a href="#contact-section" class="navbar-cta">Kontakt</a></li>
+
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropdown-toggle">
+                Mediathek <span class="chevron"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="serie-eins.html">4 Händler 1 Deal</a></li>
+                <li><a href="serie-zwei.html">Tuning Treff</a></li>
+              </ul>
+            </li>
+
+            <li><a href="index.html#services-section">Leistungen</a></li>
+            <li>
+              <a href="index.html#contact-section" class="navbar-cta"
+                >Kontakt</a
+              >
+            </li>
           </ul>
 
           <div class="hamburger" id="hamburger">
@@ -197,13 +211,23 @@
         </div>
 
         <div class="mobile-menu" id="mobileMenu">
-          <a href="#" class="active">Startseite</a>
+          <a href="index.html" class="active">Startseite</a>
           <a href="fahrzeugsuche.html">Fahrzeuge</a>
-          <!-- <a href="wohnmobile.html">Wohnmobile</a> -->
-          <a href="#services-section">Leistungen</a>
           <a href="ueber-uns.html">Über uns</a>
           <a href="team.html">Team</a>
-          <a href="#contact-section">Kontakt</a>
+
+          <div class="dropdown">
+            <a href="javascript:void(0)" class="dropdown-toggle">
+              Mediathek <span class="chevron"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="serie-eins.html">4 Händler 1 Deal</a></li>
+              <li><a href="serie-zwei.html">Tuning Treff</a></li>
+            </ul>
+          </div>
+
+          <a href="index.html#services-section">Leistungen</a>
+          <a href="index.html#contact-section">Kontakt</a>
         </div>
       </nav>
     </div>
@@ -813,14 +837,11 @@
         const heroVideo = document.querySelector(".hero-video");
         const heroFallback = document.querySelector(".hero-fallback");
         const contactContainer = document.querySelector(".floating-contact");
-
-        // Logo & Typewriter Elements
         const logoContainer = document.querySelector(".navbar-logo");
         const typewriterElement = document.getElementById("typewriter-text");
 
         let ticking = false;
 
-        // --- LOGO & TYPEWRITER LOGIC ---
         const initLogoAnimation = () => {
           if (!logoContainer) return;
           if (typewriterElement) {
@@ -832,7 +853,6 @@
           });
         };
 
-        // --- VIDEO OPTIMIZATION ---
         const initVideoOptimization = () => {
           if (!heroVideo) return;
           const playVideo = () => {
@@ -844,12 +864,17 @@
           document.addEventListener("touchstart", playVideo, { once: true });
         };
 
-        // --- MOBILE MENU LOGIC ---
         const toggleMenu = (forceClose = false) => {
           const isActive = mobileMenu.classList.contains("active");
           if (forceClose || isActive) {
             hamburger.classList.remove("active");
             mobileMenu.classList.remove("active");
+
+            // RESET: Closes any open dropdowns when menu is closed
+            document.querySelectorAll(".dropdown.mobile-open").forEach((d) => {
+              d.classList.remove("mobile-open");
+            });
+
             if (contactContainer) {
               contactContainer.style.opacity = "1";
               contactContainer.style.pointerEvents = "auto";
@@ -864,12 +889,10 @@
           }
         };
 
-        // --- SCROLL EFFECTS (THEME + STICKY + LOGO + AUTO-HIDE MENU) ---
         const handleScrollEffects = () => {
           const scrollY = window.scrollY;
           const topHeight = topbar ? topbar.offsetHeight : 0;
           const heroHeight = hero ? hero.offsetHeight : 600;
-
           const wasLight = navbar.classList.contains("light");
 
           if (scrollY > topHeight) {
@@ -886,11 +909,10 @@
             navbar.classList.remove("light");
           }
 
-          const isLight = navbar.classList.contains("light");
-          if (wasLight !== isLight) {
+          if (wasLight !== navbar.classList.contains("light")) {
             if (logoContainer) {
               logoContainer.classList.remove("animate-ready");
-              void logoContainer.offsetWidth; // Force reflow
+              void logoContainer.offsetWidth;
               logoContainer.classList.add("animate-ready");
             }
           }
@@ -904,43 +926,33 @@
             if (container) {
               const rect = container.getBoundingClientRect();
               const isDesktop = window.innerWidth > 1024;
-
-              // 1. Calculate Progress
               const triggerPoint = isDesktop
                 ? window.innerHeight * 0.7
                 : window.innerHeight * 0.5;
-              let progress = (triggerPoint - rect.top) / container.offsetHeight;
-              progress = Math.max(0, Math.min(1, progress));
+              let progress = Math.max(
+                0,
+                Math.min(1, (triggerPoint - rect.top) / container.offsetHeight),
+              );
 
-              // Update the road line
               container.style.setProperty(
                 "--path-progress",
                 `${progress * 100}%`,
               );
 
-              const items = container.querySelectorAll(".timeline-item");
-              items.forEach((item) => {
-                // 2. Get the item's relative position in the container
+              container.querySelectorAll(".timeline-item").forEach((item) => {
                 const itemMid = item.offsetTop + item.offsetHeight / 2;
                 const currentScrollPx = progress * container.offsetHeight;
-
-                // 3. Distance logic
                 const buffer = isDesktop ? 250 : 300;
                 const dist = currentScrollPx - itemMid;
+                let opacityValue = Math.max(
+                  0,
+                  Math.min(1, (dist + buffer) / buffer),
+                );
 
-                // 4. THE FIX: Linear mapping without "Else" flickering
-                // This formula ensures opacity is 0 until the buffer hits,
-                // then scales perfectly to 1 and STAYS at 1.
-                let opacityValue = (dist + buffer) / buffer;
-                opacityValue = Math.max(0, Math.min(1, opacityValue)); // Clamp between 0 and 1
-
-                // Apply styles directly
                 item.style.opacity = opacityValue;
                 item.style.visibility = opacityValue > 0 ? "visible" : "hidden";
-
                 const slideDist = isDesktop ? 30 : 50;
-                const yOffset = slideDist - opacityValue * slideDist;
-                item.style.transform = `translateY(${yOffset}px)`;
+                item.style.transform = `translateY(${slideDist - opacityValue * slideDist}px)`;
               });
             }
           }
@@ -977,7 +989,47 @@
             .forEach((el) => revealObserver.observe(el));
         };
 
-        // --- EVENT LISTENERS ---
+        const initMobileDropdowns = () => {
+          // 1. Target dropdowns specifically inside the mobile menu
+          const mobileDropdowns = mobileMenu.querySelectorAll(".dropdown");
+
+          mobileDropdowns.forEach((dropdown) => {
+            const toggle = dropdown.querySelector(".dropdown-toggle");
+
+            toggle.addEventListener("click", (e) => {
+              if (window.innerWidth <= 1024) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const isOpen = dropdown.classList.contains("mobile-open");
+
+                // Close ALL mobile dropdowns first
+                mobileDropdowns.forEach((d) =>
+                  d.classList.remove("mobile-open"),
+                );
+
+                // If it wasn't open, open it now (allows toggle close/open)
+                if (!isOpen) {
+                  dropdown.classList.add("mobile-open");
+                }
+              }
+            });
+          });
+
+          // 2. Handle standard links (clamping down on the 'ignore' logic)
+          mobileMenu.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", (e) => {
+              if (!link.classList.contains("dropdown-toggle")) {
+                // It's a real page link - reset everything and close
+                mobileDropdowns.forEach((d) =>
+                  d.classList.remove("mobile-open"),
+                );
+                toggleMenu(true);
+              }
+            });
+          });
+        };
+
         window.addEventListener(
           "scroll",
           () => {
@@ -1006,10 +1058,6 @@
           }
         });
 
-        mobileMenu.querySelectorAll("a").forEach((link) => {
-          link.addEventListener("click", () => toggleMenu(true));
-        });
-
         if (heroVideo) {
           heroVideo.addEventListener("error", () => {
             heroVideo.style.display = "none";
@@ -1017,10 +1065,10 @@
           });
         }
 
-        // --- INITIALIZATION ---
         handleScrollEffects();
         initVideoOptimization();
         initObservers();
+        initMobileDropdowns();
         initLogoAnimation();
         window.addEventListener("resize", handleScrollEffects);
       })();

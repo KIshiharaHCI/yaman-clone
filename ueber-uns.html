@@ -364,10 +364,20 @@
           <ul class="navbar-links">
             <li><a href="index.html">Startseite</a></li>
             <li><a href="fahrzeugsuche.html">Fahrzeuge</a></li>
-            <!-- <li><a href="wohnmobile.html">Wohnmobile</a></li> -->
-            <li><a href="index.html#services-section">Leistungen</a></li>
             <li><a href="ueber-uns.html" class="active">Über uns</a></li>
             <li><a href="team.html">Team</a></li>
+
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropdown-toggle">
+                Mediathek <span class="chevron"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="serie-eins.html">4 Händler 1 Deal</a></li>
+                <li><a href="serie-zwei.html">Tuning Treff</a></li>
+              </ul>
+            </li>
+
+            <li><a href="index.html#services-section">Leistungen</a></li>
             <li>
               <a href="index.html#contact-section" class="navbar-cta"
                 >Kontakt</a
@@ -378,16 +388,26 @@
           <div class="hamburger" id="hamburger">
             <span></span><span></span><span></span>
           </div>
-        </div>
 
-        <div class="mobile-menu" id="mobileMenu">
-          <a href="index.html">Startseite</a>
-          <a href="fahrzeugsuche.html">Fahrzeuge</a>
-          <!-- <a href="wohnmobile.html">Wohnmobile</a> -->
-          <a href="index.html#services-section">Leistungen</a>
-          <a href="ueber-uns.html" class="active">Über uns</a>
-          <a href="team.html">Team</a>
-          <a href="index.html#contact-section">Kontakt</a>
+          <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html">Startseite</a>
+            <a href="fahrzeugsuche.html">Fahrzeuge</a>
+            <a href="ueber-uns.html" class="active">Über uns</a>
+            <a href="team.html">Team</a>
+
+            <div class="dropdown">
+              <a href="javascript:void(0)" class="dropdown-toggle">
+                Mediathek <span class="chevron"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="serie-eins.html">4 Händler 1 Deal</a></li>
+                <li><a href="serie-zwei.html">Tuning Treff</a></li>
+              </ul>
+            </div>
+
+            <a href="index.html#services-section">Leistungen</a>
+            <a href="index.html#contact-section">Kontakt</a>
+          </div>
         </div>
       </nav>
     </div>
@@ -658,44 +678,82 @@
         // --- LOGO & TYPEWRITER LOGIC ---
         const initLogoAnimation = () => {
           if (!logoContainer) return;
-
-          // Set the text content
-          if (typewriterElement) {
+          if (typewriterElement)
             typewriterElement.textContent = "Neuuuuu eingetroffen ©";
-          }
-
-          // Trigger the initial fade-in
           requestAnimationFrame(() => {
-            logoContainer.classList.add("animate-logo");
-            logoContainer.classList.add("animate-ready");
+            logoContainer.classList.add("animate-logo", "animate-ready");
           });
         };
 
+        // --- MOBILE MENU TOGGLE ---
         const toggleMenu = (forceClose = false) => {
           const isActive = mobileMenu.classList.contains("active");
           if (forceClose || isActive) {
             hamburger.classList.remove("active");
             mobileMenu.classList.remove("active");
+
+            // Close any open dropdowns
+            document
+              .querySelectorAll(".dropdown.mobile-open")
+              .forEach((d) => d.classList.remove("mobile-open"));
           } else {
             hamburger.classList.add("active");
             mobileMenu.classList.add("active");
           }
         };
 
+        // --- MOBILE DROPDOWN LOGIC ---
+        const initMobileDropdowns = () => {
+          const mobileDropdowns = mobileMenu.querySelectorAll(".dropdown");
+
+          mobileDropdowns.forEach((dropdown) => {
+            const toggle = dropdown.querySelector(".dropdown-toggle");
+            if (!toggle) return;
+
+            toggle.addEventListener("click", (e) => {
+              if (window.innerWidth <= 1024) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const isOpen = dropdown.classList.contains("mobile-open");
+
+                // Close all mobile dropdowns
+                mobileDropdowns.forEach((d) =>
+                  d.classList.remove("mobile-open"),
+                );
+
+                // Toggle this dropdown
+                if (!isOpen) dropdown.classList.add("mobile-open");
+              }
+            });
+          });
+
+          // Close menu on regular link clicks
+          mobileMenu.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+              if (!link.classList.contains("dropdown-toggle")) {
+                mobileDropdowns.forEach((d) =>
+                  d.classList.remove("mobile-open"),
+                );
+                toggleMenu(true);
+              }
+            });
+          });
+        };
+
+        // --- SCROLL HANDLER ---
         const handleScroll = () => {
           const scrollY = window.scrollY;
           const topbarHeight = topbar ? topbar.offsetHeight : 0;
           const pageHeaderBottom = pageHeader
             ? pageHeader.offsetTop + pageHeader.offsetHeight
             : 300;
-
-          // Store previous state to detect theme flip
           const wasLight = navbar.classList.contains("light");
 
-          // 1. Sticky logic
+          // Sticky Navbar
           if (scrollY > topbarHeight) {
             navbar.classList.add("sticky");
-            navbar.style.setProperty("--nav-top", `0px`);
+            navbar.style.setProperty("--nav-top", "0px");
           } else {
             navbar.classList.remove("sticky");
             navbar.style.setProperty(
@@ -704,67 +762,30 @@
             );
           }
 
-          // 2. Light/Dark mode swap
-          if (scrollY > pageHeaderBottom - 80) {
-            navbar.classList.add("light");
-          } else {
-            navbar.classList.remove("light");
-          }
+          // Light/Dark swap
+          if (scrollY > pageHeaderBottom - 80) navbar.classList.add("light");
+          else navbar.classList.remove("light");
 
-          // 3. LOGO RE-ANIMATION TRIGGER
+          // Logo re-animation on theme change
           const isLight = navbar.classList.contains("light");
-          if (wasLight !== isLight) {
-            if (logoContainer) {
-              logoContainer.classList.remove("animate-ready");
-              void logoContainer.offsetWidth; // Force reflow
-              logoContainer.classList.add("animate-ready");
-            }
+          if (wasLight !== isLight && logoContainer) {
+            logoContainer.classList.remove("animate-ready");
+            void logoContainer.offsetWidth;
+            logoContainer.classList.add("animate-ready");
           }
 
-          // 4. Close mobile menu on scroll
-          if (mobileMenu.classList.contains("active") && scrollY > 100) {
+          // Close mobile menu on scroll
+          if (mobileMenu.classList.contains("active") && scrollY > 100)
             toggleMenu(true);
-          }
 
-          // 5. SCALING EFFECT
+          // Zoom image effect
           if (zoomImage) {
             const scaleAmount = Math.max(1.0, 1.15 - scrollY * 0.0002);
             zoomImage.style.transform = `scale(${scaleAmount})`;
           }
         };
 
-        window.addEventListener(
-          "scroll",
-          () => {
-            if (!ticking) {
-              window.requestAnimationFrame(() => {
-                handleScroll();
-                ticking = false;
-              });
-              ticking = true;
-            }
-          },
-          { passive: true },
-        );
-
-        hamburger.addEventListener("click", (e) => {
-          e.stopPropagation();
-          toggleMenu();
-        });
-
-        document.addEventListener("click", (e) => {
-          if (
-            !navbar.contains(e.target) &&
-            mobileMenu.classList.contains("active")
-          ) {
-            toggleMenu(true);
-          }
-        });
-
-        mobileMenu.querySelectorAll("a").forEach((link) => {
-          link.addEventListener("click", () => toggleMenu(true));
-        });
-
+        // --- OBSERVERS ---
         const initObservers = () => {
           const footerLogoObserver = new IntersectionObserver(
             (entries) => {
@@ -796,10 +817,39 @@
             .forEach((el) => revealObserver.observe(el));
         };
 
-        // --- INITIALIZATION ---
+        // --- EVENT LISTENERS ---
+        window.addEventListener(
+          "scroll",
+          () => {
+            if (!ticking) {
+              window.requestAnimationFrame(() => {
+                handleScroll();
+                ticking = false;
+              });
+              ticking = true;
+            }
+          },
+          { passive: true },
+        );
+
+        hamburger.addEventListener("click", (e) => {
+          e.stopPropagation();
+          toggleMenu();
+        });
+
+        document.addEventListener("click", (e) => {
+          if (
+            mobileMenu.classList.contains("active") &&
+            !navbar.contains(e.target)
+          )
+            toggleMenu(true);
+        });
+
+        // --- INITIALIZE ---
         handleScroll();
         initObservers();
-        initLogoAnimation(); // Start the logo sequence
+        initLogoAnimation();
+        initMobileDropdowns();
         window.addEventListener("resize", handleScroll);
       })();
     </script>

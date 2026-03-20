@@ -422,12 +422,20 @@ h6 em {
   display: flex;
   gap: 2.5rem;
   list-style: none;
-  align-items: center;
   margin: 0;
   padding: 0;
+  height: 80px;
+  align-items: stretch;
 }
 
-.navbar-links a {
+.navbar-links > li {
+  display: flex;
+  align-items: center;
+  position: relative; /* Safety anchor */
+}
+
+/* Target only standard links and the dropdown toggle for full height */
+.navbar-links li a:not(.navbar-cta) {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -435,6 +443,10 @@ h6 em {
   font-size: 0.82rem;
   color: #ffffff;
   transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative; /* CRITICAL: Anchors the ::after line to the link */
 }
 
 .navbar.light .navbar-links a:not(.navbar-cta) {
@@ -446,22 +458,27 @@ h6 em {
   color: var(--gold) !important;
 }
 
-.navbar-links a.active {
-  position: relative;
-}
-
-.navbar-links a.active::after {
+/* Unified Underline for Hover and Active */
+.navbar-links a:not(.navbar-cta):hover::after,
+.navbar-links a.active:not(.navbar-cta)::after {
   content: "";
   position: absolute;
-  bottom: -5px;
+  bottom: 15px; /* Adjust this to move the line up or down */
   left: 0;
   width: 100%;
   height: 2px;
   background: var(--gold);
+  transition: all 0.3s ease;
 }
 
-/* CTA BUTTON */
+/* Hide underline for dropdown items specifically */
+.dropdown-menu li a::after {
+  display: none !important;
+}
+
+/* ===== CTA BUTTON (Restored Behavior) ===== */
 .navbar-cta {
+  height: auto !important; /* Forces it to ignore the parent's stretch height */
   padding: 0.7rem 1.4rem;
   border: 1px solid var(--gold);
   background: var(--gold) !important;
@@ -528,6 +545,8 @@ h6 em {
   top: 80px;
   left: 0;
   width: 100%;
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
   background: rgba(10, 10, 10, 0.98);
   display: none;
   flex-direction: column;
@@ -576,7 +595,7 @@ h6 em {
   color: var(--gold) !important;
 }
 
-.mobile-menu a:last-child {
+.mobile-menu > a:last-child {
   background: var(--gold) !important;
   color: #ffffff !important;
   padding: 1rem;
@@ -584,6 +603,173 @@ h6 em {
   border: 1px solid var(--gold);
   font-weight: 700;
   transition: all 0.3s ease;
+}
+
+/*===== DROPDOWN - PIXEL PERFECT ALIGNMENT ===== */
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: default;
+  text-decoration: none;
+  height: 100%;
+}
+
+.chevron {
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid currentColor; /* Increased from 1.5px for boldness */
+  border-bottom: 2px solid currentColor; /* Increased from 1.5px for boldness */
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+  margin-top: -3px;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(10, 10, 10, 0.98);
+  min-width: 200px;
+  list-style: none;
+  padding: 1rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+}
+
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+}
+
+.navbar.light .dropdown-menu {
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown:hover .chevron {
+  transform: rotate(-135deg);
+  margin-top: 3px;
+}
+
+.dropdown-menu li a {
+  padding: 0.8rem 1.5rem !important;
+  display: block !important;
+  height: auto !important;
+  font-size: 0.75rem !important;
+  text-align: center;
+  letter-spacing: 0.15em;
+  color: #fff !important;
+  background: transparent !important;
+  text-transform: uppercase;
+}
+
+.navbar.light .dropdown-menu li a {
+  color: #111 !important;
+}
+
+.dropdown-menu li a:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: var(--gold) !important;
+}
+
+.navbar.light .dropdown-menu li a:hover {
+  background: rgba(0, 0, 0, 0.03) !important;
+}
+
+@media (max-width: 1024px) {
+  .navbar .mobile-menu .dropdown-menu,
+  .navbar.light .mobile-menu .dropdown-menu {
+    display: none !important;
+    position: static !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* 2. Show the menu only when active */
+  .navbar .mobile-menu .dropdown.mobile-open .dropdown-menu {
+    display: block !important;
+  }
+
+  /* 3. Nested link alignment and color */
+  .navbar .mobile-menu .dropdown-menu li a,
+  .navbar.light .mobile-menu .dropdown-menu li a {
+    background: transparent !important;
+    padding: 0.5rem 0 !important;
+    margin: 0 !important;
+    display: block !important;
+    text-align: center !important;
+    height: auto !important;
+    width: 100% !important;
+    font-size: 0.75rem !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+
+  /* 4. Light mode text color adjustment */
+  .navbar.light .mobile-menu .dropdown-menu li a {
+    color: rgba(0, 0, 0, 0.6) !important;
+  }
+
+  /* 5. Dropdown Toggle Layout */
+  .mobile-menu .dropdown {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+
+  .mobile-menu .dropdown-toggle {
+    width: 100%;
+    justify-content: center;
+    padding: 0.5rem 0 !important;
+    color: #fff !important;
+    background: transparent !important;
+  }
+
+  .navbar.light .mobile-menu .dropdown-toggle {
+    color: #111 !important;
+  }
+
+  .mobile-menu .dropdown .chevron {
+    margin-left: 10px;
+    border-width: 2px;
+  }
+
+  .mobile-menu .dropdown.mobile-open .chevron {
+    transform: rotate(-135deg) !important;
+    margin-top: 5px !important;
+  }
 }
 
 /* ===== MEDIA QUERIES ===== */
@@ -2462,7 +2648,6 @@ h6 em {
 }
 
 /* TRIGGER MOBILE EARLIER */
-/* Most tablets look better with the Hamburger than a cramped menu */
 @media (max-width: 992px) {
   .navbar-links {
     display: none;
