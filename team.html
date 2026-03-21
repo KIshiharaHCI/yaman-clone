@@ -90,7 +90,6 @@
         padding-left: 2rem;
       }
 
-      /* Tablet & Mobile */
       @media (max-width: 992px) {
         .team-hero-wrapper {
           height: auto;
@@ -118,7 +117,6 @@
         }
       }
 
-      /* CAROUSEL STYLES */
       .team-carousel-container {
         position: relative;
         margin-top: 5rem;
@@ -212,7 +210,6 @@
         line-height: 1.6;
       }
 
-      /* ARROW BUTTONS - BASE */
       .carousel-nav {
         --nav-size: 48px;
         position: absolute;
@@ -248,7 +245,6 @@
         pointer-events: none;
       }
 
-      /* 1. Desktop Hover Protection */
       @media (hover: hover) {
         .team-carousel-container:hover .carousel-nav:not(.disabled) {
           opacity: 1;
@@ -259,7 +255,6 @@
         }
       }
 
-      /* 2. Mobile Active Feedback */
       @media (hover: none) {
         .carousel-nav:active:not(.disabled) {
           background: var(--gold-dark, #b8860b);
@@ -268,7 +263,6 @@
         }
       }
 
-      /* Tablet: 2 cards */
       @media (max-width: 992px) {
         .team-carousel-container {
           padding: 0 3rem;
@@ -286,7 +280,6 @@
         }
       }
 
-      /* Mobile: 1 card */
       @media (max-width: 600px) {
         .team-page-main {
           margin: 1.5rem auto;
@@ -365,11 +358,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: var(--bg-secondary); /* or your preferred dark shade */
+        background: var(--bg-secondary);
       }
 
       .team-placeholder-icon {
-        font-size: 3.5rem; /* Adjust size as needed */
+        font-size: 3.5rem;
         color: var(--gold);
         opacity: 0.6;
         transition:
@@ -881,8 +874,6 @@
         const typewriterElement = document.getElementById("typewriter-text");
 
         let ticking = false;
-
-        // --- LOGO INITIALIZATION ---
         const initLogoAnimation = () => {
           if (!logoContainer) return;
           if (typewriterElement)
@@ -891,8 +882,6 @@
             logoContainer.classList.add("animate-logo", "animate-ready");
           });
         };
-
-        // --- MOBILE MENU TOGGLE ---
         const toggleMenu = (forceClose = false) => {
           const isActive = mobileMenu.classList.contains("active");
           if (forceClose || isActive) {
@@ -906,8 +895,6 @@
             mobileMenu.classList.add("active");
           }
         };
-
-        // --- MOBILE DROPDOWN INIT ---
         const initMobileDropdowns = () => {
           const mobileDropdowns = mobileMenu.querySelectorAll(".dropdown");
 
@@ -921,19 +908,13 @@
                 e.stopPropagation();
 
                 const isOpen = dropdown.classList.contains("mobile-open");
-
-                // Close all dropdowns first
                 mobileDropdowns.forEach((d) =>
                   d.classList.remove("mobile-open"),
                 );
-
-                // Toggle current
                 if (!isOpen) dropdown.classList.add("mobile-open");
               }
             });
           });
-
-          // Close menu on normal link clicks (ignore dropdown-toggle)
           mobileMenu.querySelectorAll("a").forEach((link) => {
             link.addEventListener("click", () => {
               if (!link.classList.contains("dropdown-toggle")) {
@@ -945,8 +926,6 @@
             });
           });
         };
-
-        // --- SCROLL HANDLER ---
         const handleScroll = () => {
           const scrollY = window.scrollY;
           const topbarHeight = topbar ? topbar.offsetHeight : 0;
@@ -986,8 +965,6 @@
             zoomImage.style.transform = `scale(${scaleAmount})`;
           }
         };
-
-        // --- CAROUSEL NAVIGATION ---
         if (prevBtn && nextBtn && scrollWrapper) {
           const getScrollAmount = () => {
             const card = scrollWrapper.querySelector(".team-member-card");
@@ -1029,8 +1006,6 @@
           window.addEventListener("resize", updateNavButtons);
           updateNavButtons();
         }
-
-        // --- OBSERVERS ---
         const initObservers = () => {
           const footerLogoObserver = new IntersectionObserver(
             (entries) => {
@@ -1061,8 +1036,6 @@
             )
             .forEach((el) => revealObserver.observe(el));
         };
-
-        // --- EVENT LISTENERS ---
         window.addEventListener(
           "scroll",
           () => {
@@ -1089,8 +1062,6 @@
           )
             toggleMenu(true);
         });
-
-        // --- INITIALIZE ---
         handleScroll();
         initObservers();
         initLogoAnimation();

@@ -18,14 +18,12 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="fahrzeugsuche.css" />
     <style>
-      /* Base Container */
       .about-main {
         max-width: 1300px;
         margin: 4rem auto;
         padding: 0 2rem;
       }
 
-      /* Hero Image Wrapper - Exactly matching Team style */
       .about-image-wrapper {
         width: 100%;
         height: 80vh;
@@ -52,7 +50,6 @@
         transition: transform 0.1s linear;
       }
 
-      /* Intro Grid - Exactly matching Team style */
       .team-intro {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -93,9 +90,8 @@
         padding-left: 2rem;
       }
 
-      /* Content Styling */
       .about-content {
-        max-width: 850px; /* Centered narrow column for readability */
+        max-width: 850px;
         margin: 0 auto;
         font-size: 1.1rem;
         color: var(--text-primary);
@@ -133,7 +129,6 @@
         letter-spacing: 2px;
       }
 
-      /* Tablet Responsiveness (max-width: 992px) */
       @media (max-width: 992px) {
         .about-image-wrapper {
           height: auto;
@@ -162,7 +157,6 @@
         }
       }
 
-      /* Mobile Responsiveness (max-width: 600px) */
       @media (max-width: 600px) {
         .about-main {
           margin: 1.5rem auto;
@@ -668,14 +662,10 @@
         const mobileMenu = document.getElementById("mobileMenu");
         const pageHeader = document.querySelector(".page-header");
         const zoomImage = document.getElementById("zoomImage");
-
-        // Logo & Typewriter Elements
         const logoContainer = document.querySelector(".navbar-logo");
         const typewriterElement = document.getElementById("typewriter-text");
 
         let ticking = false;
-
-        // --- LOGO & TYPEWRITER LOGIC ---
         const initLogoAnimation = () => {
           if (!logoContainer) return;
           if (typewriterElement)
@@ -684,15 +674,11 @@
             logoContainer.classList.add("animate-logo", "animate-ready");
           });
         };
-
-        // --- MOBILE MENU TOGGLE ---
         const toggleMenu = (forceClose = false) => {
           const isActive = mobileMenu.classList.contains("active");
           if (forceClose || isActive) {
             hamburger.classList.remove("active");
             mobileMenu.classList.remove("active");
-
-            // Close any open dropdowns
             document
               .querySelectorAll(".dropdown.mobile-open")
               .forEach((d) => d.classList.remove("mobile-open"));
@@ -701,8 +687,6 @@
             mobileMenu.classList.add("active");
           }
         };
-
-        // --- MOBILE DROPDOWN LOGIC ---
         const initMobileDropdowns = () => {
           const mobileDropdowns = mobileMenu.querySelectorAll(".dropdown");
 
@@ -716,19 +700,13 @@
                 e.stopPropagation();
 
                 const isOpen = dropdown.classList.contains("mobile-open");
-
-                // Close all mobile dropdowns
                 mobileDropdowns.forEach((d) =>
                   d.classList.remove("mobile-open"),
                 );
-
-                // Toggle this dropdown
                 if (!isOpen) dropdown.classList.add("mobile-open");
               }
             });
           });
-
-          // Close menu on regular link clicks
           mobileMenu.querySelectorAll("a").forEach((link) => {
             link.addEventListener("click", () => {
               if (!link.classList.contains("dropdown-toggle")) {
@@ -740,8 +718,6 @@
             });
           });
         };
-
-        // --- SCROLL HANDLER ---
         const handleScroll = () => {
           const scrollY = window.scrollY;
           const topbarHeight = topbar ? topbar.offsetHeight : 0;
@@ -749,8 +725,6 @@
             ? pageHeader.offsetTop + pageHeader.offsetHeight
             : 300;
           const wasLight = navbar.classList.contains("light");
-
-          // Sticky Navbar
           if (scrollY > topbarHeight) {
             navbar.classList.add("sticky");
             navbar.style.setProperty("--nav-top", "0px");
@@ -761,31 +735,21 @@
               `${topbarHeight - scrollY}px`,
             );
           }
-
-          // Light/Dark swap
           if (scrollY > pageHeaderBottom - 80) navbar.classList.add("light");
           else navbar.classList.remove("light");
-
-          // Logo re-animation on theme change
           const isLight = navbar.classList.contains("light");
           if (wasLight !== isLight && logoContainer) {
             logoContainer.classList.remove("animate-ready");
             void logoContainer.offsetWidth;
             logoContainer.classList.add("animate-ready");
           }
-
-          // Close mobile menu on scroll
           if (mobileMenu.classList.contains("active") && scrollY > 100)
             toggleMenu(true);
-
-          // Zoom image effect
           if (zoomImage) {
             const scaleAmount = Math.max(1.0, 1.15 - scrollY * 0.0002);
             zoomImage.style.transform = `scale(${scaleAmount})`;
           }
         };
-
-        // --- OBSERVERS ---
         const initObservers = () => {
           const footerLogoObserver = new IntersectionObserver(
             (entries) => {
@@ -816,8 +780,6 @@
             )
             .forEach((el) => revealObserver.observe(el));
         };
-
-        // --- EVENT LISTENERS ---
         window.addEventListener(
           "scroll",
           () => {
@@ -844,8 +806,6 @@
           )
             toggleMenu(true);
         });
-
-        // --- INITIALIZE ---
         handleScroll();
         initObservers();
         initLogoAnimation();
