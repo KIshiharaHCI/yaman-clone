@@ -233,6 +233,22 @@
       </nav>
     </div>
 
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="page-header-inner">
+        <div class="breadcrumb">
+          <a href="index.html">Startseite</a>
+          <span class="breadcrumb-sep">/</span>
+          <a href="fahrzeugsuche.html">Fahrzeuge</a>
+          <span class="breadcrumb-sep">/</span>
+          <span>Fahrzeugdetail</span>
+        </div>
+        <h1>Fahrzeugdetail</h1>
+        <p>Alle Informationen zu diesem Fahrzeug</p>
+      </div>
+    </section>
+    <div class="nav-trigger"></div>
+
     <!-- LOADING STATE -->
     <div class="detail-loading" id="detailLoading">
       <div class="loading-spinner"></div>
@@ -609,11 +625,6 @@
         const handleScroll = () => {
           const scrollY = window.scrollY;
           const topbarHeight = topbar ? topbar.offsetHeight : 0;
-          const headerBottom = detailHeader
-            ? detailHeader.offsetTop + detailHeader.offsetHeight
-            : 300;
-
-          // Track theme state for logo flip
           const wasLight = navbar.classList.contains("light");
 
           // 1. Sticky logic
@@ -629,10 +640,16 @@
           }
 
           // 2. Light/Dark mode swap
-          if (scrollY > headerBottom - 80) {
-            navbar.classList.add("light");
-          } else {
-            navbar.classList.remove("light");
+          const triggerElement = document.querySelector(".nav-trigger");
+
+          if (triggerElement) {
+            const triggerPoint = triggerElement.offsetTop - navbar.offsetHeight;
+
+            if (scrollY > triggerPoint) {
+              navbar.classList.add("light");
+            } else {
+              navbar.classList.remove("light");
+            }
           }
 
           // 3. LOGO RE-ANIMATION TRIGGER

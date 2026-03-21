@@ -516,24 +516,14 @@ function populateModelDropdown() {
 // ===== SEARCH INIT =====
 function initSearch() {
   const mainSearch = document.getElementById("mainSearch");
-  const sidebarSearch = document.getElementById("sidebarSearch");
   const searchBtn = document.querySelector(".search-btn");
 
   function doSearch() {
-    activeFilters.search = mainSearch.value || sidebarSearch.value;
+    activeFilters.search = mainSearch.value;
     applyFiltersAndRender();
   }
 
-  mainSearch.addEventListener("input", () => {
-    sidebarSearch.value = mainSearch.value;
-    doSearch();
-  });
-
-  sidebarSearch.addEventListener("input", () => {
-    mainSearch.value = sidebarSearch.value;
-    doSearch();
-  });
-
+  mainSearch.addEventListener("input", doSearch);
   searchBtn.addEventListener("click", doSearch);
   mainSearch.addEventListener("keydown", (e) => {
     if (e.key === "Enter") doSearch();
@@ -785,29 +775,32 @@ function initMobileSidebar() {
   const toggle = document.getElementById("filterToggle");
   const sidebar = document.getElementById("filterSidebar");
   const closeBtn = document.getElementById("sidebarClose");
+  const overlay = document.getElementById("sidebarOverlay");
   if (!toggle || !sidebar) return;
 
-  function openSidebar() {
+  function openSidebar(e) {
+    if (e) e.stopPropagation();
     sidebar.classList.add("open");
-    document.body.style.overflow = "hidden";
+    if (overlay) overlay.classList.add("active");
+    
+    // Prevent background scrolling
+    document.body.style.overflow = 'hidden';
   }
 
-  function closeSidebar() {
+  function closeSidebar(e) {
+    if (e) e.stopPropagation();
     sidebar.classList.remove("open");
-    document.body.style.overflow = "";
+    if (overlay) overlay.classList.remove("active");
+    
+    // Restore scrolling
+    document.body.style.overflow = '';
   }
 
   toggle.addEventListener("click", openSidebar);
   closeBtn.addEventListener("click", closeSidebar);
 
   // Close on overlay click
-  document.addEventListener("click", (e) => {
-    if (
-      sidebar.classList.contains("open") &&
-      !sidebar.contains(e.target) &&
-      e.target !== toggle
-    ) {
-      closeSidebar();
-    }
-  });
+  if (overlay) {
+    overlay.addEventListener("click", closeSidebar);
+  }
 }

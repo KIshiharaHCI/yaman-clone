@@ -256,7 +256,7 @@
           <span class="hero-tagline-accent"></span>MÜLHEIM A.D. RUHR
         </div>
         <div class="hero-buttons">
-          <a href="#" class="btn-hero-main">
+          <a href="fahrzeugsuche.html" class="btn-hero-main">
             <svg
               width="18"
               height="18"
@@ -269,7 +269,7 @@
             </svg>
             Fahrzeuge Entdecken
           </a>
-          <a href="#" class="btn-hero-secondary">
+          <a href="#services-section" class="btn-hero-secondary">
             Mehr Erfahren
             <svg
               width="16"
@@ -293,16 +293,6 @@
 
     <section class="trust-bar">
       <div class="trust-container">
-        <!-- <div class="trust-stamp">
-          <div class="stamp-box">
-            <img src="images/dekra-1.svg" alt="DEKRA Siegel" />
-          </div>
-          <div class="trust-header-group">
-            <span class="trust-overline">Zertifizierung</span>
-            <h2 class="trust-section-title">Geprüfte Service-Qualität</h2>
-          </div>
-        </div> -->
-
         <div class="trust-title-wrap">
           <div class="trust-header-group">
             <span class="trust-overline">Netzwerk</span>
@@ -623,19 +613,19 @@
       <div class="dual-card reveal">
         <h3>Fahrzeugankauf</h3>
         <p>Wir kaufen Ihren Wagen!</p>
-        <a href="#" class="btn-outline">Jetzt verkaufen</a>
+        <a href="#contact-section" class="btn-outline">Jetzt verkaufen</a>
       </div>
       <div class="dual-card reveal" style="transition-delay: 0.15s">
         <h3>Fahrzeugbestand</h3>
         <p>Entdecken Sie unsere Fahrzeuge</p>
-        <a href="#" class="btn-outline">Auto suchen</a>
+        <a href="fahrzeugsuche.html" class="btn-outline">Auto suchen</a>
       </div>
     </section>
 
     <section id="services-section" class="services nav-trigger">
       <div class="services-header reveal">
         <!-- <div class="overline">GÖKSU Exclusive Automobile</div> -->
-        <h2>Leistungen</h2>
+        <h2 class="section-title section-title--darktext">Leistungen</h2>
         <p>
           Bei uns dreht sich alles um Ihre automobilen Wünsche und Bedürfnisse.
           Als renommierter Autohändler bieten wir eine exklusive Palette an
@@ -733,7 +723,9 @@
         <!-- <div class="about-text-overline">
           Herzlich willkommen beim Göksu Autocenter in Mülheim
         </div> -->
-        <h2>Herzlich willkommen beim Göksu Autocenter in <em>Mülheim</em></h2>
+        <h2 class="section-title">
+          Herzlich willkommen beim Göksu Autocenter in Mülheim
+        </h2>
         <p>
           Unser Anspruch ist es Sie kompetent und serviceorientiert bei Ihrem
           Autokauf zu unterstützen. Die Leidenschaft zu unseren Autos, eine
@@ -773,7 +765,7 @@
         <div class="about-image-frame"></div>
       </div>
       <div class="about-text reveal-right">
-        <h2>Das Team hinter <em>Göksu</em></h2>
+        <h2 class="section-title">Das Team hinter Göksu</h2>
         <p>
           Drei Söhne, die von klein auf mitangepackt haben. Ein Team, das Ihnen
           nicht nur Autos verkauft, sondern echte Beratung bietet. Jeder
@@ -1038,12 +1030,12 @@
       <div class="dual-card reveal">
         <h3>Fahrzeugankauf</h3>
         <p>Wir kaufen Ihren Wagen!</p>
-        <a href="#" class="btn-outline">Jetzt verkaufen</a>
+        <a href="#contact-section" class="btn-outline">Jetzt verkaufen</a>
       </div>
       <div class="dual-card reveal" style="transition-delay: 0.15s">
         <h3>Fahrzeugbestand</h3>
         <p>Entdecken Sie unsere Fahrzeuge</p>
-        <a href="#" class="btn-outline">Auto suchen</a>
+        <a href="fahrzeugsuche.html" class="btn-outline">Auto suchen</a>
       </div>
     </section>
 
@@ -1051,11 +1043,10 @@
       <div class="contact-container">
         <div class="contact-form-wrapper reveal-left">
           <div class="overline">Wir sind für Sie da</div>
-          <h2 class="contact-title">Kontaktieren Sie uns</h2>
-          <p class="contact-desc">
-            Haben Sie Fragen zu einem Fahrzeug oder unseren Leistungen? Unser
-            Expertenteam berät Sie gerne persönlich.
-          </p>
+          <h2 class="contact-title section-title section-title--darktext">
+            Kontaktieren Sie uns
+          </h2>
+          <p class="contact-desc">Expertenteam berät Sie gerne persönlich.</p>
 
           <form class="luxury-form">
             <div class="form-row">
@@ -1439,42 +1430,6 @@
 
           if (mobileMenu.classList.contains("active") && scrollY > 100) {
             toggleMenu(true);
-          }
-
-          if (statsSection) {
-            const container = statsSection.querySelector(".timeline-container");
-            if (container) {
-              const rect = container.getBoundingClientRect();
-              const isDesktop = window.innerWidth > 1024;
-              const triggerPoint = isDesktop
-                ? window.innerHeight * 0.7
-                : window.innerHeight * 0.5;
-              let progress = Math.max(
-                0,
-                Math.min(1, (triggerPoint - rect.top) / container.offsetHeight),
-              );
-
-              container.style.setProperty(
-                "--path-progress",
-                `${progress * 100}%`,
-              );
-
-              container.querySelectorAll(".timeline-item").forEach((item) => {
-                const itemMid = item.offsetTop + item.offsetHeight / 2;
-                const currentScrollPx = progress * container.offsetHeight;
-                const buffer = isDesktop ? 250 : 300;
-                const dist = currentScrollPx - itemMid;
-                let opacityValue = Math.max(
-                  0,
-                  Math.min(1, (dist + buffer) / buffer),
-                );
-
-                item.style.opacity = opacityValue;
-                item.style.visibility = opacityValue > 0 ? "visible" : "hidden";
-                const slideDist = isDesktop ? 30 : 50;
-                item.style.transform = `translateY(${slideDist - opacityValue * slideDist}px)`;
-              });
-            }
           }
         };
 
