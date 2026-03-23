@@ -241,7 +241,19 @@
         preload="auto"
         poster="images/hero-fallback.png"
       >
-        <source src="videos/hero-vid-cropped.mp4" type="video/mp4" />
+        <source
+          src="videos/desktop-hero-vid.mp4"
+          type="video/mp4"
+          media="(min-width: 1025px)"
+        />
+
+        <source
+          src="videos/tablet-hero-vid.mp4"
+          type="video/mp4"
+          media="(min-width: 768px)"
+        />
+
+        <source src="videos/mobile-hero-vid.mp4" type="video/mp4" />
       </video>
 
       <div class="hero-overlay"></div>
@@ -958,12 +970,19 @@
       <a
         class="panel-hero event-style"
         href="serie-zwei.html"
-        aria-label="Tuning Treff 2026 – Coming Soon"
+        aria-label="Tuning Treff 2026"
       >
+        <video class="hero-video-bg" autoplay muted loop playsinline>
+          <source
+            src="videos/tuning-treff-banner-vid.mp4#t=4"
+            type="video/mp4"
+          />
+        </video>
+
+        <div class="video-overlay"></div>
+
         <h2 class="hero-headline">Tuning Treff</h2>
-
         <p class="year-badge">2026</p>
-
         <p class="coming-soon">Coming Soon</p>
       </a>
 
@@ -1401,7 +1420,15 @@
         const handleScrollEffects = () => {
           const scrollY = window.scrollY;
           const topHeight = topbar ? topbar.offsetHeight : 0;
+          const navHeight = navbar.offsetHeight;
+          const totalHeaderHeight = topHeight + navHeight;
           const wasLight = navbar.classList.contains("light");
+
+          document.documentElement.style.setProperty(
+            "--header-height",
+            `${totalHeaderHeight}px`,
+          );
+
           if (scrollY > topHeight) {
             navbar.classList.add("sticky");
             navbar.style.setProperty("--nav-top", "0px");
