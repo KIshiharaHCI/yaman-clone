@@ -454,12 +454,12 @@
   transition: all 0.2s ease;
 }
 
-.custom-checkbox input:checked+.checkmark {
+.custom-checkbox input:checked + .checkmark {
   background: #ad0b04;
   border-color: #ad0b04;
 }
 
-.custom-checkbox input:checked+.checkmark::after {
+.custom-checkbox input:checked + .checkmark::after {
   content: "";
   width: 4px;
   height: 8px;
@@ -469,7 +469,7 @@
   margin-top: -2px;
 }
 
-.custom-checkbox input:checked~* {
+.custom-checkbox input:checked ~ * {
   color: var(--text-primary);
 }
 
@@ -722,7 +722,7 @@
   position: absolute;
   top: 0.6rem;
   left: 0.6rem;
-  background: rgba(10, 10, 10, 0.8);
+  background: white;
   color: var(--gold);
   font-size: 0.6rem;
   font-weight: 600;

@@ -3232,6 +3232,48 @@ h6 em {
   color: #ffffff;
 }
 
+/* ===== FOOTER BRANDING (PALA GROUP) ===== */
+.footer-branding {
+  background: #000000;
+  padding: 1.5rem 2rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  opacity: 1;
+}
+
+.footer-branding a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+
+}
+
+.footer-branding a:hover {
+  opacity: 1;
+}
+
+.footer-branding img {
+  height: 30px;
+  width: auto;
+}
+
+
+.footer-branding span {
+  color: #888888;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+}
+
+.footer-branding a:hover span {
+  color: #ffffff;
+}
+
 .footer-nav-links {
   list-style: none;
   padding: 0;
