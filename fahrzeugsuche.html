@@ -528,11 +528,18 @@
       <div class="footer-col">
         <h4>Navigation</h4>
         <ul class="footer-nav-links">
+          <li><a href="index.html">Startseite</a></li>
           <li><a href="fahrzeugsuche.html">Fahrzeuge</a></li>
-          <!-- <li><a href="wohnmobile.html">Wohnmobile</a></li> -->
-          <li><a href="index.html#services-section">Leistungen</a></li>
           <li><a href="ueber-uns.html">Über uns</a></li>
           <li><a href="team.html">Team</a></li>
+          <li>
+            <span class="footer-nav-label">Mediathek</span>
+            <ul class="footer-nav-sub">
+              <li><a href="serie-eins.html">4 Händler 1 Deal</a></li>
+              <li><a href="serie-zwei.html">Tuning Treff</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#services-section">Leistungen</a></li>
           <li><a href="index.html#contact-section">Kontakt</a></li>
         </ul>
       </div>
@@ -752,16 +759,28 @@
           }
         }
 
-        // ✅ EXISTING REVEAL ANIMATIONS (keep yours)
         const revealObserver = new IntersectionObserver(
           (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
+            let staggerDelay = 0;
+            const sortedEntries = [...entries].sort(
+              (a, b) => a.target.offsetTop - b.target.offsetTop,
+            );
+
+            sortedEntries.forEach((entry) => {
+              if (
+                entry.isIntersecting &&
+                !entry.target.classList.contains("visible")
+              ) {
+                const el = entry.target;
+                if (!el.style.transitionDelay) {
+                  el.style.transitionDelay = `${staggerDelay}ms`;
+                  staggerDelay += 100;
+                }
+                el.classList.add("visible");
               }
             });
           },
-          { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
+          { threshold: 0.15, rootMargin: "0px 0px -50px 0px" },
         );
 
         document
