@@ -936,9 +936,9 @@ h6 em {
 
 /* ===== TRUST BAR ===== */
 .trust-bar {
-  background: black;
+  background: white;
   padding: 12rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   overflow: hidden;
   position: relative;
   z-index: 10;
@@ -977,7 +977,7 @@ h6 em {
   line-height: 1.1;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: white;
+  color: black;
   margin: 0;
 }
 
