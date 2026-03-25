@@ -1,6 +1,8 @@
-// ===== AUDARIS API CONFIG =====
-const API_BASE = "https://api.audaris.de/v1/clients/2396/website-vehicles";
-const WEBSITE_ID = "6357a94781160e63a700a2de";
+// ===== Backend API CONFIG =====
+// Frontend should call our Express proxy (mobile.de credentials must stay on the server).
+const API_BASE = "http://127.0.0.1:5000/api/vehicles";
+// Kept for backward compatibility with existing URL building; backend ignores it.
+const WEBSITE_ID = "unused";
 
 // ===== STATE =====
 let currentImageIndex = 0;
