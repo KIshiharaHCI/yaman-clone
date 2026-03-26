@@ -15,32 +15,6 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="fahrzeugsuche.css" />
   <style>
-    /* ===== DARK MODE PAGE HEADER OVERRIDE ===== */
-    .page-header {
-      background: linear-gradient(135deg, var(--bg-primary) 0%, #14120e 100%);
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .page-header h1 {
-      color: var(--text-primary);
-    }
-
-    .page-header p {
-      color: var(--text-secondary);
-    }
-
-    .breadcrumb {
-      color: var(--text-primary);
-    }
-
-    .breadcrumb a {
-      color: var(--text-primary);
-    }
-
-    .breadcrumb-sep {
-      color: var(--text-primary);
-    }
-
     /* ===== ABOUT PAGE STYLES ===== */
     .about-main {
       max-width: 1300px;
@@ -418,10 +392,12 @@
     </nav>
   </div>
 
-  <!-- PAGE HEADER -->
-  <section class="page-header">
-    <div class="page-header-inner">
-      <div class="breadcrumb">
+  <!-- SUBPAGE HERO -->
+  <section class="subpage-hero ">
+    <img class="hero-bg-image" id="zoomImage" src="images/4-handler-1-deal-hero-img.jpeg" alt="4 Händler 1 Deal Hero" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="breadcrumb breadcrumb-overlay">
         <a href="index.html">Startseite</a>
         <span class="breadcrumb-sep">/</span>
         <span>Mediathek</span>
@@ -429,7 +405,7 @@
         <span>Tuning Treff</span>
       </div>
       <h1>Tuning Treff</h1>
-      <p>
+      <p class="hero-subtitle">
         Die Leidenschaft für Performance: Unsere Tuning Community.
       </p>
     </div>
@@ -437,10 +413,6 @@
 
   <!-- MAIN CONTENT -->
   <main class="about-main nav-trigger">
-    <div class="about-image-wrapper reveal" style="height: 60vh; min-height: 400px; padding: 0;">
-      <img id="zoomImage" src="images/4-handler-1-deal-hero-img.jpeg" alt="4 Händler 1 Deal Hero"
-        style="width: 100%; height: 100%; object-fit: cover; max-width: none; max-height: none;" />
-    </div>
 
     <div class="team-intro reveal">
       <div class="intro-left">

@@ -369,10 +369,7 @@ h6 em {
 }
 
 #navbar.light .animate-ready .logo-red-part,
-#navbar.light
-  .animate-ready
-  .logo-automobile-paths
-  path:nth-child(n + 1):nth-child(-n + 11) {
+#navbar.light .animate-ready .logo-automobile-paths path:nth-child(n + 1):nth-child(-n + 11) {
   fill: #ad0b04;
 }
 
@@ -420,7 +417,7 @@ h6 em {
   align-items: stretch;
 }
 
-.navbar-links > li {
+.navbar-links>li {
   display: flex;
   align-items: center;
   position: relative;
@@ -584,7 +581,7 @@ h6 em {
   color: var(--gold) !important;
 }
 
-.mobile-menu > a:last-child {
+.mobile-menu>a:last-child {
   background: var(--gold) !important;
   color: #ffffff !important;
   padding: 1rem;
@@ -695,6 +692,7 @@ h6 em {
 }
 
 @media (max-width: 1024px) {
+
   .navbar .mobile-menu .dropdown-menu,
   .navbar.light .mobile-menu .dropdown-menu {
     display: none !important;
@@ -767,6 +765,7 @@ h6 em {
 /* ===== MEDIA QUERIES ===== */
 
 @media (max-width: 768px) {
+
   .navbar,
   .navbar-wrapper {
     height: 65px;
@@ -830,13 +829,11 @@ h6 em {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(10, 10, 10, 0.3) 0%,
-    rgba(10, 10, 10, 0.1) 35%,
-    rgba(10, 10, 10, 0.6) 75%,
-    rgba(10, 10, 10, 0.9) 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(10, 10, 10, 0.3) 0%,
+      rgba(10, 10, 10, 0.1) 35%,
+      rgba(10, 10, 10, 0.6) 75%,
+      rgba(10, 10, 10, 0.9) 100%);
   z-index: 1;
 }
 
@@ -941,7 +938,6 @@ h6 em {
 .trust-bar {
   background: white;
   padding: 12rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   overflow: hidden;
   position: relative;
   z-index: 10;
@@ -1009,20 +1005,16 @@ h6 em {
 
 .logo-slider {
   width: 100%;
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 15%,
-    black 85%,
-    transparent
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 15%,
-    black 85%,
-    transparent
-  );
+  mask-image: linear-gradient(to right,
+      transparent,
+      black 15%,
+      black 85%,
+      transparent);
+  -webkit-mask-image: linear-gradient(to right,
+      transparent,
+      black 15%,
+      black 85%,
+      transparent);
 }
 
 .logo-track {
@@ -1335,8 +1327,7 @@ h6 em {
   position: absolute;
   inset: 0;
 
-  background: url("images/cropped-4-handler-1-deal-image.png") center center /
-    contain no-repeat;
+  background: url("images/cropped-4-handler-1-deal-image.png") center center / contain no-repeat;
   width: 100%;
   height: 100%;
   /* animation: autoScale 2s var(--transition-smooth) infinite; */
@@ -1466,7 +1457,7 @@ h6 em {
 
 /* ===== SPECIFIC MARGINS FOR TUNING TREFF BANNER ===== */
 .banner-section.banner-event-wrapper {
-  margin-top: 14rem;
+  margin-top: 0;
   margin-bottom: 14rem;
 
   border-color: rgba(255, 255, 255, 0.1);
@@ -1481,13 +1472,14 @@ h6 em {
 
 @media (max-width: 768px) {
   .banner-section.banner-event-wrapper {
-    margin-top: 8rem;
+    margin-top: 0;
     margin-bottom: 8rem;
     width: 92%;
   }
 }
 
 @keyframes autoScale {
+
   0%,
   100% {
     transform: scale(1.02);
@@ -1499,6 +1491,7 @@ h6 em {
 }
 
 @keyframes cssPulse {
+
   0%,
   100% {
     opacity: 1;
@@ -1643,6 +1636,7 @@ h6 em {
     transform: translateX(-100vw);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -1654,6 +1648,7 @@ h6 em {
     transform: translateX(100vw);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -1665,6 +1660,7 @@ h6 em {
     transform: translateY(100px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -1807,12 +1803,10 @@ h6 em {
 /* --- HERO PRIMARY & FOOTER --- */
 .btn-hero-main,
 .footer-cta-btn {
-  background: linear-gradient(
-    to right,
-    #8a0903 0%,
-    var(--gold) 50%,
-    #8a0903 100%
-  ) !important;
+  background: linear-gradient(to right,
+      #8a0903 0%,
+      var(--gold) 50%,
+      #8a0903 100%) !important;
 
   color: #ffffff !important;
   border: none !important;
@@ -1830,12 +1824,10 @@ h6 em {
 
 .btn-hero-main:hover,
 .footer-cta-btn:hover {
-  background: linear-gradient(
-    to right,
-    var(--gold) 0%,
-    var(--gold-light) 50%,
-    var(--gold) 100%
-  ) !important;
+  background: linear-gradient(to right,
+      var(--gold) 0%,
+      var(--gold-light) 50%,
+      var(--gold) 100%) !important;
 
   box-shadow:
     0 15px 50px rgba(173, 11, 4, 0.5),
@@ -1853,12 +1845,10 @@ h6 em {
   left: -150%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(255, 255, 255, 0.15),
-    transparent
-  );
+  background: linear-gradient(to right,
+      transparent,
+      rgba(255, 255, 255, 0.15),
+      transparent);
   transition: 0.5s ease-in-out;
 }
 
@@ -2002,6 +1992,7 @@ h6 em {
 }
 
 @keyframes scrollPulse {
+
   0%,
   100% {
     opacity: 0.3;
@@ -2090,7 +2081,7 @@ h6 em {
   background: rgba(10, 10, 10, 0.4);
 }
 
-.dual-card > * {
+.dual-card>* {
   position: relative;
   z-index: 1;
 }
@@ -2196,12 +2187,10 @@ h6 em {
 
 .divider-line {
   height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--border-color),
-    transparent
-  );
+  background: linear-gradient(to right,
+      transparent,
+      var(--border-color),
+      transparent);
 }
 
 /* ===== SERVICES - REFINED WHITE EDITION ===== */
@@ -2635,11 +2624,9 @@ h6 em {
   top: 0;
   bottom: 0;
   width: 2px;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.1) 50%,
-    transparent 50%
-  );
+  background-image: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.1) 50%,
+      transparent 50%);
   background-size: 2px 30px;
   transform: translateX(-50%);
   z-index: 1;
@@ -2698,11 +2685,9 @@ h6 em {
 }
 
 .stat-content {
-  background: linear-gradient(
-    145deg,
-    rgba(25, 25, 25, 0.9) 0%,
-    rgba(5, 5, 5, 1) 100%
-  );
+  background: linear-gradient(145deg,
+      rgba(25, 25, 25, 0.9) 0%,
+      rgba(5, 5, 5, 1) 100%);
   backdrop-filter: blur(10px);
   padding: 2.5rem;
   border-radius: 4px;
@@ -2741,6 +2726,7 @@ h6 em {
 }
 
 @keyframes trophy-shine {
+
   0%,
   100% {
     transform: scale(1);
@@ -2930,10 +2916,10 @@ h6 em {
   font-weight: bold;
 }
 
-.input-group input:focus ~ label,
-.input-group input:not(:placeholder-shown) ~ label,
-.input-group textarea:focus ~ label,
-.input-group textarea:not(:placeholder-shown) ~ label {
+.input-group input:focus~label,
+.input-group input:not(:placeholder-shown)~label,
+.input-group textarea:focus~label,
+.input-group textarea:not(:placeholder-shown)~label {
   top: -18px;
   font-size: 0.75rem;
   color: var(--gold);
@@ -3749,5 +3735,112 @@ h6 em {
   .footer-nav-label {
     text-align: center;
     margin-left: 0;
+  }
+}
+
+/* ===== SUBPAGE HERO OVERLAY ===== */
+.subpage-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  max-height: 600px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--bg-primary);
+  margin-top: 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.subpage-hero .hero-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  transform: scale(1.05); /* slightly scale up for zoom effect */
+}
+
+.subpage-hero .hero-bg-image.hero-bg-bottom {
+  object-position: bottom;
+  transform-origin: bottom center;
+  transform: scale(1); /* no initial zoom — prevent cropping people at edges */
+}
+
+.subpage-hero .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+      rgba(10, 10, 10, 0.4) 0%,
+      rgba(10, 10, 10, 0.2) 40%,
+      rgba(10, 10, 10, 0.8) 100%);
+  z-index: 1;
+}
+
+.subpage-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  padding: 0 2rem;
+  margin-top: 40px; /* Offset to center visually considering navbar */
+}
+
+.subpage-hero .breadcrumb-overlay {
+  margin-bottom: 1.5rem;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.subpage-hero .breadcrumb-overlay a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.subpage-hero .breadcrumb-overlay a:hover {
+  color: var(--gold);
+}
+
+.subpage-hero .breadcrumb-overlay .breadcrumb-sep {
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0.5rem;
+}
+
+.subpage-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 0.8s 0.2s forwards;
+  opacity: 0;
+  line-height: 1.1;
+}
+
+.subpage-hero .hero-subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  color: #ffffff;
+  line-height: 1.6;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  max-width: 700px;
+  margin: 0 auto;
+  animation: fadeInUp 0.8s 0.4s forwards;
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .subpage-hero {
+    height: 50vh;
+    min-height: 350px;
   }
 }

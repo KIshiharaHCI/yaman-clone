@@ -157,22 +157,23 @@
     </nav>
   </div>
 
-  <!-- PAGE HEADER -->
-  <section class="page-header">
-    <div class="page-header-inner">
-      <div class="breadcrumb">
+  <!-- SUBPAGE HERO -->
+  <section class="subpage-hero ">
+    <img class="hero-bg-image" id="zoomImage" src="images/cropped-drone-shot.png" alt="Fahrzeuge GÖKSU Autocenter" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="breadcrumb breadcrumb-overlay">
         <a href="index.html">Startseite</a>
         <span class="breadcrumb-sep">/</span>
         <span>Fahrzeugsuche</span>
       </div>
       <h1>Fahrzeugsuche</h1>
-      <p>Entdecken Sie unsere handverlesene Auswahl exklusiver Automobile</p>
+      <p class="hero-subtitle">Entdecken Sie unsere handverlesene Auswahl exklusiver Automobile</p>
     </div>
   </section>
-  <div class="nav-trigger"></div>
 
   <!-- SEARCH LAYOUT -->
-  <div class="search-layout">
+  <div class="search-layout nav-trigger">
     <!-- FILTER SIDEBAR -->
     <aside class="filter-sidebar" id="filterSidebar">
       <button class="sidebar-close" id="sidebarClose">
@@ -601,6 +602,7 @@
       const pageHeader = document.querySelector(".page-header");
       const logoContainer = document.querySelector(".navbar-logo");
       const typewriterElement = document.getElementById("typewriter-text");
+      const zoomImage = document.getElementById("zoomImage");
 
       let ticking = false;
 
@@ -707,6 +709,11 @@
 
         if (mobileMenu.classList.contains("active") && scrollY > 100) {
           toggleMenu(true);
+        }
+
+        if (zoomImage) {
+          const scaleAmount = Math.max(1.0, 1.15 - scrollY * 0.0002);
+          zoomImage.style.transform = `scale(${scaleAmount})`;
         }
       };
 

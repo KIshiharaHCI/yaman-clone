@@ -159,10 +159,12 @@
     </nav>
   </div>
 
-  <!-- PAGE HEADER -->
-  <section class="page-header">
-    <div class="page-header-inner">
-      <div class="breadcrumb">
+  <!-- SUBPAGE HERO -->
+  <section class="subpage-hero ">
+    <img class="hero-bg-image" id="zoomImage" src="images/cropped-drone-shot.png" alt="Fahrzeuge GÖKSU Autocenter" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="breadcrumb breadcrumb-overlay">
         <a href="index.html">Startseite</a>
         <span class="breadcrumb-sep">/</span>
         <a href="fahrzeugsuche.html">Fahrzeuge</a>
@@ -170,7 +172,7 @@
         <span>Fahrzeugdetail</span>
       </div>
       <h1>Fahrzeugdetail</h1>
-      <p>Alle Informationen zu diesem Fahrzeug</p>
+      <p class="hero-subtitle">Alle Informationen zu diesem Fahrzeug</p>
     </div>
   </section>
   <div class="nav-trigger"></div>
@@ -438,6 +440,7 @@
       const hamburger = document.getElementById("hamburger");
       const mobileMenu = document.getElementById("mobileMenu");
       const contactContainer = document.querySelector(".floating-contact");
+      const zoomImage = document.getElementById("zoomImage");
 
       // Specifically for the detail page loading/header logic
       const detailHeader =
@@ -522,6 +525,12 @@
         // 4. Close mobile menu on scroll
         if (mobileMenu.classList.contains("active") && scrollY > 100) {
           toggleMenu(true);
+        }
+
+        // 5. Zoom effect
+        if (zoomImage) {
+          const scaleAmount = Math.max(1.0, 1.15 - scrollY * 0.0002);
+          zoomImage.style.transform = `scale(${scaleAmount})`;
         }
       };
 
