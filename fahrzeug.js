@@ -36,6 +36,8 @@ function formatFuel(fuel) {
     PETROL: "Benzin",
     DIESEL: "Diesel",
     ELECTRIC: "Elektro",
+    ELECTRICITY: "Elektro",
+    Electricity: "Elektro",
     HYBRID: "Hybrid",
     HYBRID_PETROL: "Hybrid Benzin",
     HYBRID_DIESEL: "Hybrid Diesel",
