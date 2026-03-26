@@ -12,6 +12,7 @@ let activeFilters = {
   search: "",
   fahrzeugart: "",
   modell: "",
+  ausstattung: [],
   kraftstoff: [],
   getriebe: [],
   preisMin: 0,
@@ -257,6 +258,93 @@ function getVehicleGearbox(v) {
   return v.gearboxType || v.gearbox || "";
 }
 
+function normalizeEquipmentText(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[_-]/g, " ")
+    .replace(/[()]/g, " ")
+    .replace(/[^\p{L}\p{N}\s]/gu, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function collectVehicleEquipmentTexts(v) {
+  const texts = [];
+  const push = (val) => {
+    const t = normalizeEquipmentText(val);
+    if (t) texts.push(t);
+  };
+
+  const maybeArrays = [
+    v?.equipment,
+    v?.equipments,
+    v?.features,
+    v?.featureList,
+    v?.options,
+    v?.optionalEquipment,
+    v?.specialEquipment,
+  ];
+
+  maybeArrays.forEach((arr) => {
+    if (!Array.isArray(arr)) return;
+    arr.forEach((entry) => {
+      if (typeof entry === "string") {
+        push(entry);
+        return;
+      }
+      if (entry && typeof entry === "object") {
+        push(entry.name || entry.label || entry.value || entry.key || "");
+      }
+    });
+  });
+
+  const maybeObjects = [v?.features, v?.equipmentFlags, v?.optionsMap];
+  maybeObjects.forEach((obj) => {
+    if (!obj || typeof obj !== "object" || Array.isArray(obj)) return;
+    Object.entries(obj).forEach(([key, value]) => {
+      if (value === true || value === 1 || value === "true") {
+        push(key);
+      } else if (typeof value === "string" && value.trim()) {
+        push(value);
+      }
+    });
+  });
+
+  push(v?.modelDescription);
+  push(v?.subtitle);
+  push(v?.subitle);
+  push(v?._source?.subtitle);
+  push(v?.description);
+
+  return texts.join(" ");
+}
+
+function vehicleHasEquipment(v, equipmentItem) {
+  const haystack = collectVehicleEquipmentTexts(v);
+  if (!haystack) return false;
+
+  const exact = normalizeEquipmentText(equipmentItem);
+  if (exact && haystack.includes(exact)) return true;
+
+  const aliasMap = {
+    "head up display hud": ["head up", "hud"],
+    "virtual digital cockpit": ["digital cockpit", "virtual cockpit", "cockpit"],
+    "navigationssystem": ["navigation", "navi"],
+    "soundsystem": ["burmester", "bowers wilkins", "harman", "bose"],
+    "adaptiver tempomat acc": ["acc", "distronic", "adaptive cruise"],
+    "totwinkel assistent": ["totwinkel", "blind spot"],
+    "notbremsassistent": ["notbrems", "aeb"],
+    "verkehrszeichenerkennung": ["verkehrszeichen", "sign recognition"],
+    "ruckfahrkamera": ["ruckfahrkamera", "rear view camera", "kamera"],
+    "sitzheizung": ["sitzheizung", "sthzg", "sthzg"],
+    "sitzheizung vorne": ["sitzheizung", "sthzg", "sthzg"],
+    "lederausstattung": ["leder"],
+  };
+
+  const aliases = aliasMap[exact] || [];
+  return aliases.some((a) => haystack.includes(normalizeEquipmentText(a)));
+}
+
 function getVehicleConditionDisplay(v) {
   // Prefer backend-provided label.
   if (v && typeof v.conditionDisplay === "string" && v.conditionDisplay.trim()) {
@@ -485,6 +573,13 @@ function applyFiltersAndRender() {
       const model = v.modelName || v.modelGroupName || "";
       return model === activeFilters.modell;
     });
+  }
+
+  // Equipment filter (AND across selected equipment items)
+  if (activeFilters.ausstattung.length > 0) {
+    result = result.filter((v) =>
+      activeFilters.ausstattung.every((item) => vehicleHasEquipment(v, item)),
+    );
   }
 
   // Price range
@@ -721,6 +816,15 @@ function initBrandGrid() {
 
 // ===== CHECKBOXES =====
 function initCheckboxes() {
+  document.querySelectorAll('input[data-filter="ausstattung"]').forEach((cb) => {
+    cb.addEventListener("change", () => {
+      activeFilters.ausstattung = [
+        ...document.querySelectorAll('input[data-filter="ausstattung"]:checked'),
+      ].map((c) => c.value);
+      applyFiltersAndRender();
+    });
+  });
+
   document.querySelectorAll('input[data-filter="kraftstoff"]').forEach((cb) => {
     cb.addEventListener("change", () => {
       activeFilters.kraftstoff = [
@@ -776,6 +880,7 @@ function resetAllFilters() {
     search: "",
     fahrzeugart: "",
     modell: "",
+    ausstattung: [],
     kraftstoff: [],
     getriebe: [],
     preisMin: 0,
