@@ -68,6 +68,21 @@ function formatPrice(price) {
   );
 }
 
+function getVehicleConditionDisplay(v) {
+  if (v && typeof v.conditionDisplay === "string" && v.conditionDisplay.trim()) {
+    return v.conditionDisplay.trim();
+  }
+
+  const condition = String(v?.condition || "").toUpperCase();
+  const map = {
+    USED: "Gebrauchtwagen",
+    NEW: "Neuwagen",
+    DEMONSTRATION: "Jahreswagen",
+    PRE_REGISTRATION: "Jahreswagen",
+  };
+  return map[condition] || "";
+}
+
 function formatRegistration(dateStr) {
   if (!dateStr) return "–";
   if (dateStr.includes("-")) {
@@ -196,6 +211,13 @@ function populateVehicle(v) {
   // Price
   const price = v.priceConsumer || v.price || v.priceRetail || 0;
   document.getElementById("vehiclePrice").textContent = formatPrice(price);
+
+  // Condition badge
+  const conditionBadgeEl = document.getElementById("conditionBadge");
+  if (conditionBadgeEl) {
+    const conditionDisplay = getVehicleConditionDisplay(v);
+    conditionBadgeEl.textContent = (conditionDisplay || "Gebrauchtwagen").toUpperCase();
+  }
 
   // Tax info
   const taxEl = document.getElementById("priceTax");
