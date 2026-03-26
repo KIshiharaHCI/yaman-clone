@@ -255,6 +255,22 @@ function getVehicleGearbox(v) {
   return v.gearboxType || v.gearbox || "";
 }
 
+function getVehicleConditionDisplay(v) {
+  // Prefer backend-provided label.
+  if (v && typeof v.conditionDisplay === "string" && v.conditionDisplay.trim()) {
+    return v.conditionDisplay.trim();
+  }
+
+  const condition = String(v?.condition || "").toUpperCase();
+  const map = {
+    USED: "Gebrauchtwagen",
+    NEW: "Neuwagen",
+    DEMONSTRATION: "Jahreswagen",
+    PRE_REGISTRATION: "Jahreswagen",
+  };
+  return map[condition] || "";
+}
+
 function getVehicleId(v) {
   return v.audaris_id || v._id || v.mobileAdId || "";
 }
@@ -296,7 +312,7 @@ async function loadVehicles() {
       
       if (!resp.ok) throw new Error(`API error: ${resp.status}`);
       const data = await resp.json();
-      console.log("data:", data);
+      console.log("data:", data.data);
       if (data.data && data.data.length > 0) {
         all = all.concat(data.data);
         skip += limit;
@@ -367,6 +383,7 @@ function renderCards(vehicles) {
     const price = formatPrice(getVehiclePrice(v));
     const fuel = formatFuel(getVehicleFuel(v));
     const gearbox = formatGearbox(getVehicleGearbox(v));
+    const conditionBadge = getVehicleConditionDisplay(v) || "Gebrauchtwagen";
     const power = getVehiclePower(v);
     const powerDisplay = power > 0 ? `${kwToPs(power)} PS` : "";
     const mileage = formatMileage(getVehicleMileage(v));
@@ -376,7 +393,7 @@ function renderCards(vehicles) {
 
     card.innerHTML = `
       <div class="car-card-image">
-        <div class="car-card-badge">Gebrauchtwagen</div>
+        <div class="car-card-badge">${conditionBadge}</div>
         ${
           imgSrc
             ? `<img src="${imgSrc}" alt="${title}" loading="lazy">`
@@ -425,6 +442,22 @@ function applyFiltersAndRender() {
       const searchable =
         `${getVehicleTitle(v)} ${getVehicleSubtitle(v)} ${formatFuel(getVehicleFuel(v))} ${formatGearbox(getVehicleGearbox(v))}`.toLowerCase();
       return searchable.includes(q);
+    });
+  }
+
+  // Fahrzeugart (condition) filter
+  if (activeFilters.fahrzeugart) {
+    const selected = String(activeFilters.fahrzeugart || "").trim();
+    result = result.filter((v) => {
+      const display = getVehicleConditionDisplay(v);
+      if (display) return display === selected;
+
+      // Fallback: if backend doesn't provide conditionDisplay yet.
+      const c = String(v?.condition || "").toUpperCase();
+      if (selected === "Gebrauchtwagen") return c === "USED";
+      if (selected === "Neuwagen") return c === "NEW";
+      if (selected === "Jahreswagen") return c === "DEMONSTRATION" || c === "PRE_REGISTRATION";
+      return true;
     });
   }
 
