@@ -13,6 +13,8 @@ export default defineConfig({
         ueberUns: resolve(__dirname, 'ueber-uns.html'),
         fahrzeugsuche: resolve(__dirname, 'fahrzeugsuche.html'),
         fahrzeug: resolve(__dirname, 'fahrzeug.html'),
+        serieEins: resolve(__dirname, 'serie-eins.html'),
+        serieZwei: resolve(__dirname, 'serie-zwei.html'),
       },
     },
   },
