@@ -1,0 +1,123 @@
+/* ===== FOOTER SOCIAL FIX ===== */
+.footer-social-icons.topbar-group {
+  padding-left: 0;
+  margin-top: 1.5rem;
+  gap: 16px;
+}
+
+.footer-social-icons.topbar-group::before {
+  display: none !important;
+}
+
+.footer-brand .social:hover i,
+.footer-social-icons .social:hover i {
+  transform: none !important;
+}
+
+/* ===== COOKIE CONSENT VIDEO PLACEHOLDER (Mediathek) ===== */
+.video-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0a0a0a !important;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2.5rem;
+  /* border: 1px solid var(--gold); */
+  box-sizing: border-box;
+  border-radius: 0;
+}
+
+.video-placeholder p {
+  line-height: 1.6;
+  color: #bbbbbb;
+  margin-bottom: 32px;
+  font-family: var(--font-display);
+  letter-spacing: 3px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  max-width: 450px;
+  text-transform: none;
+}
+
+.video-unlock-btn {
+  background-color: transparent !important;
+  color: #ffffff !important;
+  border: 1px solid #ffffff !important;
+  padding: 14px 36px !important;
+  font-family: var(--font-display) !important;
+  font-size: 0.7rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
+  cursor: pointer;
+  transition: all 0.4s ease !important;
+  border-radius: 0 !important;
+}
+
+.video-unlock-btn:hover {
+  background-color: var(--gold) !important;
+  color: #ffffff !important;
+  /* White text on hover for Mediathek as requested */
+  border-color: var(--gold) !important;
+  transform: none !important;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3) !important;
+}
+
+/* ===== COOKIE CONSENT MAP PLACEHOLDER (Homepage) ===== */
+/* Reverting to light theme to flow with the white background section before it */
+.map-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f8f9fa !important;
+  /* Light grayish branding */
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2.5rem;
+  box-sizing: border-box;
+}
+
+.map-placeholder p {
+  line-height: 1.6;
+  color: #888888;
+  margin-bottom: 32px;
+  font-family: var(--font-display);
+  letter-spacing: 3px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  max-width: 450px;
+  text-transform: none;
+}
+
+.map-unlock-btn {
+  background-color: transparent !important;
+  color: #1a1a1a !important;
+  border: 1px solid #1a1a1a !important;
+  padding: 14px 36px !important;
+  font-family: var(--font-display) !important;
+  font-size: 0.7rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
+  cursor: pointer;
+  transition: all 0.4s ease !important;
+  border-radius: 0 !important;
+}
+
+.map-unlock-btn:hover {
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
+  border-color: #1a1a1a !important;
+  transform: none !important;
+}

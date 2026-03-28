@@ -17,6 +17,14 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="fahrzeugsuche.css" />
+    <link
+      rel="stylesheet"
+      id="silktide-consent-manager-css"
+      href="silktide-consent-manager.css"
+    />
+    <link rel="stylesheet" href="cookie-placeholders.css" />
+    <script src="silktide-consent-manager.js"></script>
+    <script src="cookie-config.js"></script>
     <style>
       /* ===== ABOUT PAGE STYLES ===== */
       .about-main {
@@ -30,7 +38,7 @@
         height: 80vh;
         min-height: 500px;
         margin-bottom: 4rem;
-        border-radius: 4px;
+        border-radius: 0;
         position: relative;
         display: flex;
         align-items: center;
@@ -198,12 +206,53 @@
         text-align: center;
       }
 
+      .single-video-theater {
+        background: var(--bg-secondary);
+        margin-bottom: 4rem;
+        transition: all 0.5s ease;
+        border: 1px solid transparent;
+        padding: 0;
+      }
+
+      /* Blocked state: Show border and center content */
+      .single-video-theater.consent-blocked {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 700px;
+        border: 1px solid var(--gold);
+        padding: 0; /* Removed padding to center precisely */
+        text-align: center;
+      }
+
+      .single-video-theater.consent-blocked h3 {
+        display: none !important;
+      }
+
+      /* Remove bottom margin when blocked to ensure vertical centering */
+      .single-video-theater.consent-blocked .video-container {
+        margin-bottom: 0 !important;
+        width: 100%;
+      }
+
+      .single-video-theater.consent-blocked .main-player-area {
+        width: 100%;
+        max-width: 1200px;
+      }
+
+      /* Consent given state: No border, normal padding */
+      .single-video-theater.consent-given {
+        border: 1px solid transparent;
+        padding: 0;
+      }
+
       .video-container {
         position: relative;
         padding-bottom: 56.25%;
         height: 0;
         overflow: hidden;
-        border-radius: 8px;
+        border-radius: 0;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         margin-bottom: 4rem;
         background: #000;
@@ -221,8 +270,7 @@
       .sales-cta {
         background: var(--bg-secondary);
         padding: 4rem 2rem;
-        border-radius: 8px;
-        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 0;
         margin-bottom: 2rem;
       }
 
@@ -517,7 +565,7 @@
               <iframe
                 width="560"
                 height="315"
-                src="https://www.youtube-nocookie.com/embed/wIvUWQUXz1Q?si=Ls7dWR8ZINoN81kj"
+                data-src="https://www.youtube-nocookie.com/embed/wIvUWQUXz1Q?si=Ls7dWR8ZINoN81kj"
                 title="YouTube video player"
                 frameborder="0"
                 allow="
@@ -531,7 +579,24 @@
                 "
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
+                style="display: none"
               ></iframe>
+              <div class="video-placeholder">
+                <p>
+                  Bitte akzeptieren Sie 'Video-Inhalte', um dieses Video zu
+                  sehen.
+                </p>
+                <button
+                  class="video-unlock-btn"
+                  onclick="
+                    silktideCookieBannerManager.acceptCookieType(
+                      'video_inhalte',
+                    )
+                  "
+                >
+                  Video aktivieren
+                </button>
+              </div>
             </div>
             <h3>Tuning Treff EXKLUSIV</h3>
           </div>
@@ -637,7 +702,7 @@
             Gebrauchtwagen auf Herz und Nieren. Und nur wenn alles stimmt,
             bekommt er das Siegel
           </p>
-        <div class="topbar-group footer-social-icons">
+          <div class="topbar-group footer-social-icons">
             <a
               href="https://www.facebook.com/autocentermulheimgoksu/"
               class="social"
@@ -757,15 +822,24 @@
         };
         const toggleMenu = (forceClose = false) => {
           const isActive = mobileMenu.classList.contains("active");
+          const contactContainer = document.querySelector(".floating-contact");
           if (forceClose || isActive) {
             hamburger.classList.remove("active");
             mobileMenu.classList.remove("active");
             document
               .querySelectorAll(".dropdown.mobile-open")
               .forEach((d) => d.classList.remove("mobile-open"));
+            if (contactContainer) {
+              contactContainer.style.opacity = "1";
+              contactContainer.style.pointerEvents = "auto";
+            }
           } else {
             hamburger.classList.add("active");
             mobileMenu.classList.add("active");
+            if (contactContainer) {
+              contactContainer.style.opacity = "0";
+              contactContainer.style.pointerEvents = "none";
+            }
           }
         };
         const initMobileDropdowns = () => {
@@ -800,38 +874,43 @@
           });
         };
         const handleScroll = () => {
+          if (document.body.style.position === "fixed") return;
+
           const scrollY = window.scrollY;
           const topbarHeight = topbar ? topbar.offsetHeight : 0;
           const wasLight = navbar.classList.contains("light");
-          if (scrollY > topbarHeight) {
+
+          if (scrollY >= topbarHeight) {
             navbar.classList.add("sticky");
-            navbar.style.setProperty("--nav-top", "0px");
           } else {
             navbar.classList.remove("sticky");
-            navbar.style.setProperty(
-              "--nav-top",
-              `${topbarHeight - scrollY}px`,
-            );
           }
-          const triggerElement = document.querySelector(".nav-trigger");
 
+          const triggerElement = document.querySelector(".nav-trigger");
           if (triggerElement) {
             const triggerPoint = triggerElement.offsetTop - navbar.offsetHeight;
-
             if (scrollY > triggerPoint) {
               navbar.classList.add("light");
             } else {
               navbar.classList.remove("light");
             }
           }
+
           const isLight = navbar.classList.contains("light");
           if (wasLight !== isLight && logoContainer) {
             logoContainer.classList.remove("animate-ready");
             void logoContainer.offsetWidth;
             logoContainer.classList.add("animate-ready");
           }
-          if (mobileMenu.classList.contains("active") && scrollY > 100)
+
+          if (
+            mobileMenu &&
+            mobileMenu.classList.contains("active") &&
+            scrollY > 100
+          ) {
             toggleMenu(true);
+          }
+
           if (zoomImage) {
             const scaleAmount = Math.max(1.0, 1.15 - scrollY * 0.0002);
             zoomImage.style.transform = `scale(${scaleAmount})`;
@@ -913,6 +992,26 @@
         initLogoAnimation();
         initMobileDropdowns();
         window.addEventListener("resize", handleScroll);
+
+        // --- Video Consent Dynamic Styling ---
+        const theater = document.querySelector(".single-video-theater");
+        if (theater) {
+          const checkConsent = () => {
+            const videoConsent =
+              localStorage.getItem("silktideCookieChoice_video_inhalte") ===
+              "true";
+            if (videoConsent) {
+              theater.classList.remove("consent-blocked");
+              theater.classList.add("consent-given");
+            } else {
+              theater.classList.add("consent-blocked");
+              theater.classList.remove("consent-given");
+            }
+          };
+          checkConsent();
+          // Fallback for re-runs
+          setInterval(checkConsent, 1000);
+        }
       })();
     </script>
   </body>

@@ -230,8 +230,8 @@ h6 em {
 
 /* ===== NAVBAR BASE ===== */
 .navbar {
-  position: fixed;
-  top: var(--nav-top, 0);
+  position: absolute;
+  top: 0;
   left: 0;
   width: 100%;
   height: 80px;
@@ -247,6 +247,8 @@ h6 em {
 }
 
 .navbar.sticky {
+  /* Switch to fixed only when sticking to the top */
+  position: fixed;
   top: 0 !important;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   background: rgba(10, 10, 10, 0.95);
@@ -3078,12 +3080,72 @@ h6 em {
 .map-fullwidth {
   width: 100%;
   line-height: 0;
-  filter: grayscale(1) contrast(1.1);
-  transition: filter 0.5s ease;
+  /* Keeps the container tight around the iframe */
+  filter: grayscale(1);
+  transition: filter 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
 
 .map-fullwidth:hover {
-  filter: grayscale(0.2) contrast(1);
+  filter: grayscale(0.3);
+}
+
+/* The Overlay Container - Now handles all alignment */
+.map-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f8f9fa;
+  /* Premium cool gray */
+  z-index: 10;
+
+  /* Flexbox Fix */
+  display: flex;
+  flex-direction: column;
+  /* Stacks text above button */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Hide the overlay when iframe is active */
+.map-fullwidth iframe[src] ~ .map-placeholder {
+  display: none !important;
+}
+
+.map-placeholder p {
+  /* Resetting line-height to 1.6 to prevent overlapping lines */
+  line-height: 1.6;
+  color: #888;
+  margin-bottom: 32px;
+  font-family: var(--font-display);
+  letter-spacing: 3px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  max-width: 450px;
+  /* Prevents text from stretching too wide */
+}
+
+.map-unlock-btn {
+  background-color: transparent;
+  color: #1a1a1a;
+  border: 1px solid #1a1a1a;
+  padding: 14px 36px;
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.map-unlock-btn:hover {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border-color: #1a1a1a;
 }
 
 /* ===== MOBILE RESPONSIVENESS FIXES ===== */
@@ -3841,13 +3903,15 @@ h6 em {
   object-fit: cover;
   object-position: center;
   z-index: 0;
-  transform: scale(1.05); /* slightly scale up for zoom effect */
+  transform: scale(1.05);
+  /* slightly scale up for zoom effect */
 }
 
 .subpage-hero .hero-bg-image.hero-bg-bottom {
   object-position: bottom;
   transform-origin: bottom center;
-  transform: scale(1); /* no initial zoom — prevent cropping people at edges */
+  transform: scale(1);
+  /* no initial zoom — prevent cropping people at edges */
 }
 
 .subpage-hero .hero-overlay {
@@ -3868,7 +3932,8 @@ h6 em {
   text-align: center;
   max-width: 900px;
   padding: 0 2rem;
-  margin-top: 40px; /* Offset to center visually considering navbar */
+  margin-top: 40px;
+  /* Offset to center visually considering navbar */
 }
 
 .subpage-hero .breadcrumb-overlay {
@@ -3936,9 +4001,11 @@ h6 em {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   max-width: 1300px;
 }
+
 .page-intro-section .intro-header {
   position: relative;
 }
+
 .page-intro-section .overline {
   color: var(--gold);
   font-family: var(--font-body);
@@ -3949,6 +4016,7 @@ h6 em {
   display: block;
   margin-bottom: 1.5rem;
 }
+
 .page-intro-section h2 {
   font-family: var(--font-display);
   font-style: italic;
@@ -3959,6 +4027,7 @@ h6 em {
   line-height: 1.1;
   margin: 0;
 }
+
 .page-intro-section .intro-content p {
   font-family: var(--font-body);
   font-size: 1.25rem;
@@ -3966,6 +4035,7 @@ h6 em {
   color: var(--text-secondary);
   margin-bottom: 1.5rem;
 }
+
 .page-intro-section .intro-content p:first-child {
   font-size: 1.5rem;
   color: #fff;
@@ -3980,21 +4050,26 @@ h6 em {
     margin-bottom: 4rem;
     padding-bottom: 2rem;
   }
+
   .page-intro-section h2 {
     font-size: 2.8rem;
   }
 }
+
 @media (max-width: 600px) {
   .page-intro-section {
     padding: 0 1.5rem 2rem;
     margin: 2rem auto 3rem;
   }
+
   .page-intro-section h2 {
     font-size: 2.2rem;
   }
+
   .page-intro-section .intro-content p {
     font-size: 1.1rem;
   }
+
   .page-intro-section .intro-content p:first-child {
     font-size: 1.25rem;
   }
@@ -4028,6 +4103,7 @@ h6 em {
   margin: 0 auto 6rem;
   text-align: left;
 }
+
 .single-video-theater .main-player-area h3 {
   margin-top: 1.5rem;
   font-family: var(--font-display);
@@ -4046,6 +4122,7 @@ h6 em {
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 8px;
 }
+
 .sales-cta h3 {
   font-family: var(--font-display);
   font-size: 2.2rem;
@@ -4053,6 +4130,7 @@ h6 em {
   color: #ffffff;
   margin-bottom: 1.5rem;
 }
+
 .sales-cta p {
   font-family: var(--font-body);
   font-size: 1.1rem;
@@ -4066,6 +4144,7 @@ h6 em {
     margin: 4rem 1.5rem;
     padding: 3rem 1.5rem;
   }
+
   .sales-cta h3 {
     font-size: 1.8rem;
   }
@@ -4077,9 +4156,11 @@ h6 em {
   margin-top: 1.5rem;
   gap: 16px;
 }
+
 .footer-social-icons.topbar-group::before {
   display: none !important;
 }
+
 .footer-brand .social:hover i,
 .footer-social-icons .social:hover i {
   transform: none !important;
