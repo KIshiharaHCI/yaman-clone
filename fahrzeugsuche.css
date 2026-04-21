@@ -904,3 +904,33 @@
   font-size: 0.8rem;
   color: var(--text-muted);
 }
+
+/* ===== FAHRZEUGSUCHE DISABLED STATE ===== */
+.fahrzeugsuche-disabled {
+  max-width: 600px;
+  margin: 5rem auto;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: var(--text-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.fahrzeugsuche-disabled svg {
+  opacity: 0.4;
+  color: var(--accent-gold, #c9a84c);
+}
+
+.fahrzeugsuche-disabled h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary, #fff);
+}
+
+.fahrzeugsuche-disabled p {
+  font-size: 1rem;
+  color: var(--text-muted, #888);
+  max-width: 420px;
+}
