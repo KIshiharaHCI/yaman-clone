@@ -1,6 +1,8 @@
-// ===== AUDARIS API CONFIG =====
-const API_BASE = "https://api.audaris.de/v1/clients/2396/website-vehicles";
-const WEBSITE_ID = "6357a94781160e63a700a2de";
+// ===== Backend API CONFIG =====
+// Frontend should call our Express proxy (mobile.de credentials must stay on the server).
+const API_BASE = "http://127.0.0.1:5000/api/vehicles";
+// Kept for backward compatibility with existing URL building; backend ignores it.
+const WEBSITE_ID = "unused";
 
 // ===== STATE =====
 let currentImageIndex = 0;
@@ -34,6 +36,8 @@ function formatFuel(fuel) {
     PETROL: "Benzin",
     DIESEL: "Diesel",
     ELECTRIC: "Elektro",
+    ELECTRICITY: "Elektro",
+    Electricity: "Elektro",
     HYBRID: "Hybrid",
     HYBRID_PETROL: "Hybrid Benzin",
     HYBRID_DIESEL: "Hybrid Diesel",
@@ -64,6 +68,21 @@ function formatPrice(price) {
   return (
     Number(price).toLocaleString("de-DE", { minimumFractionDigits: 0 }) + ",- €"
   );
+}
+
+function getVehicleConditionDisplay(v) {
+  if (v && typeof v.conditionDisplay === "string" && v.conditionDisplay.trim()) {
+    return v.conditionDisplay.trim();
+  }
+
+  const condition = String(v?.condition || "").toUpperCase();
+  const map = {
+    USED: "Gebrauchtwagen",
+    NEW: "Neuwagen",
+    DEMONSTRATION: "Jahreswagen",
+    PRE_REGISTRATION: "Jahreswagen",
+  };
+  return map[condition] || "";
 }
 
 function formatRegistration(dateStr) {
@@ -194,6 +213,13 @@ function populateVehicle(v) {
   // Price
   const price = v.priceConsumer || v.price || v.priceRetail || 0;
   document.getElementById("vehiclePrice").textContent = formatPrice(price);
+
+  // Condition badge
+  const conditionBadgeEl = document.getElementById("conditionBadge");
+  if (conditionBadgeEl) {
+    const conditionDisplay = getVehicleConditionDisplay(v);
+    conditionBadgeEl.textContent = (conditionDisplay || "Gebrauchtwagen").toUpperCase();
+  }
 
   // Tax info
   const taxEl = document.getElementById("priceTax");
