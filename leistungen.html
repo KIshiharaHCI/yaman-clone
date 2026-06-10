@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4 Händler 1 Deal - Autocenter Mülheim Göksu</title>
+    <title>Leistungen - Autocenter Mülheim Göksu</title>
     <link rel="icon" type="image/png" href="images/logo_favicon.png" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
@@ -17,418 +17,228 @@
     <script src="silktide-consent-manager.js"></script>
     <script src="cookie-config.js"></script>
     <style>
-      /* ===== ABOUT PAGE STYLES ===== */
-      .about-main {
-        max-width: 1300px;
-        margin: 4rem auto;
+      /* ===== LEISTUNGEN PAGE ===== */
+      body {
+        background: #ffffff;
+      }
+
+      .leistungen-main {
+        max-width: 1320px;
+        margin: 4.5rem auto 0;
         padding: 0 2rem;
       }
 
-      .about-image-wrapper {
-        width: 100%;
-        height: 80vh;
-        min-height: 500px;
-        margin-bottom: 4rem;
-        border-radius: 0;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: var(--bg-secondary);
-        overflow: hidden;
+      .svc-intro {
+        text-align: center;
+        max-width: 720px;
+        margin: 0 auto 3.5rem;
       }
 
-      .about-image-wrapper img {
-        width: auto;
-        max-width: 90%;
-        height: auto;
-        max-height: 90%;
-        object-fit: contain;
-        object-position: center;
-        transform-origin: center center;
-        will-change: transform;
-        transition: transform 0.1s linear;
-      }
-
-      .team-intro {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        margin: 6rem 0;
-        align-items: end;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding-top: 4rem;
-      }
-
-      .intro-left .overline {
+      .svc-intro .overline {
         color: var(--gold);
         font-family: var(--font-body);
-        font-size: 0.75rem;
+        font-size: 0.78rem;
         font-weight: 700;
-        letter-spacing: 0.4em;
+        letter-spacing: 0.35em;
         text-transform: uppercase;
         display: block;
         margin-bottom: 1rem;
       }
 
-      .intro-left h2 {
-        font-family: var(--font-display);
-        font-size: 3rem;
-        text-transform: uppercase;
-        color: #ffffff;
-        line-height: 1;
-        margin: 0;
-      }
-
-      .intro-right p {
-        font-family: var(--font-body);
-        font-size: 1.15rem;
-        line-height: 1.8;
-        color: var(--text-secondary);
-        margin: 0;
-        border-left: 2px solid var(--gold);
-        padding-left: 2rem;
-      }
-
-      .about-content {
-        max-width: 850px;
-        margin: 0 auto;
-        font-size: 1.1rem;
-        color: var(--text-primary);
-        line-height: 1.8;
-      }
-
-      .about-content p {
-        margin-bottom: 1.5rem;
-      }
-
-      .about-content p:first-of-type::first-letter {
-        font-family: var(--font-display);
-        font-size: 3rem;
-        float: left;
-        line-height: 1;
-        margin-right: 0.5rem;
-        color: var(--gold);
-      }
-
-      .about-quote {
-        border-left: 4px solid var(--gold);
-        padding-left: 1.5rem;
-        margin: 2.5rem 0;
-        font-style: italic;
-        font-size: 1.2rem;
-        color: var(--text-primary);
-      }
-
-      .about-tagline {
+      .svc-intro h2 {
         font-family: var(--font-hero);
-        font-size: 2.5rem;
-        color: var(--gold);
-        text-align: center;
-        margin-top: 3rem;
-        letter-spacing: 2px;
-      }
-
-      @media (max-width: 992px) {
-        .about-image-wrapper {
-          height: auto;
-          min-height: unset;
-          margin-bottom: 1.5rem;
-          padding: 20px 0;
-        }
-
-        .about-image-wrapper img {
-          max-width: 85%;
-        }
-
-        .team-intro {
-          margin: 2rem 0;
-          padding-top: 2rem;
-        }
-
-        .intro-left h2 {
-          font-size: 2.2rem;
-        }
-
-        .intro-right p {
-          padding-left: 0;
-          border-left: none;
-          font-size: 1.05rem;
-        }
-      }
-
-      @media (max-width: 600px) {
-        .about-main {
-          margin: 1.5rem auto;
-          padding: 0 1.5rem;
-        }
-
-        .about-image-wrapper {
-          padding: 10px 0;
-          margin-bottom: 2rem;
-        }
-
-        .about-image-wrapper img {
-          max-width: 92%;
-        }
-
-        .team-intro {
-          display: flex;
-          flex-direction: column;
-          gap: 1.5rem;
-          text-align: left;
-          align-items: flex-start;
-        }
-
-        .intro-left h2 {
-          font-size: 1.85rem;
-          line-height: 1.2;
-        }
-
-        .about-tagline {
-          font-size: 1.6rem;
-        }
-      }
-
-      /* ===== SERIES SPECIFIC STYLES ===== */
-      .sales-cta {
-        background: var(--bg-secondary);
-        padding: 4rem 2rem;
-        border-radius: 0;
-        /* border: 1px solid var(--gold); */
-        margin-bottom: 2rem;
-        text-align: center;
-      }
-
-      .sales-cta h3 {
-        font-family: var(--font-display);
-        font-size: 2rem;
-        color: var(--gold);
-        margin-bottom: 1rem;
+        font-style: italic;
+        font-size: 3.25rem;
         text-transform: uppercase;
+        color: var(--text-primary-dark);
+        line-height: 1;
+        margin: 0 0 1.5rem;
       }
 
-      .sales-cta p {
-        color: var(--text-secondary);
-        margin-bottom: 2rem;
-        font-size: 1.15rem;
+      .svc-intro p {
+        font-family: var(--font-body);
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: #555555;
+        margin: 0;
       }
 
-      .playlist-theater {
+      .svc-grid {
         display: grid;
-        grid-template-columns: 1fr 350px;
-        gap: 2rem;
-        margin-bottom: 6rem;
-        text-align: left;
-        background: var(--bg-secondary);
-        transition: none; /* Removed slow transition to prevent movement glitches */
-        border: 1px solid transparent;
-        padding: 0;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 5.5rem;
       }
 
-      /* Blocked state: Show border and center content */
-      .playlist-theater.consent-blocked {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 700px;
-        border: 1px solid var(--gold);
-        padding: 0;
-        text-align: center;
+      .svc-card {
         position: relative;
-      }
-
-      /* Target the central text specifically for alignment */
-      .playlist-theater.consent-blocked .video-placeholder {
-        position: static;
-        height: auto;
-        border: none;
-        background: transparent !important;
-      }
-
-      /* Hide title and sidebar mockup when blocked */
-      .playlist-theater.consent-blocked h3,
-      .playlist-theater.consent-blocked .playlist-sidebar {
-        display: none !important;
-      }
-
-      /* Consent given state: No border, normal grid */
-      .playlist-theater.consent-given {
-        border: 1px solid transparent;
-        padding: 0;
-      }
-
-      .video-placeholder-centered {
-        max-width: 600px;
-        width: 100%;
-      }
-
-      .main-player-area h3 {
-        margin-top: 1.5rem;
-        font-family: var(--font-display);
-        font-size: 1.8rem;
-        color: #ffffff;
-        text-transform: uppercase;
-      }
-
-      .playlist-sidebar {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 0;
-        display: flex;
-        flex-direction: column;
-        height: 500px;
-      }
-
-      .sidebar-header {
-        padding: 1.2rem;
-        background: rgba(255, 255, 255, 0.02);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        font-weight: 700;
-        font-size: 0.8rem;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: var(--gold);
-      }
-
-      .sidebar-scroll {
-        overflow-y: auto;
-        flex-grow: 1;
-      }
-
-      .sidebar-scroll::-webkit-scrollbar {
-        width: 4px;
-      }
-
-      .sidebar-scroll::-webkit-scrollbar-thumb {
-        background: var(--gold);
-      }
-
-      .playlist-item {
-        display: flex;
-        gap: 15px;
-        padding: 12px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-      }
-
-      .playlist-item:hover {
-        background: rgba(212, 175, 55, 0.1);
-      }
-
-      .item-thumb {
-        width: 120px;
-        flex-shrink: 0;
-      }
-
-      .item-thumb img {
-        width: 100%;
-        border-radius: 0;
-        display: block;
-        object-fit: cover;
-      }
-
-      .item-title {
-        font-size: 0.9rem;
-        line-height: 1.4;
-        color: var(--text-secondary);
-      }
-
-      @media (max-width: 1100px) {
-        .playlist-theater {
-          grid-template-columns: 1fr;
-        }
-
-        .playlist-sidebar {
-          height: 400px;
-        }
-      }
-
-      .video-container {
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
         overflow: hidden;
-        background: #000;
-        border-radius: 0;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        border-radius: 4px;
+        min-height: 240px;
+        display: flex;
+        cursor: pointer;
+        background: #0a0a0a;
+        text-decoration: none;
       }
 
-      #main-facade-img.loaded {
-        opacity: 1 !important;
+      .svc-card.svc-wide {
+        grid-column: span 3;
+        min-height: 300px;
+      }
+      .svc-card.svc-third {
+        grid-column: span 2;
+        min-height: 240px;
+      }
+      .svc-card.svc-banner {
+        grid-column: span 4;
+        min-height: 240px;
       }
 
-      .facade img {
+      .svc-card-img {
+        position: absolute;
+        inset: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
-        display: block;
-        background-color: #000;
-        opacity: 0;
-        transition: opacity 0.4s ease-in-out;
+        transition: transform 0.7s var(--transition-smooth);
+      }
+      .svc-card:hover .svc-card-img {
+        transform: scale(1.07);
       }
 
-      .facade img.loaded {
-        opacity: 1;
-      }
-
-      img:not([src]),
-      img[src=""] {
-        opacity: 0;
-      }
-
-      .video-container iframe,
-      .video-container .facade {
+      .svc-card-overlay {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.7) 0%,
+          rgba(0, 0, 0, 0.35) 40%,
+          rgba(0, 0, 0, 0.55) 100%
+        );
+        transition: background 0.4s ease;
+      }
+      .svc-card:hover .svc-card-overlay,
+      .svc-card.is-open .svc-card-overlay {
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.82) 0%,
+          rgba(0, 0, 0, 0.88) 100%
+        );
       }
 
-      .play-button {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 68px;
-        height: 48px;
-        background: rgba(0, 0, 0, 0.8);
-        border-radius: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition:
-          background 0.3s,
-          transform 0.3s;
+      .svc-card-content {
+        position: relative;
         z-index: 2;
+        width: 100%;
+        padding: 1.85rem 1.85rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
       }
 
-      .play-button:after {
-        content: "";
-        border-style: solid;
-        border-width: 10px 0 10px 20px;
-        border-color: transparent transparent transparent #fff;
-        margin-left: 4px;
-      }
-
-      .facade:hover .play-button {
-        background: #ff0000;
-        transform: translate(-50%, -50%) scale(1.1);
-      }
-
-      .playlist-item.active {
-        background: rgba(212, 175, 55, 0.15);
-        border-left: 3px solid var(--gold);
-        pointer-events: none;
-      }
-
-      .playlist-item.active .item-title {
+      .svc-card-content h3 {
+        font-family: var(--font-display);
         color: #ffffff;
-        font-weight: 700;
+        font-size: 1.45rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        line-height: 1.12;
+        margin: 0;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+      }
+
+      .svc-card-content h3::after {
+        content: "";
+        display: block;
+        width: 38px;
+        height: 3px;
+        background: var(--gold-light);
+        margin-top: 0.85rem;
+        transition: width 0.4s ease;
+      }
+      .svc-card:hover .svc-card-content h3::after,
+      .svc-card.is-open .svc-card-content h3::after {
+        width: 64px;
+      }
+
+      .svc-card-content p {
+        font-family: var(--font-body);
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.92rem;
+        line-height: 1.6;
+        margin: 0;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.55s var(--transition-smooth),
+          opacity 0.4s ease,
+          margin-top 0.4s ease;
+      }
+      .svc-card:hover .svc-card-content p,
+      .svc-card.is-open .svc-card-content p {
+        max-height: 340px;
+        opacity: 1;
+        margin-top: 0.9rem;
+      }
+
+      /* Tablet: 2 columns */
+      @media (max-width: 992px) {
+        .svc-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 1rem;
+        }
+        .svc-card.svc-wide,
+        .svc-card.svc-third {
+          grid-column: span 1;
+          min-height: 210px;
+        }
+        .svc-card.svc-banner {
+          grid-column: span 2;
+          min-height: 220px;
+        }
+        .svc-intro h2 {
+          font-size: 2.5rem;
+        }
+      }
+
+      /* Mobile: keep 2 columns */
+      @media (max-width: 600px) {
+        .leistungen-main {
+          padding: 0 1.1rem;
+          margin-top: 3rem;
+        }
+        .svc-grid {
+          gap: 0.7rem;
+        }
+        .svc-card.svc-wide,
+        .svc-card.svc-third {
+          min-height: 150px;
+        }
+        .svc-card.svc-banner {
+          min-height: 165px;
+        }
+        .svc-card-content {
+          padding: 1.1rem 1.1rem 1.2rem;
+        }
+        .svc-card-content h3 {
+          font-size: 1rem;
+          letter-spacing: 0;
+        }
+        .svc-card-content h3::after {
+          margin-top: 0.6rem;
+        }
+        .svc-card-content p {
+          font-size: 0.8rem;
+        }
+        .svc-intro {
+          margin-bottom: 2.25rem;
+        }
+        .svc-intro h2 {
+          font-size: 2rem;
+        }
       }
     </style>
   </head>
@@ -514,9 +324,7 @@
                   <path
                     d="M45.2,197.3v20.9c0,6.7,3.5,8.7,7.2,8.7c4.3,0,7.1-2.4,7.1-8.7v-20.9h7.6v20.5 c0,12-7,15.1-14.8,15.1c-7.9,0-14.7-3.2-14.7-14.9v-20.7H45.2z"
                   />
-                  <path
-                    d="M82.8,203.5H72.1v-6.2H101v6.2H90.4v28.9h-7.6V203.5z"
-                  />
+                  <path d="M82.8,203.5H72.1v-6.2H101v6.2H90.4v28.9h-7.6V203.5z" />
                   <path
                     d="M136.9,214.7c0,9.8-5.9,18.2-17.3,18.2c-11,0-16.8-8-16.8-18c0-10.2,6.4-18,17.3-18 C130.4,196.8,136.9,204,136.9,214.7z M110.7,214.7c0,6.8,3,12,9.2,12c6.7,0,9.1-5.6,9.1-11.9c0-6.6-2.7-11.9-9.3-11.9 C113.4,203,110.7,207.9,110.7,214.7z"
                   />
@@ -529,9 +337,7 @@
                   <path
                     d="M210.4,232.4v-35.1h9.4c4.4,7.9,12.5,22.1,14.1,25.9h0.1c-0.4-3.7-0.4-9.8-0.4-15.5v-10.4h6.9v35.1 h-8.9c-3.8-6.9-12.7-23.2-14.5-27.2H217c0.3,3.1,0.3,10.3,0.3,16.6v10.7H210.4z"
                   />
-                  <path
-                    d="M256.3,203.5h-10.7v-6.2h28.9v6.2h-10.6v28.9h-7.6V203.5z"
-                  />
+                  <path d="M256.3,203.5h-10.7v-6.2h28.9v6.2h-10.6v28.9h-7.6V203.5z" />
                   <path
                     d="M303.4,217.3h-16.8v8.9h18.5l-0.9,6.2h-25v-35.1h24.9v6.2h-17.5v7.5h16.8V217.3z"
                   />
@@ -603,18 +409,16 @@
             <li><a href="team.html">Team</a></li>
 
             <li class="dropdown">
-              <a href="javascript:void(0)" class="dropdown-toggle active">
+              <a href="javascript:void(0)" class="dropdown-toggle">
                 Mediathek <span class="chevron"></span>
               </a>
               <ul class="dropdown-menu">
-                <li>
-                  <a href="serie-eins.html" class="active">4 Händler 1 Deal</a>
-                </li>
+                <li><a href="serie-eins.html">4 Händler 1 Deal</a></li>
                 <li><a href="serie-zwei.html">Tuning Treff</a></li>
               </ul>
             </li>
 
-            <li><a href="leistungen.html">Leistungen</a></li>
+            <li><a href="leistungen.html" class="active">Leistungen</a></li>
             <li>
               <a href="index.html#contact-section" class="navbar-cta"
                 >Kontakt</a
@@ -633,18 +437,16 @@
             <a href="team.html">Team</a>
 
             <div class="dropdown">
-              <a href="javascript:void(0)" class="dropdown-toggle active">
+              <a href="javascript:void(0)" class="dropdown-toggle">
                 Mediathek <span class="chevron"></span>
               </a>
               <ul class="dropdown-menu">
-                <li>
-                  <a href="serie-eins.html" class="active">4 Händler 1 Deal</a>
-                </li>
+                <li><a href="serie-eins.html">4 Händler 1 Deal</a></li>
                 <li><a href="serie-zwei.html">Tuning Treff</a></li>
               </ul>
             </div>
 
-            <a href="leistungen.html">Leistungen</a>
+            <a href="leistungen.html" class="active">Leistungen</a>
             <a href="index.html#contact-section">Kontakt</a>
           </div>
         </div>
@@ -654,57 +456,287 @@
     <!-- SUBPAGE HERO -->
     <section class="subpage-hero">
       <img
-        class="hero-bg-image"
+        class="hero-bg-image black-and-white"
         id="zoomImage"
-        src="images/4-handler-1-deal-hero-img.jpeg"
-        alt="4 Händler 1 Deal Hero"
+        src="images/cropped-drone-shot.png"
+        alt="Autocenter Mülheim Göksu"
+        onerror="this.src = 'images/hero-fallback.png'"
       />
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <div class="breadcrumb breadcrumb-overlay">
           <a href="index.html">Startseite</a>
           <span class="breadcrumb-sep">/</span>
-          <span>Mediathek</span>
-          <span class="breadcrumb-sep">/</span>
-          <span>4 Händler 1 Deal</span>
+          <span>Leistungen</span>
         </div>
-        <h1>4 Händler 1 Deal</h1>
+        <h1>Leistungen</h1>
         <p class="hero-subtitle">
-          Die exklusive Serie: Wer macht den besten Deal?
+          Ihre automobilen Wünsche mit unseren erstklassigen Services.
         </p>
       </div>
     </section>
 
     <!-- MAIN CONTENT -->
-    <main class="about-main nav-trigger">
-      <section class="page-intro-section reveal">
-        <div class="intro-header">
-          <span class="overline">Exklusive Serie</span>
-          <h2>Worum geht es?</h2>
-        </div>
-        <div class="intro-content">
-          <p>
-            Vier Händler, ein Kunde, ein begrenztes Budget. In unserer
-            YouTube-Serie treten unsere Experten gegeneinander an, um das
-            perfekte Fahrzeug für einen ausgewählten Kunden zu finden.
-          </p>
-        </div>
+    <main class="leistungen-main nav-trigger">
+      <section class="svc-intro reveal">
+        <span class="overline">Unsere Expertise</span>
+        <h2>Was wir bieten</h2>
+        <p>
+          Erleben Sie automobilen Full-Service auf höchstem Niveau. Wir begleiten
+          Sie mit Expertise, Leidenschaft und maßgeschneiderten Lösungen bei jedem
+          Schritt.
+        </p>
       </section>
 
-      <div class="series-content">
-        <div id="yt-theater-container" class="playlist-theater reveal">
-          <p style="color: var(--gold); padding: 4rem; text-align: center">
-            Wird geladen...
-          </p>
+      <div class="svc-grid">
+        <!-- 1 -->
+        <div class="svc-card svc-wide reveal">
+          <img
+            class="svc-card-img"
+            src="images/showroom.jpg"
+            alt="Fahrzeugverkauf & Beratung"
+            loading="lazy"
+            onerror="this.src = 'images/hero-fallback.png'"
+          />
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-content">
+            <h3>Fahrzeugverkauf &amp; Beratung</h3>
+            <p>
+              Von der Sportlimousine bis zum Luxus-SUV – bei GÖKSU finden Sie eine
+              große Auswahl an hochwertigen Fahrzeugen der Marken Mercedes-AMG,
+              BMW, Audi, Porsche, Volkswagen und viele mehr. Preise von 5.000 € bis
+              weit über 100.000 €. Kommen Sie vorbei und lassen Sie sich persönlich
+              beraten.
+            </p>
+          </div>
         </div>
 
-        <div class="reveal sales-cta">
-          <h3>Willst du auch so einen Deal?</h3>
-          <p>
-            Egal ob sportlicher Luxus oder alltagstauglicher Begleiter – wir
-            finden dein Traumauto zum Bestpreis. Entdecke jetzt unseren
-            exklusiven Fahrzeugbestand.
-          </p>
+        <!-- 2 -->
+        <div class="svc-card svc-wide reveal">
+          <img
+            class="svc-card-img"
+            src="images/autohaus.png"
+            alt="Neuwagen – Mitsubishi & Haval"
+            loading="lazy"
+            onerror="this.src = 'images/hero-fallback.png'"
+          />
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-content">
+            <h3>Neuwagen – Mitsubishi &amp; Haval</h3>
+            <p>
+              Als offizieller Neuwagenhändler bieten wir Ihnen aktuelle Modelle von
+              Mitsubishi (inkl. Eclipse Cross und Elektrofahrzeuge, 7 Jahre Garantie
+              ohne Kilometerbegrenzung) sowie Haval / GWM (u.a. Jolion Pro und H6,
+              5 Jahre Garantie). Qualität und Zukunft, direkt bei GÖKSU.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="svc-card svc-third reveal">
+          <img
+            class="svc-card-img"
+            src="images/old car history pic.png"
+            alt="Probefahrt"
+            loading="lazy"
+            onerror="this.src = 'images/hero-fallback.png'"
+          />
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-content">
+            <h3>Probefahrt</h3>
+            <p>
+              Überzeugen Sie sich selbst. Wir laden Sie herzlich ein, Ihr
+              Wunschfahrzeug bei uns in Mülheim an der Ruhr unverbindlich Probe zu
+              fahren. Vereinbaren Sie einfach einen Termin, wir freuen uns auf Sie!
+            </p>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="svc-card svc-third reveal">
+          <img
+            class="svc-card-img"
+            src="images/cropped-handshake.png"
+            alt="Fahrzeugankauf & Inzahlungnahme"
+            loading="lazy"
+            onerror="this.src = 'images/hero-fallback.png'"
+          />
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-content">
+            <h3>Fahrzeugankauf &amp; Inzahlungnahme</h3>
+            <p>
+              Sie möchten Ihr Fahrzeug verkaufen oder in Zahlung geben? Wir bewerten
+              Ihr Auto fair und transparent, auf Wunsch holen wir es direkt bei
+              Ihnen ab. Auszahlung noch am selben Tag per Überweisung.
+            </p>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="svc-card svc-third reveal">
+          <img
+            class="svc-card-img"
+            src="images/team-photo-maxresdefault.jpg"
+            alt="Maßgeschneiderte Finanzierung"
+            loading="lazy"
+            onerror="this.src = 'images/hero-fallback.png'"
+          />
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-content">
+            <h3>Maßgeschneiderte Finanzierung</h3>
+            <p>
+              Den Traum vom Sportwagen oder luxuriösen Reisemobil verwirklichen, und
+              dabei liquide bleiben. Wir bieten Ihnen individuelle
+              Finanzierungslösungen, darunter 0 % Finanzierung. Schnell,
+              unkompliziert und diskret.
+            </p>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="svc-card svc-third reveal">
+          <img
+            class="svc-card-img"
+            src="images/cropped-drone-shot.png"
+            alt="Individuelles Fahrzeug-Sourcing"
+            loading="lazy"
+            onerror="this.src = 'images/hero-fallback.png'"
+          />
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-content">
+            <h3>Individuelles Fahrzeug-Sourcing</h3>
+            <p>
+              Ihr Wunschmodell ist nicht im Bestand? Kein Problem. Über unser
+              exklusives Händlernetzwerk haben wir Zugriff auf Bestände, die der
+              normale Markt nicht zeigt. Wir finden Ihr Traumfahrzeug.
+            </p>
+          </div>
+        </div>
+
+        <!-- 7 (banner) -->
+        <div class="svc-card svc-banner reveal">
+          <img
+            class="svc-card-img"
+            src="images/cropped-4-handler-1-deal-image.png"
+            alt="Digitale Live-Besichtigung"
+            loading="lazy"
+            onerror="this.src = 'images/4-handler-1-deal-hero-img.jpeg'"
+          />
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-content">
+            <h3>Digitale Live-Besichtigung</h3>
+            <p>
+              Transparenz ohne Anreise. Wir zeigen Ihnen jedes Fahrzeug in einem
+              detaillierten Live-Rundgang per WhatsApp-Call oder als HD-Video –
+              jeder Winkel, jedes Detail. So können Sie mit vollem Vertrauen auch
+              aus der Ferne kaufen.
+            </p>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="svc-card svc-third reveal">
+          <img
+            class="svc-card-img"
+            src="images/aerial.png"
+            alt="Weltweite Überführung & Export"
+            loading="lazy"
+            onerror="this.src = 'images/hero-fallback.png'"
+          />
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-content">
+            <h3>Weltweite Überführung &amp; Export</h3>
+            <p>
+              Wir machen Grenzen unsichtbar. GÖKSU organisiert den sicheren
+              Transport Ihres Fahrzeugs in alle Welt. Von der Abholung bis zur
+              Ankunft – wir übernehmen die gesamte Logistik sowie alle Zoll- und
+              Exportdokumente für einen reibungslosen Ablauf.
+            </p>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="svc-card svc-third reveal">
+          <img
+            class="svc-card-img"
+            src="images/about-us-photo.jpg"
+            alt="Wohnmobile & Reisemobile"
+            loading="lazy"
+            onerror="this.src = 'images/hero-fallback.png'"
+          />
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-content">
+            <h3>Wohnmobile &amp; Reisemobile</h3>
+            <p>
+              Als offizieller Vertragspartner von WINGAMM, Notin, La Marca und
+              Dropcamp bieten wir Ihnen eine exklusive Auswahl an hochwertigen
+              Wohnmobilen und Reisemobilen – als Neuwagen sofort verfügbar. Erleben
+              Sie Freiheit auf vier Rädern, direkt bei GÖKSU in Mülheim.
+            </p>
+          </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="svc-card svc-third reveal">
+          <img
+            class="svc-card-img"
+            src="images/cropped-enhanced-history-photo.png"
+            alt="Gewährleistung & Kundenservice"
+            loading="lazy"
+            onerror="this.src = 'images/hero-fallback.png'"
+          />
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-content">
+            <h3>Gewährleistung &amp; Kundenservice</h3>
+            <p>
+              Bei GÖKSU kaufen Sie sicher. Alle Fahrzeuge werden intern geprüft, und
+              wir stehen vollständig hinter jedem Fahrzeug, das unser Haus verlässt.
+              Gewährleistungsfälle werden bei uns nicht versteckt – sie werden
+              gelöst. Ihre Sicherheit hat bei uns oberste Priorität.
+            </p>
+          </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="svc-card svc-wide reveal">
+          <img
+            class="svc-card-img"
+            src="images/cropped cleaned autohaus map.png"
+            alt="Zulassungsservice & Kennzeichen"
+            loading="lazy"
+            onerror="this.src = 'images/hero-fallback.png'"
+          />
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-content">
+            <h3>Zulassungsservice &amp; Kennzeichen</h3>
+            <p>
+              Vom Kauf direkt auf die Straße: Wir übernehmen die komplette
+              Bürokratie für Sie. Ob regionale Anmeldung in Mülheim oder weltweite
+              Überführung inklusive Zollkennzeichen – wir sorgen dafür, dass Ihr
+              neues Fahrzeug startklar ist.
+            </p>
+          </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="svc-card svc-wide reveal">
+          <img
+            class="svc-card-img"
+            src="images/cropped styrum map cleaned.png"
+            alt="Exklusiver Airportservice"
+            loading="lazy"
+            onerror="this.src = 'images/hero-fallback.png'"
+          />
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-content">
+            <h3>Exklusiver Airportservice</h3>
+            <p>
+              Ihre Zeit ist kostbar. Wenn Sie für Ihr neues Traumauto von weiter her
+              anreisen, holen wir Sie persönlich am Flughafen ab. Ein kurzer Anruf
+              mit Ihren Flugdaten genügt, und unser Team erwartet Sie direkt am
+              Terminal.
+            </p>
+          </div>
         </div>
       </div>
     </main>
@@ -757,33 +789,6 @@
           >Fahrzeugbestand entdecken</a
         >
       </div>
-
-      <!-- <div class="pre-footer-social">
-        <a
-          href="https://www.facebook.com/people/GÖKSU-Exclusive/100077934512477/"
-          target="_blank"
-          rel="noopener"
-          aria-label="Facebook"
-        >
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a
-          href="https://www.instagram.com/GÖKSU_exclusive/?hl=de"
-          target="_blank"
-          rel="noopener"
-          aria-label="Instagram"
-        >
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a
-          href="https://www.google.com/search?q=GÖKSU+EXCLUSIVE+AUTOMOBILE"
-          target="_blank"
-          rel="noopener"
-          aria-label="Google"
-        >
-          <i class="fab fa-google"></i>
-        </a>
-      </div> -->
     </section>
 
     <footer class="footer" id="kontakt">
@@ -902,7 +907,6 @@
         const topbar = document.querySelector(".topbar-container");
         const hamburger = document.getElementById("hamburger");
         const mobileMenu = document.getElementById("mobileMenu");
-        const pageHeader = document.querySelector(".page-header");
         const zoomImage = document.getElementById("zoomImage");
         const logoContainer = document.querySelector(".navbar-logo");
         const typewriterElement = document.getElementById("typewriter-text");
@@ -999,7 +1003,11 @@
             logoContainer.classList.add("animate-ready");
           }
 
-          if (mobileMenu.classList.contains("active") && scrollY > 100) {
+          if (
+            mobileMenu &&
+            mobileMenu.classList.contains("active") &&
+            scrollY > 100
+          ) {
             toggleMenu(true);
           }
 
@@ -1053,6 +1061,17 @@
             )
             .forEach((el) => revealObserver.observe(el));
         };
+
+        // Touch devices: tap a service card to reveal/hide its description
+        const initServiceCards = () => {
+          if (!window.matchMedia("(hover: none)").matches) return;
+          document.querySelectorAll(".svc-card").forEach((card) => {
+            card.addEventListener("click", () =>
+              card.classList.toggle("is-open"),
+            );
+          });
+        };
+
         window.addEventListener(
           "scroll",
           () => {
@@ -1083,309 +1102,9 @@
         initObservers();
         initLogoAnimation();
         initMobileDropdowns();
+        initServiceCards();
         window.addEventListener("resize", handleScroll);
       })();
-    </script>
-    <!-- <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Show the initial state (blocked or loading placeholder) immediately
-        renderSeriesTheater(window.serieEinsVideos || []);
-
-        fetch("playlist_worker.php")
-          .then((response) => response.json())
-          .then((videos) => {
-            if (
-              !videos ||
-              videos.error ||
-              !Array.isArray(videos) ||
-              videos.length === 0
-            ) {
-              throw new Error("Keine Videos verfügbar");
-            }
-            window.serieEinsVideos = videos;
-            renderSeriesTheater(videos);
-          })
-          .catch((err) => {
-            console.error("Video Fetch Error:", err);
-            // If already accepted but fetch failed, show error
-            const videoConsent =
-              localStorage.getItem("silktideCookieChoice_video_inhalte") ===
-              "true";
-            if (videoConsent) {
-              document.getElementById("yt-theater-container").innerHTML =
-                '<p style="color: var(--gold); text-align: center; padding: 4rem;">Aktuell keine Videos verfügbar.</p>';
-            }
-          });
-      });
-
-      function renderSeriesTheater(videos, forceConsent = false) {
-        const container = document.getElementById("yt-theater-container");
-        if (!container) return;
-
-        // GLOBAL COOKIE CHECK
-        const videoConsent =
-          forceConsent ||
-          localStorage.getItem("silktideCookieChoice_video_inhalte") === "true";
-
-        // If blocked, show placeholder regardless of videos data state
-        if (!videoConsent) {
-          container.classList.add("consent-blocked");
-          container.classList.remove("consent-given");
-          container.innerHTML = `
-            <div class="video-placeholder">
-                <p>
-                  Bitte akzeptieren Sie 'Video-Inhalte', um die Playlists zu sehen.
-                </p>
-                <button class="video-unlock-btn" 
-                        onclick="silktideCookieBannerManager.acceptCookieType('video_inhalte')">
-                  Mediathek aktivieren
-                </button>
-            </div>
-          `;
-          return;
-        }
-
-        // If allowed, ensure we have videos or wait for fetch
-        if (!videos || !Array.isArray(videos) || videos.length === 0) {
-          container.classList.add("consent-blocked"); // Keep frame
-          container.innerHTML =
-            '<p style="color: var(--gold); text-align: center; width: 100%; margin: 0;">Wird geladen...</p>';
-          return;
-        }
-
-        container.classList.remove("consent-blocked");
-        container.classList.add("consent-given");
-
-        const first = videos[0];
-
-        container.innerHTML = `
-    <div class="main-player-area">
-        <div id="active-video-wrapper" class="video-container">
-            <div class="facade" onclick="playEpisode('${first.id}')">
-                <img id="main-facade-img" 
-                     src="https://i.ytimg.com/vi/${first.id}/maxresdefault.jpg" 
-                     onload="checkThumbQuality(this, '${first.id}')"
-                     alt="${first.title}">
-                <div class="play-button"></div>
-            </div>
-        </div>
-        <h3 id="active-title">${first.title}</h3>
-    </div>
-    <div class="playlist-sidebar">
-        <div class="sidebar-header">Weitere Folgen</div>
-        <div class="sidebar-scroll" id="playlist-items-list">
-            ${videos
-              .map(
-                (v, index) => `
-                <div class="playlist-item ${index === 0 ? "active" : ""}" 
-                     onclick="updateMainContent('${v.id}', '${v.title.replace(/'/g, "\\'")}', this)">
-                    <div class="item-thumb">
-                        <img src="https://i.ytimg.com/vi/${v.id}/mqdefault.jpg" style="opacity:1;">
-                    </div>
-                    <div class="item-info"><span class="item-title">${v.title}</span></div>
-                </div>
-            `,
-              )
-              .join("")}
-        </div>
-    </div>`;
-      }
-
-      function updateMainContent(id, title, element) {
-        document.getElementById("active-title").innerText = title;
-
-        // We reset the opacity here so the next image also fades in
-        document.getElementById("active-video-wrapper").innerHTML = `
-    <div class="facade" onclick="playEpisode('${id}')">
-        <img id="main-facade-img" 
-             src="https://i.ytimg.com/vi/${id}/maxresdefault.jpg" 
-             onload="checkThumbQuality(this, '${id}')">
-        <div class="play-button"></div>
-    </div>`;
-
-        document
-          .querySelectorAll(".playlist-item")
-          .forEach((item) => item.classList.remove("active"));
-        element.classList.add("active");
-
-        document
-          .getElementById("active-video-wrapper")
-          .scrollIntoView({ behavior: "smooth", block: "center" });
-      }
-
-      function checkThumbQuality(img, id) {
-        // If it's the 120px gray placeholder
-        if (img.naturalWidth <= 120) {
-          // Change the source and WAIT for the new load before showing
-          img.src = "https://i.ytimg.com/vi/" + id + "/hqdefault.jpg";
-        } else {
-          // It's a real high-res thumbnail, fade it in
-          img.classList.add("loaded");
-        }
-      }
-
-      function playEpisode(id) {
-        document.getElementById("active-video-wrapper").innerHTML = `
-        <iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0" 
-                allow="autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-      }
-    </script> -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Initial load: render the state based on what we have (or empty)
-        renderSeriesTheater(window.serieEinsVideos || []);
-
-        // Fetch the video list from your API
-        fetch("yt_api_worker.php")
-          .then((res) => (res.ok ? res.json() : Promise.reject()))
-          .then((videos) => {
-            window.serieEinsVideos = videos;
-            renderSeriesTheater(videos);
-          })
-          .catch((err) => console.error("Fetch Error:", err));
-
-        // THE ENGINE: Watches for the image injection (Fixes Episode 7 stall)
-        const observer = new MutationObserver((mutations) => {
-          mutations.forEach((mutation) => {
-            mutation.addedNodes.forEach((node) => {
-              const img =
-                node.id === "main-facade-img"
-                  ? node
-                  : node.querySelector
-                    ? node.querySelector("#main-facade-img")
-                    : null;
-              if (img) {
-                handleThumbLogic(img);
-              }
-            });
-          });
-        });
-
-        const container = document.getElementById("yt-theater-container");
-        if (container)
-          observer.observe(container, { childList: true, subtree: true });
-      });
-
-      function handleThumbLogic(img) {
-        const id = img.getAttribute("data-id");
-        let attempts = 0;
-
-        const runCheck = () => {
-          if (img.naturalWidth > 0) {
-            if (img.naturalWidth <= 120) {
-              img.src = "yt_api_worker.php?thumb_id=" + id + "&q=hqdefault";
-            } else {
-              img.classList.add("loaded");
-              img.style.opacity = "1";
-            }
-            return;
-          }
-
-          if (attempts === 5) {
-            img.src = "yt_api_worker.php?thumb_id=" + id + "&q=hqdefault";
-          }
-
-          if (attempts < 20) {
-            attempts++;
-            setTimeout(runCheck, 100);
-          } else {
-            img.classList.add("loaded");
-            img.style.opacity = "1";
-          }
-        };
-
-        runCheck();
-      }
-
-      function renderSeriesTheater(videos, forceConsent = false) {
-        const container = document.getElementById("yt-theater-container");
-        if (!container) return;
-
-        const videoConsent =
-          forceConsent ||
-          localStorage.getItem("silktideCookieChoice_video_inhalte") === "true";
-
-        // BLOCKED STATE: Added classes and styled button with instant re-render
-        if (!videoConsent) {
-          container.classList.add("consent-blocked");
-          container.classList.remove("consent-given");
-          container.innerHTML = `
-            <div class="video-placeholder">
-                <p>Bitte akzeptieren Sie 'Video-Inhalte', um die Playlists zu sehen.</p>
-                <button class="video-unlock-btn" 
-                        onclick="silktideCookieBannerManager.acceptCookieType('video_inhalte'); renderSeriesTheater(window.serieEinsVideos || [])">
-                  Mediathek aktivieren
-                </button>
-            </div>`;
-          return;
-        }
-
-        if (!videos || !videos.length) {
-          container.classList.add("consent-blocked");
-          container.innerHTML =
-            '<p style="color:var(--gold);text-align:center;width:100%;">Wird geladen...</p>';
-          return;
-        }
-
-        // GIVEN STATE
-        container.classList.remove("consent-blocked");
-        container.classList.add("consent-given");
-
-        const first = videos[0];
-        container.innerHTML = `
-      <div class="main-player-area">
-          <div id="active-video-wrapper" class="video-container">
-              <div class="facade" onclick="playEpisode('${first.id}')">
-                  <img id="main-facade-img" data-id="${first.id}" 
-                       src="yt_api_worker.php?thumb_id=${first.id}&q=maxresdefault" 
-                       style="opacity:0; transition:opacity 0.4s; width:100%; height:auto; display:block;">
-                  <div class="play-button"></div>
-              </div>
-          </div>
-          <h3 id="active-title">${first.title}</h3>
-      </div>
-      <div class="playlist-sidebar">
-          <div class="sidebar-header">Weitere Folgen</div>
-          <div class="sidebar-scroll" id="playlist-items-list">
-              ${videos
-                .map(
-                  (v, i) => `
-                <div class="playlist-item ${i === 0 ? "active" : ""}" onclick="updateMainContent('${v.id}', '${v.title.replace(/'/g, "\\'")}', this)">
-                    <div class="item-thumb"><img src="yt_api_worker.php?thumb_id=${v.id}&q=mqdefault"></div>
-                    <div class="item-info"><span class="item-title">${v.title}</span></div>
-                </div>`,
-                )
-                .join("")}
-          </div>
-      </div>`;
-      }
-
-      function updateMainContent(id, title, element) {
-        const wrapper = document.getElementById("active-video-wrapper");
-        if (!wrapper) return;
-        document.getElementById("active-title").innerText = title;
-
-        wrapper.innerHTML = `
-      <div class="facade" onclick="playEpisode('${id}')">
-          <img id="main-facade-img" data-id="${id}"
-               src="yt_api_worker.php?thumb_id=${id}&q=maxresdefault" 
-               style="opacity:0; transition:opacity 0.4s; width:100%; height:auto; display:block;">
-          <div class="play-button"></div>
-      </div>`;
-
-        document
-          .querySelectorAll(".playlist-item")
-          .forEach((item) => item.classList.remove("active"));
-        if (element) element.classList.add("active");
-        wrapper.scrollIntoView({ behavior: "smooth", block: "center" });
-      }
-
-      function playEpisode(id) {
-        document.getElementById("active-video-wrapper").innerHTML = `
-      <iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0" 
-              allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen 
-              style="width:100%; height:100%; border:none;"></iframe>`;
-      }
     </script>
   </body>
 </html>

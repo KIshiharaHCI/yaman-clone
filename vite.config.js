@@ -20,6 +20,7 @@ export default defineConfig({
         fahrzeug: resolve(__dirname, 'fahrzeug.html'),
         serieEins: resolve(__dirname, 'serie-eins.html'),
         serieZwei: resolve(__dirname, 'serie-zwei.html'),
+        leistungen: resolve(__dirname, 'leistungen.html'),
       },
     },
   },
