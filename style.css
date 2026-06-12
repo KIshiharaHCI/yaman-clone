@@ -431,8 +431,10 @@ h6 em {
 
 .navbar-logo {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3px;
   text-decoration: none;
   height: 100%;
 }
@@ -598,6 +600,7 @@ h6 em {
   align-items: center;
   height: 100%;
   position: relative;
+  white-space: nowrap;
 }
 
 .navbar.light .navbar-links a:not(.navbar-cta) {
@@ -659,9 +662,25 @@ h6 em {
 .hamburger {
   display: none;
   flex-direction: column;
-  gap: 6px;
+  align-items: center;
+  gap: 5px;
   cursor: pointer;
   z-index: 1100;
+}
+
+.hamburger::after {
+  content: "Menü";
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 1px;
+}
+
+.navbar.light .hamburger::after {
+  color: #111111;
 }
 
 .hamburger span {
