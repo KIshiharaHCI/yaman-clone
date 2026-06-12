@@ -1236,7 +1236,7 @@
         renderSeriesTheater(window.serieEinsVideos || []);
 
         // Fetch the video list from your API
-        fetch("yt_api_worker.php")
+        fetch("/api/yt")
           .then((res) => (res.ok ? res.json() : Promise.reject()))
           .then((videos) => {
             window.serieEinsVideos = videos;
@@ -1273,7 +1273,7 @@
         const runCheck = () => {
           if (img.naturalWidth > 0) {
             if (img.naturalWidth <= 120) {
-              img.src = "yt_api_worker.php?thumb_id=" + id + "&q=hqdefault";
+              img.src = "/api/yt?thumb_id=" + id + "&q=hqdefault";
             } else {
               img.classList.add("loaded");
               img.style.opacity = "1";
@@ -1282,7 +1282,7 @@
           }
 
           if (attempts === 5) {
-            img.src = "yt_api_worker.php?thumb_id=" + id + "&q=hqdefault";
+            img.src = "/api/yt?thumb_id=" + id + "&q=hqdefault";
           }
 
           if (attempts < 20) {
@@ -1337,7 +1337,7 @@
           <div id="active-video-wrapper" class="video-container">
               <div class="facade" onclick="playEpisode('${first.id}')">
                   <img id="main-facade-img" data-id="${first.id}" 
-                       src="yt_api_worker.php?thumb_id=${first.id}&q=maxresdefault" 
+                       src="/api/yt?thumb_id=${first.id}&q=maxresdefault" 
                        style="opacity:0; transition:opacity 0.4s; width:100%; height:auto; display:block;">
                   <div class="play-button"></div>
               </div>
@@ -1351,7 +1351,7 @@
                 .map(
                   (v, i) => `
                 <div class="playlist-item ${i === 0 ? "active" : ""}" onclick="updateMainContent('${v.id}', '${v.title.replace(/'/g, "\\'")}', this)">
-                    <div class="item-thumb"><img src="yt_api_worker.php?thumb_id=${v.id}&q=mqdefault"></div>
+                    <div class="item-thumb"><img src="/api/yt?thumb_id=${v.id}&q=mqdefault"></div>
                     <div class="item-info"><span class="item-title">${v.title}</span></div>
                 </div>`,
                 )
@@ -1368,7 +1368,7 @@
         wrapper.innerHTML = `
       <div class="facade" onclick="playEpisode('${id}')">
           <img id="main-facade-img" data-id="${id}"
-               src="yt_api_worker.php?thumb_id=${id}&q=maxresdefault" 
+               src="/api/yt?thumb_id=${id}&q=maxresdefault" 
                style="opacity:0; transition:opacity 0.4s; width:100%; height:auto; display:block;">
           <div class="play-button"></div>
       </div>`;
